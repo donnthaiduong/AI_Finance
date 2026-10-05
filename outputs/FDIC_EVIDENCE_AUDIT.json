@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "sources": null,
+  "financialRows": null,
+  "datasetSha256": null,
+  "errors": [
+    "Dataset unavailable or invalid: FileNotFoundError"
+  ],
+  "scope": "Offline raw-byte and financial-row integrity; historical releases and official API units require separate verification.",
+  "recordedAt": "2026-10-05T15:37:47.322450+00:00",
+  "productSnapshotSha256": "424ad8f61a86c4e000adf6d0b21f70a1b758d9be6c995838618bdc0297800a42",
+  "referenceHashesValid": true,
+  "syntheticAuditTestsPassed": 9
+}

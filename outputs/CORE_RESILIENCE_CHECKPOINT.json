@@ -1,0 +1,67 @@
+{
+  "recordedAt": "2026-10-05T13:32:50.2648191+00:00",
+  "scope": "Local technical checkpoint; active goal incomplete",
+  "jsTests": {
+    "passed": 55,
+    "failed": 0,
+    "seededOracleCases": 500
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed after responsive table, payment and metric fixes",
+  "httpSmoke": "passed",
+  "httpEvidenceFaults": "passed; original files restored byte-for-byte",
+  "browser": [
+    "unconfirmed minimum preparation 21250 USD for 180000 USD synthetic example",
+    "confirmed preparation leaves zero shortfall and survives reload",
+    "changed assumption removes checked proposal",
+    "guided and missing-AI-key explanations",
+    "390px results/payments check; payment page has no horizontal overflow",
+    "unavailable evidence guidance and server verification",
+    "malformed import rejected; valid v2 import survives reload with 700 USD shortfall"
+  ],
+  "aiProviderLive": "unverified; no key configured",
+  "userStudy": "not started; no participants per user",
+  "openGatesDocument": "docs/CORE_RESILIENCE_PROGRESS.md",
+  "screenshot": "outputs/one-page-plan-proof-20261005.png",
+  "snapshotSha256": "424ad8f61a86c4e000adf6d0b21f70a1b758d9be6c995838618bdc0297800a42",
+  "deviceStorage": {
+    "unitTests": 8,
+    "browser": "actual workspace with synthetic faulting adapter; temporary session and archival/conflict/blocked-read cases passed",
+    "nativeQuotaExhaustion": "unverified",
+    "proof": "outputs/device-storage-proof-20261005.png"
+  },
+  "exportImport": {
+    "textRoundTrip": "passed through browser; 597-character synthetic session; reload/server reproduce 700 USD shortfall",
+    "blobDownload": "unverified",
+    "clipboardFidelity": "unverified; browser-tool readback differed",
+    "fileCapBytes": 33554432
+  },
+  "httpBodyCapBytes": 128000,
+  "largestUnicodePortfolioHttp": "passed on scenario and guided copilot",
+  "planPdf": {
+    "nativeDownload": "unverified",
+    "machineRecord": "outputs/PLAN_PDF_VERIFICATION.json",
+    "visualInspection": "passed; actual production UI example and maximum Unicode inputs",
+    "A4": true,
+    "artifacts": 2,
+    "raster": true,
+    "pagesEach": 1
+  },
+  "delayedCopilotUI": "passed with synthetic transport: input/destination/question/AI edits, confirmation and out-of-order responses; current draft requires user action",
+  "unavailableEvidenceCompleteJourney": "passed: compare 21250 USD, confirm, zero shortfall, server match and generated report",
+  "responsiveUI": {
+    "proof": "outputs/mobile-results-proof-20261005.png",
+    "keyboard": "table arrows, invalid payment, Space/Enter confirmation and results/Copilot Tab segment passed",
+    "scopeDocument": "docs/RESPONSIVE_UI_VERIFICATION.md",
+    "machineRecord": "outputs/RESPONSIVE_UI_VERIFICATION.json",
+    "viewports": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "horizontalDocumentOverflow": "none on synthetic example after fix",
+    "viewsEach": 7,
+    "nativeMobileAndOtherBrowsers": "unverified"
+  }
+}

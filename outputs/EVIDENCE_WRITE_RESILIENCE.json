@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-10-05T15:47:50.081008+00:00",
+  "scope": "Local EvidenceStore implementation and filesystem faults; not distributed/crash durability",
+  "javascriptTestsPassed": 59,
+  "typescript": "passed",
+  "productionBuild": "passed",
+  "faultTestsAdded": 4,
+  "corpusOriginalLocationExists": false,
+  "files": {
+    "lib\\evidence-store.ts": "d28c772489958fc7578e84eeeb5e0d50330e0aad9b3a8510530406a98d4b90de",
+    "tests\\evidence-store.test.mjs": "f94b72ec80abcb305f37d17067079363d72f3d124c2b4679434ec42859a4a960"
+  }
+}

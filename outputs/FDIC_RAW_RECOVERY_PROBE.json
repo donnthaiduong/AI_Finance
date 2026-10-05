@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-05T16:08:27.416339+00:00",
+  "url": "https://api.fdic.gov/banks/financials?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+REPDTE%3A%5B20160101+TO+%2A%5D&fields=CERT%2CNAME%2CREPDTE%2CASSET%2CDEP%2CEQ%2CROA&limit=10000&offset=0&format=json",
+  "originalSha256": "d1173da12e4fe1f04a923a41a184f2b330dbb38f93dcf2c6d624d2738bde0338",
+  "retrievedSha256": "d1173da12e4fe1f04a923a41a184f2b330dbb38f93dcf2c6d624d2738bde0338",
+  "originalBytesMatch": true,
+  "savedFile": "data\\raw\\d1173da12e4fe1f04a923a41a184f2b330dbb38f93dcf2c6d624d2738bde0338.bin",
+  "bytes": 239889,
+  "financialRows": 1344,
+  "datasetRestored": false,
+  "productSnapshotChanged": false
+}

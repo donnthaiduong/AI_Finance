@@ -1,0 +1,176 @@
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import { calculatePortfolio, comparePortfolio, confirmPortfolio, coreInput, minimumPortfolio, type PortfolioInput, type Comparison } from '../lib/portfolio';
+import type { PortfolioSession } from '../lib/portfolio-session';
+import { DeviceSessionStore, readPortfolioFile, portfolioFile, MAX_PORTFOLIO_FILE_BYTES } from '../lib/device-storage';
+import { explain } from '../lib/copilot';
+import { snapshotSchema } from '../lib/snapshot-validation';
+import type { Snapshot } from '../lib/types';
+import type { CopilotReply } from '../lib/treasury-copilot';
+import { preparationPlan } from '../lib/preparation-plan';
+import { renderPlanPdf } from '../lib/render-plan';
+import { exportSection } from '../lib/export-preview';
+
+const usd=(n:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);
+const empty=():PortfolioInput=>({positions:[],payments:[],affectedId:'',unavailablePercent:80,durationDays:21});
+const example=():PortfolioInput=>({positions:[{id:'demo-a',bankName:'Example bank A',cert:null,amount:90000},{id:'demo-b',bankName:'Example bank B',cert:null,amount:60000},{id:'demo-c',bankName:'Example bank C',cert:null,amount:30000}],payments:[{id:'salary',label:'Payroll',day:5,amount:85000},{id:'supplier',label:'Suppliers',day:15,amount:40000},{id:'operating',label:'Operating costs',day:25,amount:25000}],affectedId:'demo-a',unavailablePercent:80,durationDays:21});
+export default function TreasuryWorkspace({storageAccess=()=>window.localStorage,copilotFetch=fetch}:{storageAccess?:()=>Pick<Storage,'getItem'|'setItem'>;copilotFetch?:typeof fetch}={}){
+ const [session,setSession]=useState<PortfolioSession>({schemaVersion:2,input:empty(),activity:[]});
+ const [hydrated,setHydrated]=useState(false),[storageBlocked,setStorageBlocked]=useState(false),[storageError,setStorageError]=useState('');
+ const [view,setView]=useState('workspace'),[step,setStep]=useState(0),[snapshot,setSnapshot]=useState<Snapshot|null>(null),[evidenceError,setEvidenceError]=useState(''),[evidenceLoading,setEvidenceLoading]=useState(false);
+ const [error,setError]=useState(''),[notice,setNotice]=useState(''),[comparison,setComparison]=useState<Comparison|null>(null),[checked,setChecked]=useState(false),[destination,setDestination]=useState(''),[verification,setVerification]=useState('');
+ const [question,setQuestion]=useState(''),[reply,setReply]=useState(''),[report,setReport]=useState(false);
+ const [exportData,setExportData]=useState<{text:string;filename:string}|null>(null),[exportStatus,setExportStatus]=useState('');
+ const [exportPage,setExportPage]=useState(0);
+ const exportPreview=exportData?exportSection(exportData.text,exportPage):null;
+ const [planPdf,setPlanPdf]=useState<ReturnType<typeof renderPlanPdf>|null>(null);
+ const [useAI,setUseAI]=useState(false),[copilotBusy,setCopilotBusy]=useState(false),[copilotDraft,setCopilotDraft]=useState<CopilotReply['draft']>(null);
+ const copilotCurrent=useRef(''),copilotSequence=useRef(0);
+ const importFile=useRef<HTMLInputElement>(null),savedRaw=useRef(''),current=useRef('');
+ const deviceStore=useRef<DeviceSessionStore|null>(null);
+ if(!deviceStore.current)deviceStore.current=new DeviceSessionStore(storageAccess);
+ const [pendingReplacement,setPendingReplacement]=useState<{session:PortfolioSession;notice:string}|null>(null);
+ const input=session.input;current.current=JSON.stringify(input);
+ copilotCurrent.current=JSON.stringify({input,destination,question:question.trim(),useAI});
+ let result:ReturnType<typeof calculatePortfolio>|null=null,validation='';
+ try{if(input.positions.length)result=calculatePortfolio(input);}catch(e){validation=(e as Error).message;}
+ const bankName=(id:string)=>input.positions.find(p=>p.id===id)?.bankName||'Removed bank';
+ const liveComparison=comparison && comparison.fingerprint===JSON.stringify({input,from:comparison.from,to:comparison.to,amount:comparison.amount})?comparison:null;
+ const latest=session.activity.at(-1);
+ const confirmedAction=latest && JSON.stringify(latest.after)===current.current?latest:null;
+ async function loadEvidence(){
+   setEvidenceLoading(true);setPlanPdf(null);
+   try{const r=await fetch('/api/banks',{signal:AbortSignal.timeout(10000)});if(!r.ok)throw new Error('Evidence unavailable. Cash planning still works.');const {updateStatus,...raw}=await r.json();const data=snapshotSchema.parse(raw);setSnapshot(data);setEvidenceError(updateStatus?.state==='failed'?'Latest evidence update failed. Showing the last valid snapshot.':'');}
+   catch{setEvidenceError('Bank evidence is unavailable. Continue planning with your own balances and assumptions.');}
+   finally{setEvidenceLoading(false);setPlanPdf(null);}
+ }
+ useEffect(()=>{
+   void loadEvidence();
+   const restored=deviceStore.current!.restore();savedRaw.current=restored.original??'';
+   if(restored.session)setSession(restored.session);
+   if(restored.state==='damaged'){setStorageBlocked(true);setStorageError('Saved data is damaged. It has not been overwritten. Export the original before replacing it.');}
+   if(restored.state==='unavailable'){setStorageBlocked(true);setStorageError('Device storage could not be read. Use a temporary session and export JSON before closing.');}
+   setHydrated(true);
+ },[]);
+ useEffect(()=>{
+   if(!hydrated||storageBlocked)return;
+   const saved=deviceStore.current!.persist(session);setStorageError(saved.message);
+ },[session,hydrated,storageBlocked]);
+ function useReplacement(next:PortfolioSession,message:string){
+   setPlanPdf(null);
+   setExportData(null);setExportStatus('');
+   resetCopilot();setSession(next);setStorageBlocked(false);setPendingReplacement(null);setComparison(null);setChecked(false);setDestination('');setStep(0);setView('workspace');setReport(false);setVerification('');setError('');setNotice(message);
+ }
+ function requestReplacement(next:PortfolioSession,message:string){
+   const saved=deviceStore.current!.replaceAfterReview(next);
+   setStorageError(saved.message);
+   if(saved.state==='saved'||saved.state==='memory')useReplacement(next,message);
+   else if(saved.state!=='invalid')setPendingReplacement({session:next,notice:message});
+ }
+ function edit(next:PortfolioInput){
+   setPlanPdf(null);
+   setExportData(null);setExportStatus('');
+   setPendingReplacement(null);
+   copilotSequence.current++;setCopilotDraft(null);setCopilotBusy(false);
+   setSession(s=>({...s,input:next}));setComparison(null);setChecked(false);setVerification('');setReply('');setReport(false);setError('');
+ }
+ function begin(demo:boolean){
+   if(input.positions.length&&!window.confirm('Replace the current working portfolio? Export JSON first if you want to keep it.'))return;
+   requestReplacement({schemaVersion:2,input:demo?example():empty(),activity:[]},demo?'Example assumptions loaded. These are not observed business balances.':'New portfolio. Add your banks and scheduled obligations.');
+ }
+ function download(text:string,filename:string){const url=URL.createObjectURL(new Blob([text],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ function showExport(text:string,filename:string){setExportPage(0);setExportData({text,filename});setExportStatus('Download JSON or use Copy JSON to save the complete file. This snapshot stays on this device.');}
+ function exportJson(){try{showExport(portfolioFile(session),'cascadeguard-portfolio.json');}catch(e){setError((e as Error).message);}}
+ async function copyExport(){if(!exportData)return;try{await navigator.clipboard.writeText(exportData.text);setExportStatus('JSON copied to your clipboard. Save it as a .json file to restore later.');}catch{setExportStatus('Clipboard is unavailable. Download JSON, or copy every displayed section in order without adding characters.');}}
+ async function importJson(file:File){
+   const submitted=current.current;
+   try{
+     if(file.size>MAX_PORTFOLIO_FILE_BYTES)throw new Error('Portfolio file exceeds 32 MB.');
+     const next=readPortfolioFile(await file.text());
+     if(current.current!==submitted)throw new Error('Inputs changed while the file was being read. Choose the file again to review the replacement.');
+     if(input.positions.length&&!window.confirm('Replace the working portfolio with this validated file?'))return;
+     requestReplacement(next,'Imported inputs validated; financial results recalculated.');
+   }catch(e){setError((e as Error).message);}finally{if(importFile.current)importFile.current.value='';}
+ }
+ function prepare(){
+   setPlanPdf(null);
+   try{const p=minimumPortfolio(input,destination);if(p.status==='feasible'){setComparison(p.comparison);setChecked(false);setPlanPdf(null);setNotice('Review the minimum preparation for this selected interruption.');}
+   else{setComparison(null);setNotice(p.status==='insufficient-input'?'Add positive obligations first.':p.status==='not-needed'?'Existing allocations cover this selected scenario.':p.reason);}}
+   catch(e){setError((e as Error).message);}
+ }
+ function apply(){
+   setPlanPdf(null);
+   setExportData(null);setExportStatus('');
+   setPendingReplacement(null);
+   resetCopilot();
+   try{if(!liveComparison)throw new Error('Compare the current inputs first.');const c=confirmPortfolio(input,liveComparison,checked);setSession(s=>({...s,input:c.after,activity:[...s.activity,{at:new Date().toISOString(),from:c.from,to:c.to,amount:c.amount,before:c.before,after:c.after}].slice(-50)}));setComparison(null);setChecked(false);setReply('');setVerification('');setReport(false);setNotice('Simulation updated. No real money moved.');}
+   catch(e){setError((e as Error).message);}
+ }
+ async function verify(){
+   const submitted=current.current;
+   try{const r=await fetch('/api/scenario',{method:'POST',headers:{'Content-Type':'application/json'},body:submitted,signal:AbortSignal.timeout(10000)});const data=await r.json();if(!r.ok)throw new Error(data.error||'Verification failed.');if(JSON.stringify(data.result)!==JSON.stringify(calculatePortfolio(input)))throw new Error('Server and local calculation differ.');if(current.current===submitted)setVerification('Calculation matches the local server. Evidence: '+data.evidenceStatus+'.');}
+   catch(e){if(current.current===submitted)setError((e as Error).message);}
+ }
+ function createPlanPdf(){
+   try{const plan=preparationPlan(input,{preparedAt:new Date().toISOString(),comparison:liveComparison,activity:confirmedAction,evidence:snapshot?{version:snapshot.version,collectedAt:snapshot.collectedAt}:null});setPlanPdf(renderPlanPdf(plan));setError('');}
+   catch(e){setError((e as Error).message);setPlanPdf(null);}
+ }
+ function resetCopilot(){copilotSequence.current++;setCopilotBusy(false);setReply('');setCopilotDraft(null);}
+ async function askCopilot(){
+   if(!question.trim()){setReply('Enter a question first, or read the guided explanation above.');return;}
+   const request={input,destination,question:question.trim(),useAI},submitted=copilotCurrent.current,sequence=++copilotSequence.current;
+   setCopilotBusy(true);setReply('');setCopilotDraft(null);
+   const isCurrent=()=>copilotCurrent.current===submitted && copilotSequence.current===sequence;
+   try{
+     const response=await copilotFetch('/api/copilot',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request),signal:AbortSignal.timeout(10000)});
+     const data=await response.json() as CopilotReply;
+     if(!response.ok)throw new Error('Copilot unavailable.');
+     if(data.fingerprint!==submitted || !['ai','guided','fallback'].includes(data.mode) || typeof data.text!=='string' || data.text.length>2000 || typeof data.reason!=='string' || data.reason.length>300 || !['none','minimum','draft'].includes(data.action))throw new Error('Invalid copilot response.');
+     if(!isCurrent())return;
+     if(data.action==='minimum'){
+       setPlanPdf(null);
+       // Recompute on this tab before showing a proposal; server output cannot apply it.
+       const p=minimumPortfolio(input,destination);
+       if(p.status!=='feasible' || JSON.stringify(p)!==JSON.stringify(data.preparation))throw new Error('Comparison could not be verified.');
+       setComparison(p.comparison);setChecked(false);setReport(false);
+     }
+     if(data.action==='draft'){
+       if(!data.draft)throw new Error('Missing draft.');
+       calculatePortfolio({...input,...data.draft});setCopilotDraft(data.draft);
+     }
+     setReply((data.mode==='ai'?'AI interpretation · ':data.mode==='fallback'?'AI fallback · ':'Guided mode · ')+data.reason+' '+data.text);
+   }catch{if(isCurrent())setReply('Guided fallback · Copilot unavailable. '+explain(coreInput(input)));}
+   finally{if(isCurrent())setCopilotBusy(false);}
+ }
+ const selection=(value:string,change:(id:string)=>void,label:string,exclude?:string)=><label className="field">{label}<select aria-label={label} value={value} onChange={e=>change(e.target.value)}><option value="">Choose bank</option>{input.positions.filter(p=>p.id!==exclude).map(p=><option key={p.id} value={p.id}>{p.bankName||'Unnamed bank'}</option>)}</select></label>;
+ return <div className="shell treasury-workspace">
+ <aside className="sidebar"><a className="brand" href="/">CascadeGuard</a><p>Prepare your operating cash</p><nav aria-label="Main navigation">{[['workspace','Treasury Workspace'],['evidence','Bank Evidence'],['scenario','Scenario Lab']].map(([id,label])=><button key={id} className={view===id?'nav active':'nav'} onClick={()=>{setView(id);setReport(false);}}>{label}</button>)}</nav><p className="side-foot">USD · 30 days · simulation only</p></aside>
+ <div className="main-shell"><header className="topbar"><span>Prepare before interrupted access</span><div className="simulation-actions"><button className="quiet" onClick={()=>importFile.current?.click()}>Import JSON</button><button className="quiet" onClick={exportJson} disabled={!result}>Export JSON</button><input ref={importFile} hidden type="file" accept=".json" aria-label="Import portfolio JSON" onChange={e=>{const f=e.target.files?.[0];if(f)void importJson(f);}}/></div></header>
+ <main>
+ {error&&<div role="alert" className="alert error">{error}<button onClick={()=>setError('')} aria-label="Dismiss error">×</button></div>}
+ {storageError&&<div role="alert" className="alert error">{storageError}{savedRaw.current&&<button onClick={()=>showExport(savedRaw.current,'cascadeguard-original.json')}>Export original</button>}</div>}
+ {exportData&&exportPreview&&<section className="card" aria-label="Portfolio export"><h2>Save your portfolio JSON</h2><p>{exportData.filename==='cascadeguard-original.json'?'Original saved text, without validation. Keep this for recovery; it may not be a valid portfolio.':'Validated input and reviewed history. Results are recalculated on import.'}</p><p role="status">{exportStatus}</p><button onClick={()=>{download(exportData.text,exportData.filename);setExportStatus('Download requested. If no file appears, use Copy JSON or copy every section in order.');}}>Download JSON</button><button onClick={()=>void copyExport()}>Copy JSON</button><button onClick={()=>setExportData(null)}>Close export</button>{exportPreview.count>1&&<><p>Large file: the text is shown in sections to keep this page responsive. Download JSON and Copy JSON include the complete file. A section alone is not a valid portfolio. For manual recovery, join all sections in order without adding or removing characters.</p><p role="status">JSON section {exportPreview.index+1} of {exportPreview.count}</p><button disabled={exportPreview.index===0} onClick={()=>setExportPage(exportPreview.index-1)}>Previous JSON section</button><button disabled={exportPreview.index===exportPreview.count-1} onClick={()=>setExportPage(exportPreview.index+1)}>Next JSON section</button></>}<label className="field">{exportPreview.count===1?'Complete JSON for local export':`JSON section ${exportPreview.index+1} for local export`}<textarea readOnly rows={8} value={exportPreview.text} spellCheck={false} wrap="off"/></label></section>}
+ {pendingReplacement&&<div role="alert" className="alert error"><span>Replacement has not been saved. Continue in this tab only to keep existing device data untouched; export JSON before closing.</span><button onClick={()=>{deviceStore.current!.useMemoryOnly();useReplacement(pendingReplacement.session,pendingReplacement.notice);}}>Continue without saving to device</button><button onClick={()=>setPendingReplacement(null)}>Cancel replacement</button></div>}
+ {notice&&<div role="status" className="alert">{notice}<button onClick={()=>setNotice('')} aria-label="Dismiss notice">×</button></div>}
+ {!hydrated?<p>Restoring device-local inputs…</p>:<>
+ <div className="page-heading"><div><h1>Will your cash cover the essentials?</h1><p>Check 30 days using money already held, before one bank becomes unavailable.</p></div><span className="mode-badge">Simulation only</span></div>
+ <div className="start-actions"><button className="secondary" onClick={()=>begin(false)}>Start with my inputs</button><button className="secondary" onClick={()=>begin(true)}>Try an example</button></div>
+ {view==='evidence'?<section className="card"><h2>Bank Evidence</h2><p>Optional public evidence. Your disruption assumptions remain yours.</p><button onClick={()=>void loadEvidence()} disabled={evidenceLoading}>{evidenceLoading?'Loading evidence…':'Refresh evidence'}</button>{evidenceError&&<p role="status">{evidenceError}</p>}{snapshot?<><p>Collected {snapshot.collectedAt.slice(0,10)}. Original publication dates unverified. Snapshot {snapshot.version}.</p>{snapshot.banks.map(b=><details key={b.cert}><summary>{b.name} · FDIC {b.cert}</summary><p>Reporting period {b.period}. Deposits {usd(b.deposits)}. Assets {usd(b.assets)}.</p><a href={b.sourceUrl} target="_blank" rel="noreferrer">Open FDIC source</a><p>Next-quarter deposit growth estimate {b.prediction===null?'unavailable':(b.prediction*100).toFixed(2)+'%'}. This is not a failure probability.</p></details>)}<details><summary>Research pilot and limitations</summary><p>Model {snapshot.model.selected}. Retrospective validation; no demonstrated causal contagion.</p><ul>{snapshot.limitations.map(l=><li key={l}>{l}</li>)}</ul></details></>:<p>Cash planning remains available in Treasury Workspace.</p>}</section>:<>
+ {view==='workspace'&&<nav className="journey" aria-label="Preparation steps">{['Your cash','Your payments','Test interruption','Results'].map((label,i)=><button key={label} aria-current={step===i?'step':undefined} className={step===i?'secondary':''} onClick={()=>setStep(i)}>{i+1}. {label}</button>)}</nav>}
+ {validation&&<p role="alert" className="alert error">{validation}</p>}
+ {view==='workspace'&&step===0&&<section className="card"><h2>Your cash</h2><p>Combine accounts at each bank. Use hypothetical figures if preferred.</p>{input.positions.map(p=><div className="bank-input-row" key={p.id}><label>Bank name<input value={p.bankName} maxLength={120} onChange={e=>edit({...input,positions:input.positions.map(x=>x.id===p.id?{...x,bankName:e.target.value,cert:null}:x)})}/></label><label>Balance · USD<input type="number" min="0" step=".01" value={Number.isFinite(p.amount)?p.amount:''} onChange={e=>edit({...input,positions:input.positions.map(x=>x.id===p.id?{...x,amount:e.target.value===''?NaN:Number(e.target.value)}:x)})}/></label><button onClick={()=>{const positions=input.positions.filter(x=>x.id!==p.id);edit({...input,positions,affectedId:input.affectedId===p.id?(positions[0]?.id||''):input.affectedId});}} aria-label={'Remove '+p.bankName}>Remove</button>{snapshot&&<label>Optional evidence link<select value={p.cert??''} onChange={e=>{const cert=e.target.value?Number(e.target.value):null;const b=snapshot.banks.find(b=>b.cert===cert);edit({...input,positions:input.positions.map(x=>x.id===p.id?{...x,cert,bankName:b?.name??x.bankName}:x)});}}><option value="">No linked evidence</option>{snapshot.banks.map(b=><option key={b.cert} value={b.cert}>{b.name}</option>)}</select></label>}</div>)}<button className="secondary" disabled={input.positions.length>=32} onClick={()=>{const id=crypto.randomUUID();edit({...input,positions:[...input.positions,{id,bankName:'',cert:null,amount:0}],affectedId:input.affectedId||id});}}>Add bank</button><button className="primary" disabled={!result} onClick={()=>setStep(1)}>Next: payments</button>{evidenceError&&<p>{evidenceError}</p>}</section>}
+ {view==='workspace'&&step===1&&<section className="card"><h2>Your essential payments</h2><p>Enter all essential obligations you want to cover. Future receipts are excluded.</p>{input.payments.map(p=><div className="payment-row" key={p.id}><label>Description<input value={p.label} maxLength={120} onChange={e=>edit({...input,payments:input.payments.map(x=>x.id===p.id?{...x,label:e.target.value}:x)})}/></label><label>USD<input type="number" min="0" step=".01" value={Number.isFinite(p.amount)?p.amount:''} onChange={e=>edit({...input,payments:input.payments.map(x=>x.id===p.id?{...x,amount:e.target.value===''?NaN:Number(e.target.value)}:x)})}/></label><label>Day<input type="number" min="1" max="30" value={Number.isFinite(p.day)?p.day:''} onChange={e=>edit({...input,payments:input.payments.map(x=>x.id===p.id?{...x,day:e.target.value===''?NaN:Number(e.target.value)}:x)})}/></label><button aria-label={'Remove '+p.label} onClick={()=>edit({...input,payments:input.payments.filter(x=>x.id!==p.id)})}>×</button></div>)}<button className="secondary" disabled={input.payments.length>=100} onClick={()=>edit({...input,payments:[...input.payments,{id:crypto.randomUUID(),label:'',day:1,amount:0}]})}>Add payment</button><button className="primary" disabled={!result||result.coverage==='insufficient-input'} onClick={()=>setStep(2)}>Next: interruption</button></section>}
+ {((view==='workspace'&&step===2)||view==='scenario')&&<section className="card"><h2>Test an interruption</h2>{selection(input.affectedId,id=>edit({...input,affectedId:id}),'Affected bank')}<label className="field">Temporarily unavailable · %<input type="number" min="0" max="100" step=".1" value={Number.isFinite(input.unavailablePercent)?input.unavailablePercent:''} onChange={e=>edit({...input,unavailablePercent:e.target.value===''?NaN:Number(e.target.value)})}/></label><label className="field">Duration · days<input type="number" min="1" max="30" value={Number.isFinite(input.durationDays)?input.durationDays:''} onChange={e=>edit({...input,durationDays:e.target.value===''?NaN:Number(e.target.value)})}/></label><p>Funds return at the start of day {Number.isFinite(input.durationDays)?input.durationDays+1:'—'}. Accessible funds are assumed usable to pay all entered obligations.</p><button className="primary" disabled={!result||result.coverage==='insufficient-input'} onClick={()=>{setStep(3);setView('workspace');}}>See results</button></section>}
+ {((view==='workspace'&&step===3)||view==='scenario')&&result&&<section className="card"><h2>{result.coverage==='insufficient-input'?'Add positive obligations to assess coverage':result.maximumShortfall?'Your selected scenario has a shortfall':'Entered obligations are covered in this scenario'}</h2><div className="metrics"><div className="metric"><span>First shortfall</span><strong>{result.firstShortfallDay?'Day '+result.firstShortfallDay:'None'}</strong></div><div className="metric"><span>Maximum cumulative shortfall</span><strong>{usd(result.maximumShortfall)}</strong></div><div className="metric"><span>Total scheduled obligations</span><strong>{usd(result.expenses)}</strong></div></div><p>{result.assumptions}</p><details><summary>Daily calculation</summary><div className="table-scroll" role="region" aria-label="Daily cash calculation" tabIndex={0}><table><thead><tr><th>Day</th><th>Due</th><th>Baseline</th><th>Scenario</th></tr></thead><tbody>{result.daily.map(d=><tr key={d.day}><td>{d.day}</td><td>{usd(d.due)}</td><td>{usd(d.baseline)}</td><td>{usd(d.stressed)}</td></tr>)}</tbody></table></div></details><button className="secondary" onClick={()=>void verify()}>Verify calculation</button>{verification&&<p role="status">{verification}</p>}
+ <h3>Compare preparation before the interruption</h3>{selection(destination,id=>{resetCopilot();setDestination(id);setComparison(null);setChecked(false);setReport(false);setPlanPdf(null);},'Destination bank',input.affectedId)}<button className="secondary" onClick={prepare} disabled={result.coverage==='insufficient-input'||input.positions.length<2}>Find minimum preparation</button><p>Only the selected bank interruption is evaluated. Other-bank interruptions and transfer processing delays are excluded.</p>
+ {liveComparison&&<div className="proposal"><h3>Review proposed preparation</h3><p>Allocate {usd(liveComparison.amount)} from {bankName(liveComparison.from)} to {bankName(liveComparison.to)} before the interruption.</p><p>Maximum shortfall: {usd(liveComparison.beforeResult.maximumShortfall)} before; {usd(liveComparison.afterResult.maximumShortfall)} after. Total funds remain {usd(liveComparison.afterResult.total)}.</p><label className="confirm"><input type="checkbox" checked={checked} onChange={e=>setChecked(e.target.checked)}/>I reviewed these assumptions and want to apply this allocation to my simulation.</label><button className="primary" onClick={apply} disabled={!checked}>Confirm simulation</button></div>}
+ <h3>Treasury Copilot</h3><p>{explain(coreInput(input))}</p><p className="small muted">Ask about coverage, minimum preparation, or draft assumptions such as “80% unavailable for 21 days”. Every amount is calculated from your inputs.</p><label className="confirm"><input type="checkbox" checked={useAI} onChange={e=>{resetCopilot();setUseAI(e.target.checked);}}/>Use optional AI to interpret my question</label><p className="small muted">If configured, only the text you type is sent to Google Gemini through this server. Do not include account numbers or secrets. Portfolio balances, payment schedules and bank evidence are not sent to the AI provider. AI cannot confirm or apply allocations. Without AI, guided mode stays available.</p><label className="field">Question about this scenario<textarea value={question} maxLength={500} onChange={e=>{resetCopilot();setQuestion(e.target.value);}}/></label><button className="secondary" disabled={copilotBusy} onClick={()=>void askCopilot()}>{copilotBusy?'Interpreting question…':'Ask Copilot'}</button>{reply&&<p role="status">{reply}</p>}{copilotDraft&&<div className="proposal"><h4>Review draft assumptions</h4><p>{copilotDraft.unavailablePercent}% unavailable for {copilotDraft.durationDays} days. Your current scenario has not changed.</p><button className="secondary" onClick={()=>edit({...input,...copilotDraft})}>Use these assumptions in simulation</button></div>}
+ <button className="secondary" disabled={result.coverage==='insufficient-input'} onClick={()=>{setPlanPdf(null);setReport(true);}}>Prepare one-page plan</button>
+ </section>}
+ </>}
+ {report&&result&&<section className="card printable-plan"><div className="no-print"><button onClick={createPlanPdf}>Create one-page PDF</button><button onClick={()=>window.print()}>Print text / browser PDF</button><button onClick={()=>setReport(false)}>Close plan</button></div><h2>CascadeGuard preparation plan</h2>{planPdf&&<div className="no-print"><a href={planPdf.pdfUrl} download="cascadeguard-preparation-plan.pdf">Download one-page PDF</a><p className="small muted">This PDF is a single-page image. Use the text view below or browser print for selectable text; export JSON for complete inputs/history.</p><img src={planPdf.previewUrl} alt="Preview of the one-page preparation plan; the same assumptions and results are in the text below." style={{width:420,maxWidth:'100%',height:'auto'}}/></div>}<p>Prepared {new Date().toLocaleDateString('en-US')}. USD · simulation before interrupted access.</p><p>Affected bank: {bankName(input.affectedId)}. {input.unavailablePercent}% unavailable for {input.durationDays} days. Funds return at start of day {input.durationDays+1}.</p><p>Total funds {usd(result.total)}; scheduled obligations {usd(result.expenses)}. First shortfall {result.firstShortfallDay?'day '+result.firstShortfallDay:'none'}; maximum cumulative shortfall {usd(result.maximumShortfall)}.</p><h3>Current bank balances</h3><ul>{input.positions.slice(0,6).map(p=><li key={p.id}>{p.bankName}: {usd(p.amount)}</li>)}</ul>{input.positions.length>6&&<p>{input.positions.length-6} additional banks. Export JSON for full inputs.</p>}<h3>Next scheduled payments</h3><ul>{[...input.payments].sort((a,b)=>a.day-b.day).slice(0,8).map(p=><li key={p.id}>Day {p.day} · {p.label}: {usd(p.amount)}</li>)}</ul>{input.payments.length>8&&<p>{input.payments.length-8} additional payments included in totals; export JSON for full inputs.</p>}
+ {liveComparison?<p>Unconfirmed proposal: {usd(liveComparison.amount)} from {bankName(liveComparison.from)} to {bankName(liveComparison.to)}. Maximum shortfall before {usd(liveComparison.beforeResult.maximumShortfall)}, after {usd(liveComparison.afterResult.maximumShortfall)}.</p>:confirmedAction?<p>Confirmed simulation: {usd(confirmedAction.amount)} from {bankName(confirmedAction.from)} to {bankName(confirmedAction.to)}, recorded {confirmedAction.at}. Maximum shortfall before {usd(calculatePortfolio(confirmedAction.before).maximumShortfall)}, after {usd(calculatePortfolio(confirmedAction.after).maximumShortfall)}.</p>:<p>No current reviewed allocation. Historical simulated changes: {session.activity.length}. See exported JSON for full before/after history.</p>}<p>{result.assumptions} This evaluates one selected bank interruption; it is not a bank failure prediction or instruction to transfer real money.</p><p>Bank evidence: {snapshot?'snapshot '+snapshot.version+' collected '+snapshot.collectedAt.slice(0,10):'unavailable; no bank evidence used in calculation'}.</p></section>}
+ {session.legacyActivity?.length? <p>Preserved {session.legacyActivity.length} legacy allocation records without original scenario assumptions. They are not reclassified as reviewed preparation plans.</p>:null}
+ </>}
+ </main></div></div>;
+}

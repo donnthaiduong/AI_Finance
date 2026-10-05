@@ -1,0 +1,244 @@
+{
+  "recordedAt": "2026-10-05T13:31:39.907Z",
+  "browser": "Codex in-app browser",
+  "syntheticInputs": true,
+  "records": [
+    {
+      "width": 320,
+      "view": "1. Your cash",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 320,
+      "view": "2. Your payments",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 320,
+      "view": "3. Test interruption",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 320,
+      "view": "4. Results",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 320,
+      "view": "expanded daily calculation",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "regionScroll": 311,
+      "regionWidth": 238,
+      "scrollWidth": 305
+    },
+    {
+      "width": 320,
+      "view": "evidence and open limitations",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 320,
+      "view": "generated plan preview",
+      "bodyWidth": 305,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 390,
+      "view": "1. Your cash",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "view": "2. Your payments",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "view": "3. Test interruption",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "view": "4. Results",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "view": "expanded daily calculation",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "regionScroll": 311,
+      "regionWidth": 308,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "view": "evidence and open limitations",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 390,
+      "view": "generated plan preview",
+      "bodyWidth": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "width": 768,
+      "view": "1. Your cash",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    {
+      "width": 768,
+      "view": "2. Your payments",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    {
+      "width": 768,
+      "view": "3. Test interruption",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    {
+      "width": 768,
+      "view": "4. Results",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    {
+      "width": 768,
+      "view": "expanded daily calculation",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "regionScroll": 458,
+      "regionWidth": 458,
+      "scrollWidth": 753
+    },
+    {
+      "width": 768,
+      "view": "evidence and open limitations",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    {
+      "width": 768,
+      "view": "generated plan preview",
+      "bodyWidth": 753,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    {
+      "width": 1280,
+      "view": "1. Your cash",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 1280,
+      "view": "2. Your payments",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 1280,
+      "view": "3. Test interruption",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 1280,
+      "view": "4. Results",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 1280,
+      "view": "expanded daily calculation",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "regionScroll": 904,
+      "regionWidth": 904,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 1280,
+      "view": "evidence and open limitations",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    {
+      "width": 1280,
+      "view": "generated plan preview",
+      "bodyWidth": 1265,
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    }
+  ],
+  "keyboard": [
+    {
+      "label": "Destination bank",
+      "tag": "SELECT",
+      "text": "Choose bankExample bank BExample bank C"
+    },
+    {
+      "label": null,
+      "tag": "BUTTON",
+      "text": "Find minimum preparation"
+    },
+    {
+      "label": null,
+      "tag": "INPUT",
+      "text": ""
+    },
+    {
+      "label": null,
+      "tag": "TEXTAREA",
+      "text": ""
+    },
+    {
+      "label": null,
+      "tag": "BUTTON",
+      "text": "Ask Copilot"
+    },
+    {
+      "label": null,
+      "tag": "BUTTON",
+      "text": "Prepare one-page plan"
+    }
+  ],
+  "keyboardTableScrollPixels": 73.23076629638672
+}

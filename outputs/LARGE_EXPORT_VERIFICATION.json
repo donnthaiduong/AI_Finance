@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-05T17:16:28.0862516+00:00",
+  "scope": "Production IAB on isolated localhost:3003; synthetic data",
+  "fixtureBytes": 15433292,
+  "fixtureSha256": "afe7ea0a08e06361183aa0ecafa3c3f9f9efb4574554c0dd2d142e6375e757ef",
+  "reassembledSha256": "afe7ea0a08e06361183aa0ecafa3c3f9f9efb4574554c0dd2d142e6375e757ef",
+  "sectionsReadThroughUi": 116,
+  "maxObservedSectionCharacters": 65536,
+  "assembledCharacters": 7556268,
+  "banks": 32,
+  "payments": 100,
+  "reviewedRecords": 50,
+  "legacyRecords": 50,
+  "nativeWriteRejectionObserved": true,
+  "explicitMemoryContinuationObserved": true,
+  "reloadRestoredPriorEmptyPortfolio": true,
+  "storageBytesInspected": false,
+  "nativeDownloadVerified": false,
+  "nativeClipboardVerified": false,
+  "javascriptTestsPassed": 68,
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "screenshot": "outputs/large-export-proof-20261006.png",
+  "sourceHashes": {
+    "tests/export-preview.test.mjs": "89c9a4c266b9cfdc66c555be620f2035f594327f9506e165539d6ddbbd59794a",
+    "app/treasury-workspace.tsx": "a502ca084b63de601988527c3d10f853a1c43670a913c23ca9175d48856c1cf9",
+    "lib/export-preview.ts": "dc1a210a6abe55a2da87ffd9471fbb3be3a18bbcdd44ebc9bfccab5e3cdb3574"
+  }
+}

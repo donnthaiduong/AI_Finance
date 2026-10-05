@@ -1,0 +1,22 @@
+[
+  {
+    "file": "output\\pdf\\preparation-confirmed-example.pdf",
+    "pages": 1,
+    "sizeBytes": 313698,
+    "A4": true,
+    "imageSize": [
+      1240,
+      1754
+    ]
+  },
+  {
+    "file": "output\\pdf\\preparation-maximum-inputs.pdf",
+    "pages": 1,
+    "sizeBytes": 594038,
+    "A4": true,
+    "imageSize": [
+      1240,
+      1754
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-05T16:19:54.053256+00:00",
+  "status": "passed",
+  "scope": "Isolated retrospective bank-model replay on derived data from exact recovered FDIC bytes; no promotion or point-in-time claim",
+  "dataset": "outputs\\recovered-datasets\\20261005T161509722048Z\\dataset.json",
+  "datasetSha256": "55facb085ab0ae1a6b3e566d9184da5ff1eca1d3f5aae96a105bc0f281a7f7c8",
+  "originalDatasetBytesRestored": false,
+  "originalTreasuryBytesRestored": false,
+  "runFolder": "outputs\\research-runs\\20261005T161540264478Z",
+  "runManifestSha256": "f7d57e2cf7c7d14926ad361339e4b48332f41ffe16d9811f3f71d33351c47f4d",
+  "datasetAudit": "passed",
+  "snapshotAudit": "passed",
+  "selected": "Ridge",
+  "comparison": {
+    "selectionMatchesInherited": true,
+    "testMetricsMatchInherited": true
+  },
+  "all32BankFieldsMatchActive": true,
+  "activeSnapshotSha256": "424ad8f61a86c4e000adf6d0b21f70a1b758d9be6c995838618bdc0297800a42",
+  "pythonTestsPassed": 46,
+  "promoted": false,
+  "limitations": [
+    "Current revised data; original publication timestamps/vintages unavailable. Retrospective pilot, not a point-in-time early-warning claim.",
+    "32 current large surviving banks; survivorship bias and limited relevance to smaller SME banks.",
+    "Previous-year SOD availability proxy; actual historical publication dates unverified.",
+    "Geographic overlap is similarity, not proof of causal contagion.",
+    "Treasury rates are context only, not model features."
+  ]
+}

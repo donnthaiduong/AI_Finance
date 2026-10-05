@@ -1,0 +1,102 @@
+{
+  "recordedAt": "2026-10-05T16:01:48.635051+00:00",
+  "status": "partial",
+  "officialSourceHashesValid": true,
+  "downloadedSources": [
+    {
+      "url": "https://api.fdic.gov/banks/docs/risview_properties.yaml",
+      "file": "outputs\\fdic-reference\\risview_properties.yaml",
+      "sha256": "b257457e4e821d6a0d9f88ffc4e6e0da80e4ccf67fa394cadb21587b50b23d59",
+      "collectedAt": "2026-10-05T15:28:18.778560+00:00"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/docs/sod_properties.yaml",
+      "file": "outputs\\fdic-reference\\sod_properties.yaml",
+      "sha256": "5b91976f7f96d2684a28e8a6d93d74a6e23f10d64dc2465ac982f3a5872f6f77",
+      "collectedAt": "2026-10-05T15:28:19.839687+00:00"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/docs/institution_properties.yaml",
+      "file": "outputs\\fdic-reference\\institution_properties.yaml",
+      "sha256": "6ed1763c66a9e240904a45712b23d825c0f31beaadb6cd0213fc1bf00b2af1b9",
+      "collectedAt": "2026-10-05T15:28:21.277403+00:00"
+    },
+    {
+      "url": "https://fdic.gov/bank-financial-reports/2025-sod-instructions.pdf",
+      "file": "outputs\\fdic-reference\\2025-sod-instructions.pdf",
+      "sha256": "6568882b78fe1f055105570d95231ff9783f2932e03c5f7bf8df0ff12aa4c7be",
+      "collectedAt": "2026-10-05T15:39:21.159677+00:00"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/docs//sod_variables_definitions.csv",
+      "file": "outputs\\fdic-reference\\sod_variables_definitions.csv",
+      "sha256": "968e9a19466dec5ba61b8aad6a305e7a7289ff3c8c558491734381bbb8223068",
+      "collectedAt": "2026-10-05T15:53:10.475334+00:00"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/docs//locations_definitions.csv",
+      "file": "outputs\\fdic-reference\\locations_definitions.csv",
+      "sha256": "9e902fa965e8bc2fc79173ac40418a0ad2eaeb36ad9837c5721ac159e6013f73",
+      "collectedAt": "2026-10-05T15:53:11.273137+00:00"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/docs//All%20Financial%20Reports.xlsx",
+      "file": "outputs\\fdic-reference\\All Financial Reports.xlsx",
+      "sha256": "6413c93064c16c63d4850221b25181f03ea51d086cd8f68d365cb070f383ab65",
+      "collectedAt": "2026-10-05T15:53:13.340783+00:00"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/financials?filters=CERT%3A14+AND+REPDTE%3A20260630&fields=CERT%2CREPDTE%2CASSET%2CDEP%2CEQ%2CEQR%2CROA&format=json&limit=1",
+      "file": "outputs\\fdic-reference\\financial-unit-observation-89affb1b8a165cc55c39e9ef01d09bac42f32a5a9c8f11d8e64b7753f3ae9e26.json",
+      "sha256": "89affb1b8a165cc55c39e9ef01d09bac42f32a5a9c8f11d8e64b7753f3ae9e26",
+      "collectedAt": "2026-10-05T15:59:22.432160+00:00",
+      "purpose": "New read-only unit sanity check; not frozen training corpus"
+    },
+    {
+      "url": "https://api.fdic.gov/banks/financials?filters=CERT%3A%2814+OR+588+OR+628+OR+639+OR+913+OR+3510+OR+3511+OR+4297+OR+6384+OR+6548+OR+6560+OR+6672+OR+7213+OR+9846+OR+11063+OR+12368+OR+16571+OR+17534+OR+18409+OR+27314+OR+27471+OR+29950+OR+32188+OR+32992+OR+33124+OR+34221+OR+35583+OR+57450+OR+57565+OR+57803+OR+57890+OR+57957%29+AND+REPDTE%3A%2820260331+OR+20260630%29&fields=CERT%2CREPDTE%2CASSET%2CDEP%2CEQ%2CEQR%2CROA&format=json&limit=128",
+      "file": "outputs\\fdic-reference\\financial-crosscheck-6ce5f0a1cba3fb9647e86f98db6376d89ef19f29445bea29899274a9d7d30f72.json",
+      "sha256": "6ce5f0a1cba3fb9647e86f98db6376d89ef19f29445bea29899274a9d7d30f72",
+      "collectedAt": "2026-10-05T16:00:31.415286+00:00",
+      "purpose": "New read-only current financial reconciliation; not restoration of frozen corpus"
+    }
+  ],
+  "renderedBrowserObservation": {
+    "url": "https://banks.data.fdic.gov/bankfind-suite/financialreporting/report",
+    "kind": "Live rendered DOM inspected; observation record, not saved raw HTML",
+    "tableUnits": "Thousands USD",
+    "searchOptionMapping": {
+      "Total Assets": "ASSET",
+      "Total Deposits": "DEP"
+    },
+    "depositsFootnote": "Domestic offices; full API DEP scope separately defined by RIS"
+  },
+  "verified": {
+    "ASSET": "USD thousands; display multiply 1000",
+    "DEP": "USD thousands; display multiply 1000",
+    "ROA": "Annualized percentage; model divides 100, display retains percentage",
+    "DEPSUMBR": "2025 SOD branch domestic deposits in USD thousands, rounded to nearest thousand",
+    "STCNTYBR": "Official SOD CSV: branch state and county FIPS code; syntactic normalization implemented"
+  },
+  "sodInstructionPdfPages": [
+    6,
+    8
+  ],
+  "open": [
+    "EQ explicit thousands scaling",
+    "Historical FIPS code membership/boundary changes",
+    "snapshot transformations reconciled to frozen corpus",
+    "historical publication dates and vintages",
+    "historical SOD instruction consistency"
+  ],
+  "notVerified": [
+    "model predictions",
+    "bank failure probabilities",
+    "causal contagion"
+  ],
+  "productSnapshotChanged": false,
+  "modelChanged": false,
+  "inferences": {
+    "EQ_ASSET_shared_scale": "RIS defines EQR percentage as EQ/ASSET; all 32 new observations agree with EQR = 100*EQ/ASSET. Explicit independent EQ thousands statement remains open."
+  },
+  "currentFinancialCrosscheck": "outputs/FDIC_CURRENT_FINANCIAL_CROSSCHECK.json"
+}

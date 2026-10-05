@@ -1,0 +1,2 @@
+# Preserve official source bytes so archived SHA-256 receipts survive checkout.
+outputs/fdic-reference/** -text

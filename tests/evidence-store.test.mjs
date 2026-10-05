@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtemp,readFile,writeFile,rm,mkdir,rename} from 'node:fs/promises';
+import {mkdtemp,readFile,writeFile,rm,mkdir,rename,readdir} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {EvidenceStore} from '../work/evidence-store.mjs';
@@ -31,6 +31,46 @@ test('queued updates reject regressions without replacing newer snapshot',()=>wi
  const newer={...fixture,version:fixture.version+'-new',collectedAt:new Date(Date.parse(fixture.collectedAt)+1000).toISOString()};
  const outcomes=await Promise.allSettled([store.importSnapshot(newer),store.importSnapshot(fixture)]);
  assert.equal(outcomes[0].status,'fulfilled');assert.equal(outcomes[1].status,'rejected');assert.equal((await store.getSnapshot()).version,newer.version);
+}));
+test('wrong bank source cannot be imported or replace active evidence',()=>withStore(async(store,directory)=>{
+ const original=await readFile(join(directory,'snapshot.json'),'utf8');
+ const candidate=structuredClone(fixture);candidate.version+='-wrong-source';
+ candidate.banks[0].sourceUrl=candidate.banks[0].sourceUrl.replace(`CERT:${candidate.banks[0].cert}`,`CERT:${candidate.banks[0].cert+1}`);
+ await assert.rejects(store.importSnapshot(candidate));
+ assert.equal(await readFile(join(directory,'snapshot.json'),'utf8'),original);
+ assert.equal((await store.getStatus()).state,'failed');
+}));
+test('wrong period in active source recovers validated fallback after restart',()=>withStore(async(store,directory)=>{
+ await store.getSnapshot();
+ const corrupted=structuredClone(fixture);
+ corrupted.banks[0].sourceUrl=corrupted.banks[0].sourceUrl.replace(`REPDTE:${corrupted.banks[0].period}`,'REPDTE:20150331');
+ await writeFile(join(directory,'snapshot.json'),JSON.stringify(corrupted));
+ assert.deepEqual(await new EvidenceStore(directory).getSnapshot(),fixture);
+}));
+test('backup write failure preserves readable current evidence and cleans temporary files',()=>withStore(async(store,directory)=>{
+ await mkdir(join(directory,'last-valid-snapshot.json'));
+ const current={...fixture,version:fixture.version+'-readable'};
+ await writeFile(join(directory,'snapshot.json'),JSON.stringify(current));
+ assert.equal((await store.getSnapshot()).version,current.version);
+ assert.match((await store.getStatus()).message,/backup could not be updated/);
+ assert.equal((await readdir(directory)).some(name=>name.endsWith('.tmp')),false);
+}));
+test('fallback remains readable when status persistence fails',()=>withStore(async(store,directory)=>{
+ await store.getSnapshot();await writeFile(join(directory,'snapshot.json'),'not json');
+ await mkdir(join(directory,'update-status.json'));
+ assert.equal((await store.getSnapshot()).version,fixture.version);
+ assert.equal((await readdir(directory)).some(name=>name.endsWith('.tmp')),false);
+}));
+test('both backup and status failures still return valid active evidence',()=>withStore(async(store,directory)=>{
+ await mkdir(join(directory,'last-valid-snapshot.json'));await mkdir(join(directory,'update-status.json'));
+ assert.deepEqual(await store.getSnapshot(),fixture);
+ assert.equal((await readdir(directory)).some(name=>name.endsWith('.tmp')),false);
+}));
+test('failed rejection status cannot replace the original validation error',()=>withStore(async(store,directory)=>{
+ await mkdir(join(directory,'update-status.json'));
+ await assert.rejects(store.importSnapshot({...fixture,banks:[]}),error=>error.name==='ZodError');
+ assert.equal((await store.getSnapshot()).version,fixture.version);
+ assert.equal((await readdir(directory)).some(name=>name.endsWith('.tmp')),false);
 }));
 test('admin token requires configured server secret; source text cannot authenticate',()=>{
  const secret='x'.repeat(32);

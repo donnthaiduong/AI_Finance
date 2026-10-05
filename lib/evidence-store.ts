@@ -1,4 +1,4 @@
-import { readFile, writeFile, rename, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, rename, mkdir, unlink } from 'node:fs/promises';
 import { join } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
 import { snapshotSchema } from './snapshot-validation';
@@ -11,8 +11,13 @@ export class EvidenceStore {
   private async atomic(name:string,value:unknown) {
     await mkdir(this.directory,{recursive:true});
     const temporary=join(this.directory,`${name}.${randomUUID()}.tmp`);
-    await writeFile(temporary,JSON.stringify(value,null,2),'utf8');
-    await rename(temporary,join(this.directory,name));
+    try {
+      await writeFile(temporary,JSON.stringify(value,null,2),'utf8');
+      await rename(temporary,join(this.directory,name));
+    } finally {
+      // Only the unique file created by this operation is eligible for cleanup.
+      try { await unlink(temporary); } catch {}
+    }
   }
   private async read(name:string):Promise<Snapshot> {
     return snapshotSchema.parse(JSON.parse(await readFile(join(this.directory,name),'utf8'))) as Snapshot;
@@ -25,16 +30,18 @@ export class EvidenceStore {
   }
   async getSnapshot():Promise<Snapshot> {
     return this.exclusive(async()=>{
+      let current:Snapshot;
       try {
-        const current=await this.read('snapshot.json');
-        // Durable fallback also supports restarting after a damaged active file.
-        await this.atomic('last-valid-snapshot.json',current);
-        return current;
+        current=await this.read('snapshot.json');
       } catch {
         const fallback=await this.read('last-valid-snapshot.json');
-        await this.record('failed','Active evidence unavailable; using last valid snapshot.');
+        try { await this.record('failed','Active evidence unavailable; using last valid snapshot.'); } catch {}
         return fallback;
       }
+      // Backup/status write failures must not discard successfully read evidence.
+      try { await this.atomic('last-valid-snapshot.json',current); }
+      catch { try { await this.record('failed','Current evidence readable; durable backup could not be updated.'); } catch {} }
+      return current;
     });
   }
   async getStatus():Promise<Status|null> {
@@ -52,7 +59,7 @@ export class EvidenceStore {
         await this.atomic('last-valid-snapshot.json',current);
         // The last mutation affecting active evidence is an atomic rename.
         await this.atomic('snapshot.json',candidate);
-      }catch(error){await this.record('failed','Update rejected; last valid evidence retained.');throw error;}
+      }catch(error){try{await this.record('failed','Update rejected; last valid evidence retained.');}catch{}throw error;}
       // A status write failure must not turn an activated update into a rejection.
       try{await this.record('ok','Validated snapshot activated.');}catch{}
       return (value as Snapshot).version;

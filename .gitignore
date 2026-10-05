@@ -15,3 +15,4 @@ data/last-valid-snapshot.json
 data/update-status.json
 data/*.tmp
 outputs/research-runs/
+outputs/recovered-datasets/

@@ -1,5 +1,10 @@
 # Core implementation audit — 2026-10-05
 
+This is the earlier foundation audit. Subsequent guided-journey, v2 session and
+Copilot changes, 42-test result and current unfinished gates are recorded in
+`docs/CORE_RESILIENCE_PROGRESS.md`. The Context Mode availability row below
+describes the earlier audit; Context Mode tools became available in this session.
+
 Người dùng đã chốt nghiên cứu trước demo, chạy cục bộ với snapshot có nguồn,
 và nhóm thử là chủ SME/người phụ trách tài chính dùng ngân hàng Mỹ. Hosting chốt sau.
 

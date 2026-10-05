@@ -1,7 +1,7 @@
 """Two-layer mean GraphSAGE in NumPy, with explicit backprop and temporal splits.
 This pilot uses current revised FDIC data, not verified historical vintages.
 """
-import datetime as dt, hashlib, json, pathlib, time
+import datetime as dt, hashlib, json, pathlib, re, time
 import numpy as np
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'outputs/research-runs/manual' 
@@ -9,20 +9,45 @@ OUTPUT = ROOT / 'outputs/research-runs/manual'
 def quarter_next(p):
     y,m=int(p[:4]),int(p[4:6]); return f'{y+1}0331' if m==12 else f'{y}{m+3:02d}' + ('30' if m+3 in (6,9) else '31')
 
+def county_code(value):
+    """Canonical five-digit state/county syntax; not a historical FIPS lookup."""
+    if isinstance(value,bool) or value is None: raise ValueError('Missing/invalid branch county code.')
+    if isinstance(value,(int,float)):
+        if value<0 or value>=100000 or (isinstance(value,float) and (not np.isfinite(value) or value!=int(value))):
+            raise ValueError('Branch county code must be an integer in five digits.')
+        text=str(int(value))
+    elif isinstance(value,str): text=value
+    else: raise ValueError('Invalid branch county code type.')
+    if not re.fullmatch(r'[0-9]{1,5}',text): raise ValueError('Invalid branch county code syntax.')
+    text=text.zfill(5)
+    if text[:2]=='00' or text[2:]=='000': raise ValueError('Unknown branch county code; do not group it as a real county.')
+    return text
+
 def graph(dataset, certs, year):
     # Conservative annual proxy: use previous-year SOD only. Actual vintage dates unknown.
     available = [int(y) for y,r in dataset['sod'].items() if r and int(y) < year]
     if not available: return np.zeros((len(certs),len(certs)))
     rows=dataset['sod'][str(max(available))]
-    counties=sorted({int(r['STCNTYBR']) for r in rows if r.get('STCNTYBR') is not None})
-    indices={c:i for i,c in enumerate(certs)}; ci={c:i for i,c in enumerate(counties)}
-    v=np.zeros((len(certs),len(counties)))
+    indices={c:i for i,c in enumerate(certs)}
+    selected=[]
     for r in rows:
-        if int(r['CERT']) in indices and r.get('STCNTYBR') is not None:
-            deposit=r.get('DEPSUMBR')
-            if deposit is None or not np.isfinite(float(deposit)) or float(deposit)<0:
-                raise ValueError('Missing or invalid branch deposit; do not replace with zero.')
-            v[indices[int(r['CERT'])], ci[int(r['STCNTYBR'])]] += float(deposit)
+        if int(r['CERT']) not in indices: continue
+        county=county_code(r.get('STCNTYBR'))
+        deposit=r.get('DEPSUMBR')
+        if deposit is None or isinstance(deposit,bool) or not np.isfinite(float(deposit)) or float(deposit)<0:
+            raise ValueError('Missing or invalid branch deposit; do not replace with zero.')
+        selected.append((int(r['CERT']),county,float(deposit)))
+    counties=sorted({county for _,county,_ in selected})
+    ci={c:i for i,c in enumerate(counties)}
+    v=np.zeros((len(certs),len(counties)))
+    for cert,county,deposit in selected:
+        total=float(v[indices[cert],ci[county]])+deposit
+        if not np.isfinite(total): raise ValueError('Branch deposit aggregation overflow.')
+        v[indices[cert],ci[county]]=total
+    if not np.isfinite(v).all(): raise ValueError('Branch deposit aggregation overflow.')
+    # Scaling each bank's vector first keeps its Euclidean norm finite without changing cosine similarity.
+    scale=np.max(v,axis=1,keepdims=True) if v.shape[1] else np.zeros((len(certs),1))
+    v=v/np.where(scale>0,scale,1)
     norm=np.linalg.norm(v,axis=1,keepdims=True); v=v/np.maximum(norm,1e-12)
     a=v@v.T;np.fill_diagonal(a,0)
     # Five most similar geographic peers; zero vectors yield no neighbours.
@@ -76,9 +101,9 @@ def metrics(pred,y,mask):
         recalls.append(len(actual&chosen)/k)
     return {'maePercentagePoints':mae,'recallWorstQuintile':float(np.mean(recalls)),'observations':int(mask.sum())}
 
-def train():
+def train(dataset_path=None):
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    start=time.perf_counter();data=json.loads((ROOT/'data/dataset.json').read_text(encoding='utf-8'))
+    start=time.perf_counter();data=json.loads((pathlib.Path(dataset_path) if dataset_path is not None else ROOT/'data/dataset.json').read_text(encoding='utf-8'))
     certs=sorted(int(r['CERT']) for r in data['institutions']);records={(int(r['CERT']),r['REPDTE']):r for r in data['financials'] if r.get('ASSET') and r.get('DEP')}
     periods=sorted({p for c,p in records});xs=[];ys=[];ms=[];graphs=[];targets=[]
     for j,p in enumerate(periods[1:]):

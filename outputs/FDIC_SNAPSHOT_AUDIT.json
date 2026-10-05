@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "sources": null,
+  "financialRows": null,
+  "datasetSha256": null,
+  "errors": [
+    "Dataset unavailable or invalid: FileNotFoundError"
+  ],
+  "scope": "Offline raw-byte and financial-row integrity; historical releases and official API units require separate verification. Snapshot checks implemented transformations and provenance, not model accuracy or release availability.",
+  "snapshotBanksChecked": 0,
+  "snapshotSha256": null,
+  "recordedAt": "2026-10-05T15:44:25.997055+00:00",
+  "command": "python pipeline/audit.py --snapshot",
+  "exitCode": 1,
+  "syntheticAuditTestsPassed": 20
+}

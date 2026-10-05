@@ -1,0 +1,191 @@
+{
+  "recordedAt": "2026-10-05T16:00:31.415286+00:00",
+  "status": "passed",
+  "snapshotSha256": "424ad8f61a86c4e000adf6d0b21f70a1b758d9be6c995838618bdc0297800a42",
+  "source": {
+    "url": "https://api.fdic.gov/banks/financials?filters=CERT%3A%2814+OR+588+OR+628+OR+639+OR+913+OR+3510+OR+3511+OR+4297+OR+6384+OR+6548+OR+6560+OR+6672+OR+7213+OR+9846+OR+11063+OR+12368+OR+16571+OR+17534+OR+18409+OR+27314+OR+27471+OR+29950+OR+32188+OR+32992+OR+33124+OR+34221+OR+35583+OR+57450+OR+57565+OR+57803+OR+57890+OR+57957%29+AND+REPDTE%3A%2820260331+OR+20260630%29&fields=CERT%2CREPDTE%2CASSET%2CDEP%2CEQ%2CEQR%2CROA&format=json&limit=128",
+    "file": "outputs\\fdic-reference\\financial-crosscheck-6ce5f0a1cba3fb9647e86f98db6376d89ef19f29445bea29899274a9d7d30f72.json",
+    "sha256": "6ce5f0a1cba3fb9647e86f98db6376d89ef19f29445bea29899274a9d7d30f72",
+    "collectedAt": "2026-10-05T16:00:31.415286+00:00",
+    "purpose": "New read-only current financial reconciliation; not restoration of frozen corpus"
+  },
+  "banksChecked": 32,
+  "financialObservationsReturned": 64,
+  "checks": [
+    "USD ASSET/DEP scaling",
+    "EQ/ASSET fraction and EQR percent",
+    "ROA unchanged percentage",
+    "Previous-quarter deposit growth"
+  ],
+  "observations": [
+    {
+      "cert": 14,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 588,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 628,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 639,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 913,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 3510,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 3511,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 4297,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 6384,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 6548,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 6560,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 6672,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 7213,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 9846,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 11063,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 12368,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 16571,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 17534,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 18409,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 27314,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 27471,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 29950,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 32188,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 32992,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 33124,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 34221,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 35583,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 57450,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 57565,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 57803,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 57890,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    },
+    {
+      "cert": 57957,
+      "period": "20260630",
+      "previousPeriod": "20260331"
+    }
+  ],
+  "errors": [],
+  "scope": "Agreement with newly retrieved FDIC revised data; not frozen-corpus or point-in-time reproduction",
+  "excluded": [
+    "model predictions",
+    "peer weights",
+    "original publication dates",
+    "historical model training"
+  ],
+  "productSnapshotChanged": false
+}

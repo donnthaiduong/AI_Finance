@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-10-05T15:52:01.321080+00:00",
+  "scope": "Metadata consistency and shared schema; not source values or historical release verification",
+  "javascriptTestsPassed": 65,
+  "testsAdded": 6,
+  "typescript": "passed",
+  "productionBuild": "passed",
+  "localHttpSmoke": "passed",
+  "productDataChanged": false,
+  "modelChanged": false,
+  "sourceCorpus": "absent; original archive requested",
+  "files": {
+    "lib\\snapshot-validation.ts": "a72cc46919f0f6693c0068c864e0f9d3a2236f44a3568f891d18b660051f3422",
+    "tests\\core.test.mjs": "c5d876683f2d9f089e5a8c6c567b893af6e2d07ebffad8d6ca884661ecf50cd0",
+    "tests\\evidence-store.test.mjs": "c8f4d17803603225fd049aadcda3267c519d0d9264ea4f4f50b7b012d3b889df"
+  }
+}

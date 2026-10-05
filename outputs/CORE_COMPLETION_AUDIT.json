@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-05T23:19:54.053256+07:00",
+  "status": "incomplete",
+  "javascriptTestsPassed": 68,
+  "pythonTestsPassed": 46,
+  "currentFinancialBanksChecked": 32,
+  "currentFinancialObservations": 64,
+  "httpSmoke": "passed this turn",
+  "checks": [
+    {
+      "name": "python-tests",
+      "exitCode": 0,
+      "log": "outputs/completion-python-tests.log"
+    },
+    {
+      "name": "current-financials",
+      "exitCode": 0,
+      "log": "outputs/completion-current-financials.log"
+    }
+  ],
+  "datasetPresent": false,
+  "liveAiVerified": false,
+  "realUserSessionsCompleted": 0,
+  "remaining": [
+    "Live AI provider/schema/intent verification",
+    "Native browser/device behaviors",
+    "Five real SME sessions",
+    "Remaining field/historical/temporal research gates",
+    "Original JSON/Treasury archival bytes remain unavailable; banking model replay now verified independently"
+  ],
+  "sourceFiles": {
+    "pipeline\\check_current_financials.py": "71c8dc343857b8b56f24c01e65b1ceed2efe637fcd1f7e674f36b456ce45efea",
+    "pipeline\\train.py": "ff1263866f4ade79c6515a25d3810eb37aebbd809021979ea9b543418b370f20",
+    "lib\\snapshot-validation.ts": "a72cc46919f0f6693c0068c864e0f9d3a2236f44a3568f891d18b660051f3422",
+    "lib\\evidence-store.ts": "d28c772489958fc7578e84eeeb5e0d50330e0aad9b3a8510530406a98d4b90de"
+  },
+  "rawResponsesRecovered": 51,
+  "rawResponsesExpected": 52,
+  "rawRecoveryReport": "outputs/FDIC_RAW_RECOVERY.json",
+  "bankModelReplay": "passed on audited derived FDIC data; no promotion",
+  "bankModelReplayReport": "outputs/RECOVERED_MODEL_REPLAY.json",
+  "nativeStorageCheck": "Production IAB native write rejection, explicit memory continuation, byte-exact 15.43 MB text export via 116 sections, semantic empty-save reload verified; native download/clipboard remain open",
+  "nativeStorageReport": "docs/NATIVE_STORAGE_VERIFICATION.md",
+  "largeExportReport": "outputs/LARGE_EXPORT_VERIFICATION.json"
+}

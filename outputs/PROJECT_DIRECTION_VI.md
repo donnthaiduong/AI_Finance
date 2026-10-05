@@ -4,6 +4,10 @@ Ghi nhận ngày 04/10/2026 theo yêu cầu của chủ dự án. Nguồn quyế
 
 ## 1. Mục tiêu sản phẩm
 
+### Phạm vi đã chốt ngày 05/10/2026 trong phiên xây dựng
+
+Người dùng chọn chuẩn bị **trước** gián đoạn ngân hàng, với tiền hiện có và nghĩa vụ 30 ngày. Hai chức năng bổ trợ là tìm mức phân bổ dự phòng tối thiểu cho ngân hàng đích do người dùng chọn và xuất kế hoạch một trang. Copilot có giới hạn hỗ trợ cùng tác vụ; mọi số liệu lấy từ công cụ và mọi áp dụng cần xác nhận. Ưu tiên MVP dự thi 20/10; có thể tiếp cận SME dùng ngân hàng Mỹ. “Rủi ro 3 sao” là tiêu chí kỹ thuật nội bộ đã được người dùng chốt: số liệu cực biên, dữ liệu thiếu/hỏng, API AI lỗi và xác nhận lỗi thời phải được xử lý an toàn. Chi tiết tiến độ và gate chưa đạt ở `docs/CORE_RESILIENCE_PROGRESS.md`; không coi đây là thang điểm cuộc thi.
+
 CascadeGuard giúp chủ SME hoặc người phụ trách tài chính sử dụng ngân hàng Mỹ trả lời: tiền còn khả dụng có đủ trả các khoản chi thiết yếu trong 30 ngày khi một phần tiền gửi tạm thời không sử dụng được hay không?
 
 Ưu tiên lean product: hoàn thành một tác vụ hữu ích, đo hiệu quả với người dùng rồi mới mở rộng. Hướng dự thi kế thừa là Topic E — SME Finance Copilot. App và demo bằng tiếng Anh, sử dụng USD. Yêu cầu hồ sơ và lịch cuộc thi phải được kiểm tra riêng khi chuẩn bị nộp.
