@@ -1,0 +1,162 @@
+{
+  "manifest": {
+    "runId": "20261004T100243583769Z",
+    "executedAt": "2026-10-04T10:02:47.863189+00:00",
+    "status": "observed-local-reproduction",
+    "dataset": {
+      "status": "passed",
+      "sources": 52,
+      "financialRows": 1344,
+      "datasetSha256": "0a214a4f4272b47941c100d101e252b27515c9045a1d95998b4411ac05578d7e",
+      "errors": [],
+      "scope": "Offline raw-byte integrity; historical releases and API units require separate verification."
+    },
+    "trainSha256": "7f6e8d1743345b6c42b3f15bae38587df5b18c0e3fb97e89a0d8db8e71d6f190",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "comparison": {
+      "selectionMatchesInherited": true,
+      "testMetricsMatchInherited": true
+    },
+    "selected": "Ridge",
+    "limitations": [
+      "Current revised data; original publication timestamps/vintages unavailable. Retrospective pilot, not a point-in-time early-warning claim.",
+      "32 current large surviving banks; survivorship bias and limited relevance to smaller SME banks.",
+      "Previous-year SOD availability proxy; actual historical publication dates unverified.",
+      "Geographic overlap is similarity, not proof of causal contagion.",
+      "Treasury rates are context only, not model features."
+    ],
+    "promotion": "Not promoted to product snapshot"
+  },
+  "report": {
+    "selected": "Ridge",
+    "selectionRule": "Lowest validation MAE among lag and ridge; GraphSAGE eligible only if it also beats the matched self-only ablation. Never select using test MAE.",
+    "validation": {
+      "LagGrowth": 5.603680149762928,
+      "Ridge": 4.6248532788594785,
+      "GraphSAGE": 4.19385197873901,
+      "SelfOnlyAblationBest": 3.6666775980720554
+    },
+    "test": {
+      "LagGrowth": {
+        "maePercentagePoints": 3.0435746180563785,
+        "recallWorstQuintile": 0.26785714285714285,
+        "observations": 256
+      },
+      "Ridge": {
+        "maePercentagePoints": 3.0211992656245767,
+        "recallWorstQuintile": 0.21428571428571427,
+        "observations": 256
+      },
+      "GraphSAGESelectedSeed": {
+        "maePercentagePoints": 2.7060059039025837,
+        "recallWorstQuintile": 0.1964285714285714,
+        "observations": 256
+      },
+      "SelfOnlyAblationMean": {
+        "maePercentagePoints": 2.3293136197141115,
+        "recallWorstQuintile": 0.26190476190476186
+      }
+    },
+    "seeds": [
+      {
+        "name": "GraphSAGE",
+        "seed": 7,
+        "epochs": 117,
+        "validationMAEPercentagePoints": 4.264062399690753,
+        "test": {
+          "maePercentagePoints": 2.708665356786873,
+          "recallWorstQuintile": 0.23214285714285715,
+          "observations": 256
+        }
+      },
+      {
+        "name": "GraphSAGE",
+        "seed": 19,
+        "epochs": 83,
+        "validationMAEPercentagePoints": 4.19385197873901,
+        "test": {
+          "maePercentagePoints": 2.7060059039025837,
+          "recallWorstQuintile": 0.1964285714285714,
+          "observations": 256
+        }
+      },
+      {
+        "name": "GraphSAGE",
+        "seed": 43,
+        "epochs": 76,
+        "validationMAEPercentagePoints": 4.621007042921033,
+        "test": {
+          "maePercentagePoints": 2.734418446485388,
+          "recallWorstQuintile": 0.25,
+          "observations": 256
+        }
+      },
+      {
+        "name": "SelfOnlyAblation",
+        "seed": 7,
+        "epochs": 61,
+        "validationMAEPercentagePoints": 3.712688576452796,
+        "test": {
+          "maePercentagePoints": 2.2621728477088077,
+          "recallWorstQuintile": 0.23214285714285712,
+          "observations": 256
+        }
+      },
+      {
+        "name": "SelfOnlyAblation",
+        "seed": 19,
+        "epochs": 61,
+        "validationMAEPercentagePoints": 3.860770438496773,
+        "test": {
+          "maePercentagePoints": 2.3317546278711356,
+          "recallWorstQuintile": 0.25,
+          "observations": 256
+        }
+      },
+      {
+        "name": "SelfOnlyAblation",
+        "seed": 43,
+        "epochs": 61,
+        "validationMAEPercentagePoints": 3.6666775980720554,
+        "test": {
+          "maePercentagePoints": 2.3940133835623905,
+          "recallWorstQuintile": 0.30357142857142855,
+          "observations": 256
+        }
+      }
+    ],
+    "summary": {
+      "GraphSAGE": {
+        "meanMAEPercentagePoints": 2.7163632357249483,
+        "stdMAEPercentagePoints": 0.012813044111734093,
+        "meanRecallWorstQuintile": 0.2261904761904762
+      },
+      "SelfOnlyAblation": {
+        "meanMAEPercentagePoints": 2.3293136197141115,
+        "stdMAEPercentagePoints": 0.053851342379783236,
+        "meanRecallWorstQuintile": 0.26190476190476186
+      }
+    },
+    "split": {
+      "trainTarget": "2016\u20132021",
+      "validationTarget": "2022\u20132023",
+      "testTarget": "2024\u20132025"
+    },
+    "features": [
+      "log assets",
+      "deposits/assets",
+      "equity/assets",
+      "ROA",
+      "lag deposit growth"
+    ],
+    "runtimeSeconds": 4.01717920001829,
+    "limitations": [
+      "Current revised data; original publication timestamps/vintages unavailable. Retrospective pilot, not a point-in-time early-warning claim.",
+      "32 current large surviving banks; survivorship bias and limited relevance to smaller SME banks.",
+      "Previous-year SOD availability proxy; actual historical publication dates unverified.",
+      "Geographic overlap is similarity, not proof of causal contagion.",
+      "Treasury rates are context only, not model features."
+    ],
+    "graphIncrementEstablished": false
+  }
+}

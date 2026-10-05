@@ -1,0 +1,35 @@
+{
+  "verifiedOn": "2026-10-05",
+  "scope": "Bounded core implementation research; not systematic literature review",
+  "findings": [
+    {
+      "url": "https://api.fdic.gov/banks/docs",
+      "title": "FDIC BankFind Suite API Documentation",
+      "publicationDate": null,
+      "supportedClaim": "FDIC provides public bank datasets with JSON/CSV responses and institution, financial and SOD definition links.",
+      "uncertainty": "Landing page does not verify every field unit or historical publication timestamp; field definition checks remain required."
+    }
+  ],
+  "unresolved": [
+    "Historical release vintages",
+    "Full field-unit mapping",
+    "Universe relevance to SME banks"
+  ],
+  "failedRetrievals": [
+    {
+      "url": "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+      "status": "403",
+      "usedForClaims": false
+    },
+    {
+      "status": "403",
+      "url": "https://www.fdic.gov/bank-financial-reports/summary-deposits",
+      "usedForClaims": false
+    },
+    {
+      "status": "No readable content",
+      "url": "https://banks.data.fdic.gov/bankfind-suite/help?helpTopic=summary-of-deposits-data-amendments",
+      "usedForClaims": false
+    }
+  ]
+}

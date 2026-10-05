@@ -1,0 +1,1891 @@
+{
+  "schemaVersion": 1,
+  "version": "24d9811429aa7d5e-sage-numpy-8ce6324aab",
+  "collectedAt": "2026-10-02T14:29:15.300504+00:00",
+  "banks": [
+    {
+      "cert": 14,
+      "name": "State Street Bank and Trust Company",
+      "city": "Boston",
+      "state": "MA",
+      "period": "20260630",
+      "assets": 412620000000,
+      "deposits": 326247000000,
+      "equityRatio": 0.07069943289224953,
+      "roa": 0.9699555199953096,
+      "depositChange": 0.08908732808118575,
+      "prediction": 0.036443459162170615,
+      "priority": 25,
+      "peers": [
+        {
+          "cert": 57957,
+          "weight": 0.473
+        },
+        {
+          "cert": 29950,
+          "weight": 0.4193
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0822
+        },
+        {
+          "cert": 18409,
+          "weight": 0.0207
+        },
+        {
+          "cert": 11063,
+          "weight": 0.0047
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:14%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 588,
+      "name": "Manufacturers and Traders Trust Company",
+      "city": "Buffalo",
+      "state": "NY",
+      "period": "20260630",
+      "assets": 218788000000,
+      "deposits": 172325000000,
+      "equityRatio": 0.12872735250562187,
+      "roa": 1.4027456969587437,
+      "depositChange": 0.03030683503132922,
+      "prediction": 0.02611425834384386,
+      "priority": 13,
+      "peers": [
+        {
+          "cert": 18409,
+          "weight": 0.303
+        },
+        {
+          "cert": 4297,
+          "weight": 0.2538
+        },
+        {
+          "cert": 57890,
+          "weight": 0.1659
+        },
+        {
+          "cert": 628,
+          "weight": 0.1389
+        },
+        {
+          "cert": 639,
+          "weight": 0.1384
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:588%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 628,
+      "name": "JPMorgan Chase Bank, National Association",
+      "city": "Columbus",
+      "state": "OH",
+      "period": "20260630",
+      "assets": 4091315000000,
+      "deposits": 2820284000000,
+      "equityRatio": 0.08348904936432418,
+      "roa": 1.5851712753913223,
+      "depositChange": 0.011581803978057342,
+      "prediction": 0.03604481684786712,
+      "priority": 24,
+      "peers": [
+        {
+          "cert": 57890,
+          "weight": 0.3009
+        },
+        {
+          "cert": 639,
+          "weight": 0.2986
+        },
+        {
+          "cert": 33124,
+          "weight": 0.2462
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0927
+        },
+        {
+          "cert": 18409,
+          "weight": 0.0616
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:628%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 639,
+      "name": "The Bank of New York Mellon",
+      "city": "New York",
+      "state": "NY",
+      "period": "20260630",
+      "assets": 425115000000,
+      "deposits": 372562000000,
+      "equityRatio": 0.06925420180421768,
+      "roa": 1.362114740851899,
+      "depositChange": -0.11236431559786908,
+      "prediction": 0.022557478896321564,
+      "priority": 9,
+      "peers": [
+        {
+          "cert": 57890,
+          "weight": 0.3144
+        },
+        {
+          "cert": 628,
+          "weight": 0.3026
+        },
+        {
+          "cert": 33124,
+          "weight": 0.2562
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0676
+        },
+        {
+          "cert": 18409,
+          "weight": 0.0592
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:639%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 913,
+      "name": "The Northern Trust Company",
+      "city": "Chicago",
+      "state": "IL",
+      "period": "20260630",
+      "assets": 178566494000,
+      "deposits": 148110314000,
+      "equityRatio": 0.0668895868000858,
+      "roa": 1.4746993243297355,
+      "depositChange": 0.04094053089344493,
+      "prediction": 0.040401034465902964,
+      "priority": 26,
+      "peers": [
+        {
+          "cert": 16571,
+          "weight": 0.5487
+        },
+        {
+          "cert": 6672,
+          "weight": 0.2283
+        },
+        {
+          "cert": 6560,
+          "weight": 0.0758
+        },
+        {
+          "cert": 628,
+          "weight": 0.0753
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0719
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:913%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 3510,
+      "name": "Bank of America, National Association",
+      "city": "Charlotte",
+      "state": "NC",
+      "period": "20260630",
+      "assets": 2654645000000,
+      "deposits": 2121804000000,
+      "equityRatio": 0.09070478350212552,
+      "roa": 1.126140493190317,
+      "depositChange": -0.002913528358029402,
+      "prediction": 0.010037412054053084,
+      "priority": 2,
+      "peers": [
+        {
+          "cert": 9846,
+          "weight": 0.4122
+        },
+        {
+          "cert": 628,
+          "weight": 0.1758
+        },
+        {
+          "cert": 57890,
+          "weight": 0.1508
+        },
+        {
+          "cert": 3511,
+          "weight": 0.1347
+        },
+        {
+          "cert": 639,
+          "weight": 0.1265
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:3510%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 3511,
+      "name": "Wells Fargo Bank, National Association",
+      "city": "Sioux Falls",
+      "state": "SD",
+      "period": "20260630",
+      "assets": 1907928000000,
+      "deposits": 1563534000000,
+      "equityRatio": 0.08884926475212901,
+      "roa": 1.3764987837774905,
+      "depositChange": 0.030687246124212416,
+      "prediction": 0.009222511069772506,
+      "priority": 1,
+      "peers": [
+        {
+          "cert": 3510,
+          "weight": 0.3213
+        },
+        {
+          "cert": 628,
+          "weight": 0.2068
+        },
+        {
+          "cert": 9846,
+          "weight": 0.1703
+        },
+        {
+          "cert": 57890,
+          "weight": 0.1645
+        },
+        {
+          "cert": 6548,
+          "weight": 0.1371
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:3511%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 4297,
+      "name": "Capital One, National Association",
+      "city": "Mclean",
+      "state": "VA",
+      "period": "20260630",
+      "assets": 662157000000,
+      "deposits": 512600000000,
+      "equityRatio": 0.14909001943647807,
+      "roa": 1.6717593968867013,
+      "depositChange": -0.01573555813707889,
+      "prediction": 0.012248553263818787,
+      "priority": 3,
+      "peers": [
+        {
+          "cert": 18409,
+          "weight": 0.6838
+        },
+        {
+          "cert": 588,
+          "weight": 0.2158
+        },
+        {
+          "cert": 6384,
+          "weight": 0.0348
+        },
+        {
+          "cert": 628,
+          "weight": 0.0338
+        },
+        {
+          "cert": 57890,
+          "weight": 0.0319
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:4297%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 6384,
+      "name": "PNC Bank, National Association",
+      "city": "Wilmington",
+      "state": "DE",
+      "period": "20260630",
+      "assets": 609771726000,
+      "deposits": 457798362000,
+      "equityRatio": 0.10361108150167002,
+      "roa": 1.3168442363727457,
+      "depositChange": 0.036898911366854956,
+      "prediction": 0.0326900442176605,
+      "priority": 21,
+      "peers": [
+        {
+          "cert": 57957,
+          "weight": 0.255
+        },
+        {
+          "cert": 6560,
+          "weight": 0.226
+        },
+        {
+          "cert": 17534,
+          "weight": 0.1925
+        },
+        {
+          "cert": 6672,
+          "weight": 0.1862
+        },
+        {
+          "cert": 16571,
+          "weight": 0.1404
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:6384%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 6548,
+      "name": "U.S. Bank National Association",
+      "city": "Cincinnati",
+      "state": "OH",
+      "period": "20260630",
+      "assets": 705554946000,
+      "deposits": 541886374000,
+      "equityRatio": 0.09755996097857417,
+      "roa": 1.2277839078306394,
+      "depositChange": 0.003798875022704597,
+      "prediction": 0.029699746311016934,
+      "priority": 18,
+      "peers": [
+        {
+          "cert": 6672,
+          "weight": 0.632
+        },
+        {
+          "cert": 16571,
+          "weight": 0.1199
+        },
+        {
+          "cert": 3511,
+          "weight": 0.0893
+        },
+        {
+          "cert": 6560,
+          "weight": 0.0844
+        },
+        {
+          "cert": 913,
+          "weight": 0.0744
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:6548%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 6560,
+      "name": "The Huntington National Bank",
+      "city": "Columbus",
+      "state": "OH",
+      "period": "20260630",
+      "assets": 283073605000,
+      "deposits": 227123103000,
+      "equityRatio": 0.11758290215719688,
+      "roa": 1.0857401002170708,
+      "depositChange": -0.0017147530126951033,
+      "prediction": 0.023596450496341792,
+      "priority": 10,
+      "peers": [
+        {
+          "cert": 6672,
+          "weight": 0.2907
+        },
+        {
+          "cert": 17534,
+          "weight": 0.2262
+        },
+        {
+          "cert": 6384,
+          "weight": 0.1852
+        },
+        {
+          "cert": 16571,
+          "weight": 0.1515
+        },
+        {
+          "cert": 913,
+          "weight": 0.1464
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:6560%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 6672,
+      "name": "Fifth Third Bank, National Association",
+      "city": "Cincinnati",
+      "state": "OH",
+      "period": "20260630",
+      "assets": 299177000000,
+      "deposits": 240928000000,
+      "equityRatio": 0.12592211299665415,
+      "roa": 0.9730230833410587,
+      "depositChange": 0.002129641953946493,
+      "prediction": 0.018771221433253278,
+      "priority": 7,
+      "peers": [
+        {
+          "cert": 6548,
+          "weight": 0.3589
+        },
+        {
+          "cert": 913,
+          "weight": 0.2134
+        },
+        {
+          "cert": 16571,
+          "weight": 0.2132
+        },
+        {
+          "cert": 6560,
+          "weight": 0.1407
+        },
+        {
+          "cert": 6384,
+          "weight": 0.0739
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:6672%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 7213,
+      "name": "Citibank, National Association",
+      "city": "Sioux Falls",
+      "state": "SD",
+      "period": "20260630",
+      "assets": 1976180000000,
+      "deposits": 1547586000000,
+      "equityRatio": 0.08668036312481657,
+      "roa": 1.0564825195197276,
+      "depositChange": 0.031016722528345555,
+      "prediction": 0.017470741549799853,
+      "priority": 5,
+      "peers": [
+        {
+          "cert": 628,
+          "weight": 0.2408
+        },
+        {
+          "cert": 57890,
+          "weight": 0.2383
+        },
+        {
+          "cert": 639,
+          "weight": 0.2261
+        },
+        {
+          "cert": 33124,
+          "weight": 0.183
+        },
+        {
+          "cert": 32188,
+          "weight": 0.1118
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:7213%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 9846,
+      "name": "Truist Bank",
+      "city": "Charlotte",
+      "state": "NC",
+      "period": "20260630",
+      "assets": 548346000000,
+      "deposits": 419212000000,
+      "equityRatio": 0.11483807668880597,
+      "roa": 1.1620305148108248,
+      "depositChange": 0.01363238501453186,
+      "prediction": 0.02654056673729161,
+      "priority": 14,
+      "peers": [
+        {
+          "cert": 3510,
+          "weight": 0.5437
+        },
+        {
+          "cert": 12368,
+          "weight": 0.1514
+        },
+        {
+          "cert": 35583,
+          "weight": 0.1251
+        },
+        {
+          "cert": 3511,
+          "weight": 0.0942
+        },
+        {
+          "cert": 6672,
+          "weight": 0.0856
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:9846%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 11063,
+      "name": "First-Citizens Bank & Trust Company",
+      "city": "Raleigh",
+      "state": "NC",
+      "period": "20260630",
+      "assets": 236317000000,
+      "deposits": 173952000000,
+      "equityRatio": 0.09778390890202567,
+      "roa": 1.026855113595847,
+      "depositChange": 0.014599093608011713,
+      "prediction": 0.0483088367097328,
+      "priority": 29,
+      "peers": [
+        {
+          "cert": 9846,
+          "weight": 0.2569
+        },
+        {
+          "cert": 3511,
+          "weight": 0.2462
+        },
+        {
+          "cert": 3510,
+          "weight": 0.2274
+        },
+        {
+          "cert": 35583,
+          "weight": 0.1504
+        },
+        {
+          "cert": 6548,
+          "weight": 0.1192
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:11063%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 12368,
+      "name": "Regions Bank",
+      "city": "Birmingham",
+      "state": "AL",
+      "period": "20260630",
+      "assets": 159787000000,
+      "deposits": 131776000000,
+      "equityRatio": 0.11226820705063616,
+      "roa": 1.4589964102058415,
+      "depositChange": -0.007411871045495631,
+      "prediction": 0.027628096449568203,
+      "priority": 16,
+      "peers": [
+        {
+          "cert": 35583,
+          "weight": 0.4666
+        },
+        {
+          "cert": 9846,
+          "weight": 0.2332
+        },
+        {
+          "cert": 3510,
+          "weight": 0.144
+        },
+        {
+          "cert": 6384,
+          "weight": 0.0881
+        },
+        {
+          "cert": 6672,
+          "weight": 0.068
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:12368%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 16571,
+      "name": "BMO Bank National Association",
+      "city": "Chicago",
+      "state": "IL",
+      "period": "20260630",
+      "assets": 254972746000,
+      "deposits": 194140429000,
+      "equityRatio": 0.14291085448010982,
+      "roa": 0.1457874900248399,
+      "depositChange": 0.0009248042182984025,
+      "prediction": 0.022388944277242563,
+      "priority": 8,
+      "peers": [
+        {
+          "cert": 913,
+          "weight": 0.5471
+        },
+        {
+          "cert": 6672,
+          "weight": 0.2274
+        },
+        {
+          "cert": 6560,
+          "weight": 0.0782
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0747
+        },
+        {
+          "cert": 6548,
+          "weight": 0.0726
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:16571%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 17534,
+      "name": "KeyBank National Association",
+      "city": "Cleveland",
+      "state": "OH",
+      "period": "20260630",
+      "assets": 188555486000,
+      "deposits": 158480379000,
+      "equityRatio": 0.09932288578439982,
+      "roa": 1.276907433413833,
+      "depositChange": 0.03375574278381772,
+      "prediction": 0.02489880701366779,
+      "priority": 12,
+      "peers": [
+        {
+          "cert": 6560,
+          "weight": 0.285
+        },
+        {
+          "cert": 57957,
+          "weight": 0.223
+        },
+        {
+          "cert": 6384,
+          "weight": 0.1987
+        },
+        {
+          "cert": 588,
+          "weight": 0.1542
+        },
+        {
+          "cert": 6672,
+          "weight": 0.139
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:17534%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 18409,
+      "name": "TD Bank, National Association",
+      "city": "Wilmington",
+      "state": "DE",
+      "period": "20260630",
+      "assets": 342803746000,
+      "deposits": 277668163000,
+      "equityRatio": 0.13329611339778066,
+      "roa": 0.8255348639380751,
+      "depositChange": -0.017262390324109658,
+      "prediction": 0.013529280336961798,
+      "priority": 4,
+      "peers": [
+        {
+          "cert": 4297,
+          "weight": 0.4881
+        },
+        {
+          "cert": 588,
+          "weight": 0.1838
+        },
+        {
+          "cert": 628,
+          "weight": 0.1124
+        },
+        {
+          "cert": 57890,
+          "weight": 0.1091
+        },
+        {
+          "cert": 639,
+          "weight": 0.1065
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:18409%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 27314,
+      "name": "Synchrony Bank",
+      "city": "Draper",
+      "state": "UT",
+      "period": "20260630",
+      "assets": 115217000000,
+      "deposits": 85967000000,
+      "equityRatio": 0.12897402293064392,
+      "roa": 2.8440589502231237,
+      "depositChange": 0.0017945998857981892,
+      "prediction": 0.0487234819039033,
+      "priority": 30,
+      "peers": [
+        {
+          "cert": 57565,
+          "weight": 0.218
+        },
+        {
+          "cert": 57803,
+          "weight": 0.218
+        },
+        {
+          "cert": 27471,
+          "weight": 0.218
+        },
+        {
+          "cert": 32992,
+          "weight": 0.218
+        },
+        {
+          "cert": 33124,
+          "weight": 0.128
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:27314%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 27471,
+      "name": "American Express National  Bank",
+      "city": "Sandy",
+      "state": "UT",
+      "period": "20260630",
+      "assets": 213946192000,
+      "deposits": 171554868000,
+      "equityRatio": 0.08952944112227994,
+      "roa": 3.6961799455330957,
+      "depositChange": -0.013962810043138636,
+      "prediction": 0.04592573816026737,
+      "priority": 28,
+      "peers": [
+        {
+          "cert": 57565,
+          "weight": 0.218
+        },
+        {
+          "cert": 57803,
+          "weight": 0.218
+        },
+        {
+          "cert": 27314,
+          "weight": 0.218
+        },
+        {
+          "cert": 32992,
+          "weight": 0.218
+        },
+        {
+          "cert": 33124,
+          "weight": 0.128
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:27471%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 29950,
+      "name": "Santander Bank, N.A.",
+      "city": "Wilmington",
+      "state": "DE",
+      "period": "20260630",
+      "assets": 103964782000,
+      "deposits": 84392829000,
+      "equityRatio": 0.13314877147532517,
+      "roa": 0.9991464045885665,
+      "depositChange": -0.014631524942916163,
+      "prediction": 0.026562827959229346,
+      "priority": 15,
+      "peers": [
+        {
+          "cert": 57957,
+          "weight": 0.412
+        },
+        {
+          "cert": 14,
+          "weight": 0.3713
+        },
+        {
+          "cert": 3510,
+          "weight": 0.084
+        },
+        {
+          "cert": 18409,
+          "weight": 0.0832
+        },
+        {
+          "cert": 628,
+          "weight": 0.0494
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:29950%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 32188,
+      "name": "USAA Federal Savings Bank",
+      "city": "Phoenix",
+      "state": "AZ",
+      "period": "20260630",
+      "assets": 106188000000,
+      "deposits": 91971000000,
+      "equityRatio": 0.05480845293253475,
+      "roa": 0.8967197472880711,
+      "depositChange": -0.03125197497314037,
+      "prediction": 0.041500184688889684,
+      "priority": 27,
+      "peers": [
+        {
+          "cert": 7213,
+          "weight": 0.5424
+        },
+        {
+          "cert": 6384,
+          "weight": 0.2276
+        },
+        {
+          "cert": 3510,
+          "weight": 0.1032
+        },
+        {
+          "cert": 3511,
+          "weight": 0.0834
+        },
+        {
+          "cert": 628,
+          "weight": 0.0435
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:32188%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 32992,
+      "name": "Morgan Stanley Bank, National Association",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "period": "20260630",
+      "assets": 419318000000,
+      "deposits": 278937000000,
+      "equityRatio": 0.0969002046179749,
+      "roa": 1.5581251744643416,
+      "depositChange": 0.09668757003282942,
+      "prediction": 0.05927764765324524,
+      "priority": 31,
+      "peers": [
+        {
+          "cert": 57565,
+          "weight": 0.218
+        },
+        {
+          "cert": 57803,
+          "weight": 0.218
+        },
+        {
+          "cert": 27314,
+          "weight": 0.218
+        },
+        {
+          "cert": 27471,
+          "weight": 0.218
+        },
+        {
+          "cert": 33124,
+          "weight": 0.128
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:32992%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 33124,
+      "name": "Goldman Sachs Bank USA",
+      "city": "New York",
+      "state": "NY",
+      "period": "20260630",
+      "assets": 758788000000,
+      "deposits": 498804000000,
+      "equityRatio": 0.07931596177061313,
+      "roa": 1.2060897371960244,
+      "depositChange": -0.011922990830449485,
+      "prediction": 0.06301257888683781,
+      "priority": 32,
+      "peers": [
+        {
+          "cert": 639,
+          "weight": 0.2263
+        },
+        {
+          "cert": 57890,
+          "weight": 0.2248
+        },
+        {
+          "cert": 628,
+          "weight": 0.2204
+        },
+        {
+          "cert": 57803,
+          "weight": 0.1642
+        },
+        {
+          "cert": 27471,
+          "weight": 0.1642
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:33124%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 34221,
+      "name": "Morgan Stanley Private Bank, National Association",
+      "city": "Purchase",
+      "state": "NY",
+      "period": "20260630",
+      "assets": 250425000000,
+      "deposits": 211668000000,
+      "equityRatio": 0.06768094239792354,
+      "roa": 1.142904601222474,
+      "depositChange": 0.028503124362251095,
+      "prediction": 0.031828035192995256,
+      "priority": 19,
+      "peers": [
+        {
+          "cert": 18409,
+          "weight": 0.282
+        },
+        {
+          "cert": 57957,
+          "weight": 0.2671
+        },
+        {
+          "cert": 588,
+          "weight": 0.2105
+        },
+        {
+          "cert": 628,
+          "weight": 0.149
+        },
+        {
+          "cert": 3511,
+          "weight": 0.0915
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:34221%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 35583,
+      "name": "Pinnacle Bank",
+      "city": "Nashville",
+      "state": "TN",
+      "period": "20260630",
+      "assets": 128791735000,
+      "deposits": 102245160000,
+      "equityRatio": 0.11498344983084513,
+      "roa": 1.082525031185846,
+      "depositChange": 0.01168596635989379,
+      "prediction": 0.03474739720549989,
+      "priority": 23,
+      "peers": [
+        {
+          "cert": 12368,
+          "weight": 0.5214
+        },
+        {
+          "cert": 9846,
+          "weight": 0.2153
+        },
+        {
+          "cert": 3510,
+          "weight": 0.1143
+        },
+        {
+          "cert": 6672,
+          "weight": 0.0767
+        },
+        {
+          "cert": 11063,
+          "weight": 0.0722
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:35583%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 57450,
+      "name": "Charles Schwab Bank, SSB",
+      "city": "Westlake",
+      "state": "TX",
+      "period": "20260630",
+      "assets": 250828000000,
+      "deposits": 225247000000,
+      "equityRatio": 0.07214505557593251,
+      "roa": 1.3267978927484971,
+      "depositChange": 0.02425970388155262,
+      "prediction": 0.01798603044504515,
+      "priority": 6,
+      "peers": [
+        {
+          "cert": 6384,
+          "weight": 0.3093
+        },
+        {
+          "cert": 3510,
+          "weight": 0.2321
+        },
+        {
+          "cert": 3511,
+          "weight": 0.2239
+        },
+        {
+          "cert": 628,
+          "weight": 0.1928
+        },
+        {
+          "cert": 12368,
+          "weight": 0.0418
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:57450%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 57565,
+      "name": "UBS Bank USA, National Association",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "period": "20260630",
+      "assets": 124438468000,
+      "deposits": 109326784000,
+      "equityRatio": 0.0755620761901376,
+      "roa": 1.0922915258152996,
+      "depositChange": 0.010759239811250853,
+      "prediction": 0.02869615197134657,
+      "priority": 17,
+      "peers": [
+        {
+          "cert": 57803,
+          "weight": 0.218
+        },
+        {
+          "cert": 27314,
+          "weight": 0.218
+        },
+        {
+          "cert": 27471,
+          "weight": 0.218
+        },
+        {
+          "cert": 32992,
+          "weight": 0.218
+        },
+        {
+          "cert": 33124,
+          "weight": 0.128
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:57565%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 57803,
+      "name": "Ally Bank",
+      "city": "Sandy",
+      "state": "UT",
+      "period": "20260630",
+      "assets": 188184000000,
+      "deposits": 156614000000,
+      "equityRatio": 0.08258938060621519,
+      "roa": 1.2021572222540537,
+      "depositChange": 0.002489998399743959,
+      "prediction": 0.03362821518638947,
+      "priority": 22,
+      "peers": [
+        {
+          "cert": 57565,
+          "weight": 0.218
+        },
+        {
+          "cert": 27314,
+          "weight": 0.218
+        },
+        {
+          "cert": 27471,
+          "weight": 0.218
+        },
+        {
+          "cert": 32992,
+          "weight": 0.218
+        },
+        {
+          "cert": 33124,
+          "weight": 0.128
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:57803%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 57890,
+      "name": "HSBC Bank USA, National Association",
+      "city": "Tysons",
+      "state": "VA",
+      "period": "20260630",
+      "assets": 173101278000,
+      "deposits": 141192598000,
+      "equityRatio": 0.095910678371768,
+      "roa": 0.9752119390042708,
+      "depositChange": 0.04185257060492925,
+      "prediction": 0.031917827223497515,
+      "priority": 20,
+      "peers": [
+        {
+          "cert": 639,
+          "weight": 0.3098
+        },
+        {
+          "cert": 628,
+          "weight": 0.3004
+        },
+        {
+          "cert": 33124,
+          "weight": 0.2507
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0794
+        },
+        {
+          "cert": 18409,
+          "weight": 0.0597
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:57890%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    },
+    {
+      "cert": 57957,
+      "name": "Citizens Bank, National Association",
+      "city": "Providence",
+      "state": "RI",
+      "period": "20260630",
+      "assets": 232517438000,
+      "deposits": 188731766000,
+      "equityRatio": 0.1138777083893381,
+      "roa": 0.9921233340926747,
+      "depositChange": 0.010063430084013286,
+      "prediction": 0.024136582004802055,
+      "priority": 11,
+      "peers": [
+        {
+          "cert": 14,
+          "weight": 0.3775
+        },
+        {
+          "cert": 29950,
+          "weight": 0.3713
+        },
+        {
+          "cert": 3510,
+          "weight": 0.0897
+        },
+        {
+          "cert": 6384,
+          "weight": 0.0874
+        },
+        {
+          "cert": 17534,
+          "weight": 0.074
+        }
+      ],
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:57957%20AND%20REPDTE:20260630&format=json",
+      "publishedAt": null
+    }
+  ],
+  "model": {
+    "version": "sage-numpy-8ce6324aab",
+    "selected": "Ridge",
+    "status": "retrospective-pilot",
+    "limitation": "Current revised data; original publication timestamps/vintages unavailable. Retrospective pilot, not a point-in-time early-warning claim.",
+    "metrics": {
+      "test": {
+        "LagGrowth": {
+          "maePercentagePoints": 3.0435746180563785,
+          "recallWorstQuintile": 0.26785714285714285,
+          "observations": 256
+        },
+        "Ridge": {
+          "maePercentagePoints": 3.0211992656245767,
+          "recallWorstQuintile": 0.21428571428571427,
+          "observations": 256
+        },
+        "GraphSAGESelectedSeed": {
+          "maePercentagePoints": 2.7060059039025837,
+          "recallWorstQuintile": 0.1964285714285714,
+          "observations": 256
+        },
+        "SelfOnlyAblationMean": {
+          "maePercentagePoints": 2.3293136197141115,
+          "recallWorstQuintile": 0.26190476190476186
+        }
+      },
+      "selected": "Ridge",
+      "selectionRule": "Lowest validation MAE among lag and ridge; GraphSAGE eligible only if it also beats the matched self-only ablation. Never select using test MAE.",
+      "validation": {
+        "LagGrowth": 5.603680149762928,
+        "Ridge": 4.6248532788594785,
+        "GraphSAGE": 4.19385197873901,
+        "SelfOnlyAblationBest": 3.6666775980720554
+      },
+      "seeds": [
+        {
+          "name": "GraphSAGE",
+          "seed": 7,
+          "epochs": 117,
+          "validationMAEPercentagePoints": 4.264062399690753,
+          "test": {
+            "maePercentagePoints": 2.708665356786873,
+            "recallWorstQuintile": 0.23214285714285715,
+            "observations": 256
+          }
+        },
+        {
+          "name": "GraphSAGE",
+          "seed": 19,
+          "epochs": 83,
+          "validationMAEPercentagePoints": 4.19385197873901,
+          "test": {
+            "maePercentagePoints": 2.7060059039025837,
+            "recallWorstQuintile": 0.1964285714285714,
+            "observations": 256
+          }
+        },
+        {
+          "name": "GraphSAGE",
+          "seed": 43,
+          "epochs": 76,
+          "validationMAEPercentagePoints": 4.621007042921033,
+          "test": {
+            "maePercentagePoints": 2.734418446485388,
+            "recallWorstQuintile": 0.25,
+            "observations": 256
+          }
+        },
+        {
+          "name": "SelfOnlyAblation",
+          "seed": 7,
+          "epochs": 61,
+          "validationMAEPercentagePoints": 3.712688576452796,
+          "test": {
+            "maePercentagePoints": 2.2621728477088077,
+            "recallWorstQuintile": 0.23214285714285712,
+            "observations": 256
+          }
+        },
+        {
+          "name": "SelfOnlyAblation",
+          "seed": 19,
+          "epochs": 61,
+          "validationMAEPercentagePoints": 3.860770438496773,
+          "test": {
+            "maePercentagePoints": 2.3317546278711356,
+            "recallWorstQuintile": 0.25,
+            "observations": 256
+          }
+        },
+        {
+          "name": "SelfOnlyAblation",
+          "seed": 43,
+          "epochs": 61,
+          "validationMAEPercentagePoints": 3.6666775980720554,
+          "test": {
+            "maePercentagePoints": 2.3940133835623905,
+            "recallWorstQuintile": 0.30357142857142855,
+            "observations": 256
+          }
+        }
+      ],
+      "summary": {
+        "GraphSAGE": {
+          "meanMAEPercentagePoints": 2.7163632357249483,
+          "stdMAEPercentagePoints": 0.012813044111734093,
+          "meanRecallWorstQuintile": 0.2261904761904762
+        },
+        "SelfOnlyAblation": {
+          "meanMAEPercentagePoints": 2.3293136197141115,
+          "stdMAEPercentagePoints": 0.053851342379783236,
+          "meanRecallWorstQuintile": 0.26190476190476186
+        }
+      },
+      "split": {
+        "trainTarget": "2016–2021",
+        "validationTarget": "2022–2023",
+        "testTarget": "2024–2025"
+      },
+      "features": [
+        "log assets",
+        "deposits/assets",
+        "equity/assets",
+        "ROA",
+        "lag deposit growth"
+      ],
+      "runtimeSeconds": 2.4396592000266537,
+      "limitations": [
+        "Current revised data; original publication timestamps/vintages unavailable. Retrospective pilot, not a point-in-time early-warning claim.",
+        "32 current large surviving banks; survivorship bias and limited relevance to smaller SME banks.",
+        "Previous-year SOD availability proxy; actual historical publication dates unverified.",
+        "Geographic overlap is similarity, not proof of causal contagion.",
+        "Treasury rates are context only, not model features."
+      ],
+      "graphIncrementEstablished": false
+    }
+  },
+  "treasury": {
+    "date": "2026-10-01",
+    "tenYear": 5.24,
+    "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates"
+  },
+  "sources": [
+    {
+      "url": "https://api.fdic.gov/banks/financials?filters=REPDTE%3A%5B20250101+TO+%2A%5D&fields=CERT%2CNAME%2CREPDTE%2CASSET%2CDEP%2CEQ%2CROA&limit=1&offset=0&format=json&sort_by=REPDTE&sort_order=DESC",
+      "sha256": "a4ff75ed31b9e7cc97f1eee823982c1a5d1a0b01776cd41b57414c5c2f8c1253",
+      "collectedAt": "2026-10-02T14:28:28.875176+00:00",
+      "rawPath": "data\\raw\\a4ff75ed31b9e7cc97f1eee823982c1a5d1a0b01776cd41b57414c5c2f8c1253.bin",
+      "sourceIndex": {
+        "name": "risview_20260819185831",
+        "createTimestamp": "2026-08-19T18:58:33Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/financials?filters=REPDTE%3A20260630&fields=CERT%2CNAME%2CASSET&limit=32&offset=0&format=json&sort_by=ASSET&sort_order=DESC",
+      "sha256": "1fad14fa7a9d3668377ff64c0e2e60d77a25fb60b01d63dc9dd934be57ad3e7f",
+      "collectedAt": "2026-10-02T14:28:29.721986+00:00",
+      "rawPath": "data\\raw\\1fad14fa7a9d3668377ff64c0e2e60d77a25fb60b01d63dc9dd934be57ad3e7f.bin",
+      "sourceIndex": {
+        "name": "risview_20260819185831",
+        "createTimestamp": "2026-08-19T18:58:33Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/financials?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+REPDTE%3A%5B20160101+TO+%2A%5D&fields=CERT%2CNAME%2CREPDTE%2CASSET%2CDEP%2CEQ%2CROA&limit=10000&offset=0&format=json",
+      "sha256": "d1173da12e4fe1f04a923a41a184f2b330dbb38f93dcf2c6d624d2738bde0338",
+      "collectedAt": "2026-10-02T14:28:31.966993+00:00",
+      "rawPath": "data\\raw\\d1173da12e4fe1f04a923a41a184f2b330dbb38f93dcf2c6d624d2738bde0338.bin",
+      "sourceIndex": {
+        "name": "risview_20260819185831",
+        "createTimestamp": "2026-08-19T18:58:33Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/institutions?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29&fields=CERT%2CNAME%2CCITY%2CSTALP%2CACTIVE&limit=10000&offset=0&format=json",
+      "sha256": "a4e16b185bf86b1acb575dc64931d44b1cfcbae451c327bbb387a7091990a828",
+      "collectedAt": "2026-10-02T14:28:32.802743+00:00",
+      "rawPath": "data\\raw\\a4e16b185bf86b1acb575dc64931d44b1cfcbae451c327bbb387a7091990a828.bin",
+      "sourceIndex": {
+        "name": "institutions_20261002090007",
+        "createTimestamp": "2026-10-02T11:56:31Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2015&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "20936c65e05f9a4e97a7717f3b0ebc4c069bb3acb7ce72cafaa057c0997e6b80",
+      "collectedAt": "2026-10-02T14:28:35.486984+00:00",
+      "rawPath": "data\\raw\\20936c65e05f9a4e97a7717f3b0ebc4c069bb3acb7ce72cafaa057c0997e6b80.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2015&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "b1314fe71d75b122fbf1ec2c5929ae436d19d408fe635e2873a4d2b0673114f7",
+      "collectedAt": "2026-10-02T14:28:38.142768+00:00",
+      "rawPath": "data\\raw\\b1314fe71d75b122fbf1ec2c5929ae436d19d408fe635e2873a4d2b0673114f7.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2015&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "bbd640904bd957672a18b769e128efd49557547d2330b9df7903ba6cfb786f0e",
+      "collectedAt": "2026-10-02T14:28:40.808457+00:00",
+      "rawPath": "data\\raw\\bbd640904bd957672a18b769e128efd49557547d2330b9df7903ba6cfb786f0e.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2015&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "f82716e876d4763231347b86edba2bf245fe22bd3a789cb34611dc27a28f3393",
+      "collectedAt": "2026-10-02T14:28:42.994059+00:00",
+      "rawPath": "data\\raw\\f82716e876d4763231347b86edba2bf245fe22bd3a789cb34611dc27a28f3393.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2016&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "30b17fc576550f8ed19deb8ed342c0e8c685347e04ae81e7c3708c1ab296d28f",
+      "collectedAt": "2026-10-02T14:28:35.201973+00:00",
+      "rawPath": "data\\raw\\30b17fc576550f8ed19deb8ed342c0e8c685347e04ae81e7c3708c1ab296d28f.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2016&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "28633a7c609e0cd2556aa113df0710d5b85637cb7f32c6e841e9852f662efe7e",
+      "collectedAt": "2026-10-02T14:28:38.164609+00:00",
+      "rawPath": "data\\raw\\28633a7c609e0cd2556aa113df0710d5b85637cb7f32c6e841e9852f662efe7e.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2016&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "e9aad95a8235ce167098fabb9ce5c3a2ae04643540e9496ac27d1a54edbf80dc",
+      "collectedAt": "2026-10-02T14:28:40.783740+00:00",
+      "rawPath": "data\\raw\\e9aad95a8235ce167098fabb9ce5c3a2ae04643540e9496ac27d1a54edbf80dc.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2016&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "e716c707661ed41d8bf178e60f6491bc1bde83ddc754f1538fc1bd4153cf4525",
+      "collectedAt": "2026-10-02T14:28:42.856498+00:00",
+      "rawPath": "data\\raw\\e716c707661ed41d8bf178e60f6491bc1bde83ddc754f1538fc1bd4153cf4525.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2017&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "ac65ee73ed4535c502a6862825f4108b2ff90b4bb5acac0d97d95120ced911bf",
+      "collectedAt": "2026-10-02T14:28:35.513355+00:00",
+      "rawPath": "data\\raw\\ac65ee73ed4535c502a6862825f4108b2ff90b4bb5acac0d97d95120ced911bf.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2017&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "46b44c9a16d2805df0580c160540cd8ee3396c3db2b55e15c4fc0e4ecda87ebd",
+      "collectedAt": "2026-10-02T14:28:38.064134+00:00",
+      "rawPath": "data\\raw\\46b44c9a16d2805df0580c160540cd8ee3396c3db2b55e15c4fc0e4ecda87ebd.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2017&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "832e7cdc3c40092eb1f9480a6a0f15a5238256e67f63e1e6b1af8db350a7944f",
+      "collectedAt": "2026-10-02T14:28:40.424179+00:00",
+      "rawPath": "data\\raw\\832e7cdc3c40092eb1f9480a6a0f15a5238256e67f63e1e6b1af8db350a7944f.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2017&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "091b9288625c5c9585b819ab6e7f1095b3cacd69512c4a9892764ac8f72d2e82",
+      "collectedAt": "2026-10-02T14:28:42.503334+00:00",
+      "rawPath": "data\\raw\\091b9288625c5c9585b819ab6e7f1095b3cacd69512c4a9892764ac8f72d2e82.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2018&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "c2fc60944a36763c33bc607e5b1a8f01a69e4be1f0115f00d9d051f793bbcb77",
+      "collectedAt": "2026-10-02T14:28:45.396653+00:00",
+      "rawPath": "data\\raw\\c2fc60944a36763c33bc607e5b1a8f01a69e4be1f0115f00d9d051f793bbcb77.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2018&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "82aad5d51cb7eb5e21db77b80358b052f28c5aca11733a513016fee57e41a4c7",
+      "collectedAt": "2026-10-02T14:28:48.668323+00:00",
+      "rawPath": "data\\raw\\82aad5d51cb7eb5e21db77b80358b052f28c5aca11733a513016fee57e41a4c7.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2018&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "ae49ef67b8ac37b91bdffaea5ee4f179298255320ffb0b0c3b43b2be2ca01987",
+      "collectedAt": "2026-10-02T14:28:51.053420+00:00",
+      "rawPath": "data\\raw\\ae49ef67b8ac37b91bdffaea5ee4f179298255320ffb0b0c3b43b2be2ca01987.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2018&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "90e70cb8302fe42b83adef1385867d5a351a8a74796e993ddea89b5b0e543583",
+      "collectedAt": "2026-10-02T14:28:53.097030+00:00",
+      "rawPath": "data\\raw\\90e70cb8302fe42b83adef1385867d5a351a8a74796e993ddea89b5b0e543583.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2019&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "0ba5baeceb15b3c4b8ca9fd44f39d69ec456432c72581f7c100ea89d6456dc1d",
+      "collectedAt": "2026-10-02T14:28:45.503910+00:00",
+      "rawPath": "data\\raw\\0ba5baeceb15b3c4b8ca9fd44f39d69ec456432c72581f7c100ea89d6456dc1d.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2019&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "8fb4d2d504fc26ca6e733fd7b8b9f7c389260db9260f719e43475af25ae9d5d9",
+      "collectedAt": "2026-10-02T14:28:49.116011+00:00",
+      "rawPath": "data\\raw\\8fb4d2d504fc26ca6e733fd7b8b9f7c389260db9260f719e43475af25ae9d5d9.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2019&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "1b4da8b4b7e8356f268af4429240259a10516f3604e0e17ec350fc8288a0458c",
+      "collectedAt": "2026-10-02T14:28:51.569890+00:00",
+      "rawPath": "data\\raw\\1b4da8b4b7e8356f268af4429240259a10516f3604e0e17ec350fc8288a0458c.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2019&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "c2e423f3103508169625791f3c7d99bb3b169e05867c60f63e600cfe50e5fbb7",
+      "collectedAt": "2026-10-02T14:28:53.830585+00:00",
+      "rawPath": "data\\raw\\c2e423f3103508169625791f3c7d99bb3b169e05867c60f63e600cfe50e5fbb7.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2020&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "b07c5427d4349ea569a289d62142cfbd310c45f836c9a30e14fc21b0e42a8b88",
+      "collectedAt": "2026-10-02T14:28:45.671681+00:00",
+      "rawPath": "data\\raw\\b07c5427d4349ea569a289d62142cfbd310c45f836c9a30e14fc21b0e42a8b88.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2020&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "6ddf34a47507f5e431803c68af30ccf77dfaf92cba5707a210a62242780b4063",
+      "collectedAt": "2026-10-02T14:28:48.438514+00:00",
+      "rawPath": "data\\raw\\6ddf34a47507f5e431803c68af30ccf77dfaf92cba5707a210a62242780b4063.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2020&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "6996d239acce24f84d3318fe50d4f06fc16839c7fa234366cfcce217d05a4cea",
+      "collectedAt": "2026-10-02T14:28:52.062264+00:00",
+      "rawPath": "data\\raw\\6996d239acce24f84d3318fe50d4f06fc16839c7fa234366cfcce217d05a4cea.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2020&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "c6e10fa07a1fc2d3de7d937eb7931c551c734c7a902b62717ca01949786319c6",
+      "collectedAt": "2026-10-02T14:28:53.798827+00:00",
+      "rawPath": "data\\raw\\c6e10fa07a1fc2d3de7d937eb7931c551c734c7a902b62717ca01949786319c6.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2021&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "10ecad251a532f19a81e3ffc794a27f25bdb4bd4fc668bf9fef1e62015b6a364",
+      "collectedAt": "2026-10-02T14:28:55.398174+00:00",
+      "rawPath": "data\\raw\\10ecad251a532f19a81e3ffc794a27f25bdb4bd4fc668bf9fef1e62015b6a364.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2021&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "19600a0529ac0f439238bf1eccd455312ad8469fa5a347bc60267f905b14c4b4",
+      "collectedAt": "2026-10-02T14:28:58.154554+00:00",
+      "rawPath": "data\\raw\\19600a0529ac0f439238bf1eccd455312ad8469fa5a347bc60267f905b14c4b4.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2021&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "7119d08c7652b21846013f34456e2f2cd74bf68157ab4828ab9880aeeffcbe8d",
+      "collectedAt": "2026-10-02T14:29:00.790814+00:00",
+      "rawPath": "data\\raw\\7119d08c7652b21846013f34456e2f2cd74bf68157ab4828ab9880aeeffcbe8d.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2021&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "9b0a776e8d97ec05bc7728f6c3a6cb123b6f9fb9d62c78a8ec6c27461877acea",
+      "collectedAt": "2026-10-02T14:29:02.676800+00:00",
+      "rawPath": "data\\raw\\9b0a776e8d97ec05bc7728f6c3a6cb123b6f9fb9d62c78a8ec6c27461877acea.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2022&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "8779bf4ec4e204fc17850ede78bf5e54a2fc4c68a6d81f683307febb4652bd53",
+      "collectedAt": "2026-10-02T14:28:56.147591+00:00",
+      "rawPath": "data\\raw\\8779bf4ec4e204fc17850ede78bf5e54a2fc4c68a6d81f683307febb4652bd53.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2022&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "468f6266ab1182f17ad2f9d43a672b15ce73a22365bf89413d75451280a7c8af",
+      "collectedAt": "2026-10-02T14:28:58.527963+00:00",
+      "rawPath": "data\\raw\\468f6266ab1182f17ad2f9d43a672b15ce73a22365bf89413d75451280a7c8af.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2022&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "323f35fd6f9e39716773e2d8f60e69025c2ce1b605a4f8a0a5ddd6c3333518fd",
+      "collectedAt": "2026-10-02T14:29:01.069721+00:00",
+      "rawPath": "data\\raw\\323f35fd6f9e39716773e2d8f60e69025c2ce1b605a4f8a0a5ddd6c3333518fd.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2022&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "b5ae7eda958c4a8c375903d5f9c1bda1eafc1dd3f0624e7960c03ca2016a43df",
+      "collectedAt": "2026-10-02T14:29:02.623977+00:00",
+      "rawPath": "data\\raw\\b5ae7eda958c4a8c375903d5f9c1bda1eafc1dd3f0624e7960c03ca2016a43df.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2023&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "13efc1eb6e6b715377c8d3f7e43b48422246b77567a07a38e0277b7c2f8ee57d",
+      "collectedAt": "2026-10-02T14:28:56.500429+00:00",
+      "rawPath": "data\\raw\\13efc1eb6e6b715377c8d3f7e43b48422246b77567a07a38e0277b7c2f8ee57d.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2023&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "afdfa90f80152a7ebe0c0095765e64aa8739b85a5a95a0365915326f6061868a",
+      "collectedAt": "2026-10-02T14:28:59.192716+00:00",
+      "rawPath": "data\\raw\\afdfa90f80152a7ebe0c0095765e64aa8739b85a5a95a0365915326f6061868a.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2023&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "bcda5e7d7d87b6e5ab6dec5f4bb2be403c7ca1134c0b535c1968244b03e0cebe",
+      "collectedAt": "2026-10-02T14:29:02.965356+00:00",
+      "rawPath": "data\\raw\\bcda5e7d7d87b6e5ab6dec5f4bb2be403c7ca1134c0b535c1968244b03e0cebe.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2023&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "d26d053cc1a7c414a5b75c2d82deeabd63414671039ed1b823459af89da369f2",
+      "collectedAt": "2026-10-02T14:29:04.358548+00:00",
+      "rawPath": "data\\raw\\d26d053cc1a7c414a5b75c2d82deeabd63414671039ed1b823459af89da369f2.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2024&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "1a30aab22122e96d9c4058f797e425dba5eabdfeb34e5900badfec24f9a233e0",
+      "collectedAt": "2026-10-02T14:29:05.906364+00:00",
+      "rawPath": "data\\raw\\1a30aab22122e96d9c4058f797e425dba5eabdfeb34e5900badfec24f9a233e0.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2024&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "2ae234d20f0e0b555139984df9b5fee08e0bb76e6388421c9e6792457f5fc93d",
+      "collectedAt": "2026-10-02T14:29:08.822836+00:00",
+      "rawPath": "data\\raw\\2ae234d20f0e0b555139984df9b5fee08e0bb76e6388421c9e6792457f5fc93d.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2024&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "89603bf264531dc509335633d70e9073f135b1426c3aa584347ccaeed0306ac6",
+      "collectedAt": "2026-10-02T14:29:11.275736+00:00",
+      "rawPath": "data\\raw\\89603bf264531dc509335633d70e9073f135b1426c3aa584347ccaeed0306ac6.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2024&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "39077c915a2df6be64da656b2f13fdb25af2098e397fe0b6a70efe85777d5b92",
+      "collectedAt": "2026-10-02T14:29:12.321963+00:00",
+      "rawPath": "data\\raw\\39077c915a2df6be64da656b2f13fdb25af2098e397fe0b6a70efe85777d5b92.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2025&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "2d838d5e11c2549b058df9d75d4f8911721202e882cc25250437a479d2bc6524",
+      "collectedAt": "2026-10-02T14:29:06.035072+00:00",
+      "rawPath": "data\\raw\\2d838d5e11c2549b058df9d75d4f8911721202e882cc25250437a479d2bc6524.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2025&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "c286da442ac43be6e5642e229daef4c7ef02f36749de9aa56f6e1b927701923d",
+      "collectedAt": "2026-10-02T14:29:08.478642+00:00",
+      "rawPath": "data\\raw\\c286da442ac43be6e5642e229daef4c7ef02f36749de9aa56f6e1b927701923d.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2025&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "9ab172ffc2772e60d82ff74440c5dae902d64528e98f2f6a91aee74af62d9ddf",
+      "collectedAt": "2026-10-02T14:29:11.032817+00:00",
+      "rawPath": "data\\raw\\9ab172ffc2772e60d82ff74440c5dae902d64528e98f2f6a91aee74af62d9ddf.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2026&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=0&format=json",
+      "sha256": "e2cd96be27bd2332075aef19227dc3fcaed899c0fa37bc27f52073bea3e7f06f",
+      "collectedAt": "2026-10-02T14:29:06.963037+00:00",
+      "rawPath": "data\\raw\\e2cd96be27bd2332075aef19227dc3fcaed899c0fa37bc27f52073bea3e7f06f.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2026&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=10000&format=json",
+      "sha256": "fc92a68ec311c8ee6461809fdc3ae8118a6440ce10603c54ff602cc80d4c984c",
+      "collectedAt": "2026-10-02T14:29:09.762254+00:00",
+      "rawPath": "data\\raw\\fc92a68ec311c8ee6461809fdc3ae8118a6440ce10603c54ff602cc80d4c984c.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2026&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=20000&format=json",
+      "sha256": "8e262626451947dda1beacf20dbd4f002ae4246b47377efebdf6ceabfbd8d02f",
+      "collectedAt": "2026-10-02T14:29:12.082475+00:00",
+      "rawPath": "data\\raw\\8e262626451947dda1beacf20dbd4f002ae4246b47377efebdf6ceabfbd8d02f.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://api.fdic.gov/banks/sod?filters=CERT%3A%28628+OR+3510+OR+7213+OR+3511+OR+33124+OR+6548+OR+4297+OR+6384+OR+9846+OR+639+OR+32992+OR+14+OR+18409+OR+6672+OR+6560+OR+16571+OR+57450+OR+34221+OR+11063+OR+57957+OR+588+OR+27471+OR+17534+OR+57803+OR+913+OR+57890+OR+12368+OR+35583+OR+57565+OR+27314+OR+32188+OR+29950%29+AND+YEAR%3A2026&fields=CERT%2CYEAR%2CSTCNTYBR%2CDEPSUMBR&limit=10000&offset=30000&format=json",
+      "sha256": "cf68a9b44b5eed75c5bf7c8432a4527d4672f32ef398400a398e8c2a6a5458d3",
+      "collectedAt": "2026-10-02T14:29:13.724418+00:00",
+      "rawPath": "data\\raw\\cf68a9b44b5eed75c5bf7c8432a4527d4672f32ef398400a398e8c2a6a5458d3.bin",
+      "sourceIndex": {
+        "name": "sod_1789738734553",
+        "createTimestamp": "2026-09-18T13:38:54Z"
+      }
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "sha256": "cdad92e523a654558d35bd754d3f3223744503db8d5f2d84bb34b0603ce8bbf8",
+      "collectedAt": "2026-10-02T14:29:15.288570+00:00",
+      "rawPath": "data\\raw\\cdad92e523a654558d35bd754d3f3223744503db8d5f2d84bb34b0603ce8bbf8.bin"
+    }
+  ],
+  "limitations": [
+    "Current revised data; original publication timestamps/vintages unavailable. Retrospective pilot, not a point-in-time early-warning claim.",
+    "32 current large surviving banks; survivorship bias and limited relevance to smaller SME banks.",
+    "Previous-year SOD availability proxy; actual historical publication dates unverified.",
+    "Geographic overlap is similarity, not proof of causal contagion.",
+    "Treasury rates are context only, not model features."
+  ]
+}

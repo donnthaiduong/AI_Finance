@@ -1,0 +1,30 @@
+✔ known liquidity interruption and return boundary (1.7656ms)
+✔ zero disruption is identical to baseline (0.5677ms)
+✔ transfer conserves cents and improves selected scenario (1.6032ms)
+✔ duration 30 never releases within the horizon (0.2113ms)
+✔ reject invalid inputs (0.5521ms)
+✔ copilot ignores injected instructions and does not invent financial data (24.5521ms)
+✔ validate real snapshot, reject duplicate banks and untrusted sources (14.3968ms)
+✔ reject invalid reporting dates and metrics that would crash evidence rendering (12.0582ms)
+✔ schema rejection retains active snapshot and exposes failed status (27.9708ms)
+✔ validated atomic import and version immutability (35.7135ms)
+✔ damaged active file recovers last valid evidence even after process restart (12.4046ms)
+✔ failed activation keeps durable fallback (19.6774ms)
+✔ queued updates reject regressions without replacing newer snapshot (21.2145ms)
+✔ admin token requires configured server secret; source text cannot authenticate (18.2254ms)
+✔ body reader counts bytes and rejects malformed JSON (3.6494ms)
+✔ export and restore retain full scenario and recompute activity (5.5783ms)
+✔ legacy device save migrates with explicit defaults (0.2753ms)
+✔ reject malformed files and fabricated allocation history (0.6866ms)
+✔ proposal requires explicit confirmation and rejects changed payments or scenario (6.5469ms)
+✔ confirmation recomputes tampered result and allocation (0.6042ms)
+✔ cent transfers preserve funds over repeated changes (2.1629ms)
+✔ malformed portfolio entries reject cleanly (0.4686ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 300.8279

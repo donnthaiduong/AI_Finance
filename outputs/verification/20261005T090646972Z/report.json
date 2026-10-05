@@ -1,0 +1,62 @@
+{
+  "runId": "20261005T090646972Z",
+  "scope": "Core, research reproduction and production administrative API; separate browser and Claudable checks required",
+  "checks": [
+    {
+      "name": "bundle",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:46.9929524Z",
+      "elapsedSeconds": 0.4646734,
+      "log": "bundle.log"
+    },
+    {
+      "name": "core-tests",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:47.4883549Z",
+      "elapsedSeconds": 0.379736,
+      "log": "core-tests.log"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:47.8688308Z",
+      "elapsedSeconds": 2.6859781,
+      "log": "typecheck.log"
+    },
+    {
+      "name": "research-tests",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:50.5553331Z",
+      "elapsedSeconds": 0.4134118,
+      "log": "research-tests.log"
+    },
+    {
+      "name": "corpus-audit",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:50.9693411Z",
+      "elapsedSeconds": 0.8083,
+      "log": "corpus-audit.log"
+    },
+    {
+      "name": "reproduce",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:51.7784597Z",
+      "elapsedSeconds": 4.4170952,
+      "log": "reproduce.log"
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:06:56.1961515Z",
+      "elapsedSeconds": 4.9901316,
+      "log": "build.log"
+    },
+    {
+      "name": "production-admin-http",
+      "exitCode": 0,
+      "startedAt": "2026-10-05T09:07:01.1866542Z",
+      "elapsedSeconds": 0.8807286,
+      "log": "production-admin-http.log"
+    }
+  ]
+}

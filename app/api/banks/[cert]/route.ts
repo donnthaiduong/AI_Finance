@@ -1,0 +1,2 @@
+import { getSnapshot } from '../../../../lib/storage';
+export async function GET(_request: Request, { params }: { params: Promise<{cert:string}> }) { try { const {cert}=await params;const s=await getSnapshot();const bank=s.banks.find(b=>b.cert===Number(cert));return bank?Response.json({bank,version:s.version,model:s.model,collectedAt:s.collectedAt}):Response.json({error:'Bank not in this pilot.'},{status:404}); } catch {return Response.json({error:'Evidence unavailable.'},{status:503});} }

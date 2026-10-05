@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "sources": 52,
+  "financialRows": 1344,
+  "datasetSha256": "0a214a4f4272b47941c100d101e252b27515c9045a1d95998b4411ac05578d7e",
+  "errors": [],
+  "scope": "Offline raw-byte integrity; historical releases and API units require separate verification."
+}

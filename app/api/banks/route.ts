@@ -1,0 +1,2 @@
+import { getSnapshot, getUpdateStatus } from '../../../lib/storage';
+export async function GET() { try { const s=await getSnapshot(); return Response.json({...s, updateStatus:await getUpdateStatus()},{headers:{'Cache-Control':'no-store'}}); } catch(e) { console.error(e); return Response.json({error:'Bank evidence is temporarily unavailable. Your portfolio remains on this device.'},{status:503}); } }

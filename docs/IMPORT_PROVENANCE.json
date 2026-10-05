@@ -1,0 +1,44 @@
+{
+  "recordedOn": "2026-10-04",
+  "sourceWorkspace": "C:\\Users\\thaid\\Documents\\Codex\\2026-10-02\\new-chat-2",
+  "sourceThread": "01a0fce1-cc5a-7162-a74f-1973b66ac3b9",
+  "status": "inherited-from-prior-local-workspace",
+  "files": [
+    {
+      "path": "data/dataset.json",
+      "sourceSha256": "0a214a4f4272b47941c100d101e252b27515c9045a1d95998b4411ac05578d7e",
+      "importedSha256": "0a214a4f4272b47941c100d101e252b27515c9045a1d95998b4411ac05578d7e"
+    },
+    {
+      "path": "data/snapshot.json",
+      "sourceSha256": "18009480271c517405b8c8809cc583b86bd0d21b151fb5d6ec0f8dd679a57787",
+      "importedSha256": "18009480271c517405b8c8809cc583b86bd0d21b151fb5d6ec0f8dd679a57787"
+    },
+    {
+      "path": "data/model-report.json",
+      "sourceSha256": "f20d742ef4f6b9ad015d710fca26b3fc79ff3ba80f55126d1e94923415af8790",
+      "importedSha256": "f20d742ef4f6b9ad015d710fca26b3fc79ff3ba80f55126d1e94923415af8790"
+    },
+    {
+      "path": "data/model-weights.npz",
+      "sourceSha256": "7a6a82768c0ccb3f67680b85dd81c6c274709d154eb9d92b0c82613de2fb6071",
+      "importedSha256": "7a6a82768c0ccb3f67680b85dd81c6c274709d154eb9d92b0c82613de2fb6071"
+    },
+    {
+      "path": "pipeline/collect.py",
+      "sourceSha256": "2185abc04625ebd840f3704509f58037e5d00b7c58649ec566ca925fad8ca3ca",
+      "importedSha256": "2185abc04625ebd840f3704509f58037e5d00b7c58649ec566ca925fad8ca3ca"
+    },
+    {
+      "path": "pipeline/train.py",
+      "sourceSha256": "e12f956f96428137d12c1af816e6e0bd8521994f0017186715fda0a4de9784ab",
+      "importedSha256": "7f6e8d1743345b6c42b3f15bae38587df5b18c0e3fb97e89a0d8db8e71d6f190"
+    },
+    {
+      "path": "app/workspace.tsx",
+      "sourceSha256": "598d432322f66fb5c343077a325e436cb07b7a66ce722f1702a190524bf7165d",
+      "importedSha256": "72f2d5fee9713a435d780a4b68c788787a79259a98162ab6183d61d585b0e23b"
+    }
+  ],
+  "note": "Code adaptations have differing hashes; original raw data and product snapshot retained. Local experiments have separate run manifests."
+}
