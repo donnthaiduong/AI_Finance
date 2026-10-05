@@ -1,0 +1,17 @@
+node_modules/
+.pnpm-store/
+tools/claudable/
+.next/
+work/
+*.tsbuildinfo
+__pycache__/
+.env*
+!.env.example
+.dev.vars*
+data/dataset.json
+data/raw/
+data/model-weights.npz
+data/last-valid-snapshot.json
+data/update-status.json
+data/*.tmp
+outputs/research-runs/
