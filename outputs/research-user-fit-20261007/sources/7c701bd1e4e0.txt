@@ -1,0 +1,44 @@
+Scenario Planning | Float Help Center (https://intercom.help/floatapp/en/articles/1719419-scenario-planning)
+citeturn41view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://intercom.help/floatapp/en/articles/1719419-scenario-planning","lineno":null}); Total lines: 46
+L0: cite0†Skip to main content L1: 
+L2: Search for articles...[Input: Search for articles...]
+L3: 
+L4:   1. cite1†All Collections L5: 
+L6:   2. cite2†Scenarios L7: 
+L8:   3. Scenario Planning
+L9: # Scenario Planning
+L10: 
+L11: An introduction to start answering those ‘what if’ questions
+L12: 
+L13: Written by Ashleigh Rayne
+L14: 
+L15: July 10, 2026
+L16: 
+L17: cite3†Embedded youtube video†www.youtube.com L18: 
+L19: Scenario planning allows you to visually map out the cash impact of different hypothetical outcomes, so that you can:
+L20: 
+L21:   * Act quickly to mitigate risk
+L22: 
+L23:   * Make informed decisions
+L24: 
+L25:   * See the visual impact of a decision
+L26: 
+L27:   * Test out a hypothesis
+L28: 
+L29:   * Plan ahead
+L30: For example, if you were to hire a new employee, expand to a new premises or even take on a new round of investment.
+L31: 
+L32: However, before you create a scenario, you'll need to set up your cite4†budgets (cash predictions) in your 'Base' forecast to make sure your starting point is accurate. The ‘Base’ will be made up of budgets, invoices, bills and reconciled bank transactions.
+L33: When you’re ready to create your first scenario, navigate to the ‘Cash Flow’ tab, click the scenario dropdown, click 'Add scenario layer' and then simply create a name for your new scenario.
+L34: 
+L35: Once the new scenario is created, all you need to do is start adding, changing, or removing budgets. Any budgets that are added, changed or removed will ‘stack' on top of the existing budgets to give you an instant view of the impact these changes have made on your base forecast.
+L36: Scenario planning can be a powerful way to start answering your business questions.
+L37: 
+L38: If you ever need to remove an entire scenario layer find out how cite5†here .
+L39: 
+L40: To find out how to move a scenario budget into the base, click cite6†here .
+L41: ​
+L42: 
+L43: Did this answer your question?
+L44: 
+L45: Disappointed Reaction😞Neutral Reaction😐Smiley Reaction😃

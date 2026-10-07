@@ -1,0 +1,11 @@
+{
+  "report": "outputs\\research-user-fit-20261007\\report.md",
+  "coverage": "4/14",
+  "claims_cited": 12,
+  "claims_total": 12,
+  "errors": [],
+  "warnings": [
+    "Q6 has no ledger claims; the report must mark it 'unknown' or 'not researched'"
+  ],
+  "verdict": "PASSED"
+}

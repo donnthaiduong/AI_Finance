@@ -1,0 +1,75 @@
+How Brex is supporting SVB customers and the broader startup community (https://www.brex.com/journal/how-brex-is-supporting-svb-customers)
+citeturn35view1 [wordlim: 200] Crawled: 3 weeks ago; Content type: text/html; Source: open({"ref_id":"https://www.brex.com/journal/how-brex-is-supporting-svb-customers","lineno":null}); Total lines: 112
+L0: cite0†gtm noscript†www.googletagmanager.com L1: 
+L2: cite1†Summer Release 2026: Deeper connections, sharper controls. See 30+ features now live → L3: 
+L4:   *   *   * cite2†Get started L5: 
+L6: cite3†Blog L7: 
+L8: cite3†Building Brex L9: 
+L10: How Brex is supp...
+L11: 
+L12: cite3†Building Brex L13: 
+L14: cite4†Image: Brex-supports-SVB L15: 
+L16: cite4†Image: Brex-supports-SVB L17: # How Brex is supporting SVB customers
+L18: 
+L19: cite5†Image: headshot photo of Pedro Franceschi L20: 
+L21: Pedro Franceschi
+L22: 
+L23: ·
+L24: 
+L25: 3 min read
+L26: 
+L27: 3 min read
+L28: 
+L29: The last couple of days have been unprecedented for the startup community. The news around Silicon Valley Bank’s insolvency has created a tremendous amount of stress for many companies, founders, and employees. Suddenly losing access to their funds is the last thing companies need to deal with.
+L30: Our teams at Brex are working around the clock to support SVB customers and the broader startup community during this challenging time. Here are some of the things we’ve shipped recently, and we are evaluating additional ways to help in this rapidly evolving situation:
+L31: ### Maintaining credit limits on Brex cards
+L32: 
+L33: Helping impacted customers maintain business continuity is top of mind for us. Hence, we’re maintaining the current credit limit for the vast majority of SVB customers. Our goal is to make sure customers can continue to use Brex as a trusted partner for their operations with no interruptions. You can find more information cite6†here .
+L34: ### Upcoming card payments
+L35: 
+L36: We understand the unpredictability of operating cash flows right now, as startups work to react to this extraordinary situation. If you have concerns about making payment on your upcoming statement, please cite7†reach out to us and we’ll work together to figure out a plan, so you have one less thing to worry about.
+L37: ### Increased FDIC insurance on Brex business accounts to $6M
+L38: 
+L39: Safety of your money is our top priority. We’ve increased the FDIC insurance on Brex business accounts from $1M to $6M, spreading the standard $250K FDIC coverage across nine partner banks.
+L40: 
+L41: We designed the Brex business account to provide stability and safety for your funds, and funds are always kept in multiple FDIC-insured accounts, or a money-market fund that must hold 99.5% of its money in securities fully backed by the US government.
+L42: 100% of funds in Brex cite8†business accounts are always available for withdrawal, and deposits are never used for lending purposes. You can read more about Brex business accounts cite8†here .
+L43: ### Emergency credit lines for SVB customers
+L44: 
+L45: Updated March 13, 2023: Following SVB’s news, many of our customers had reached out sharing their concern about upcoming payroll and other operational needs, and we announced an emergency bridge loan to help minimize the impact of these events on their operational spend.
+L46: Since then, the Federal Reserve Board has announced that SVB customers now have access to 100% of their funds. Because there is no longer a gap to help cover for these customers, we have discontinued our loan program at this time. We’re continuing to fast-track SVB customers’ applications for our cite8†Brex Business Account , which cite9†reduces your exposure to any single bank.
+L47: 
+L48: . . .
+L49: In a moment of uncertainty in the tech community, we feel incredibly fortunate to be in a strong financial position to continue serving customers well, with no exposure to SVB. We don’t take for granted the trust placed in us by customers, investors, banking partners, lenders and regulators.
+L50: On a personal note, the last two days were some of the most unforgettable ones in our careers. Although SVB was at times a competitor to Brex in cards and business accounts, SVB played an important role getting Brex off the ground, providing our first credit facility in the early days — which we’re so grateful for. Over the years, we partnered together to serve thousands of mutual customers.
+L51: It was sad to watch the events of the last 48 hours affecting an industry peer — and many colleagues — we respect and admire.
+L52: Internally, the Brex team remained in contact with thousands of SVB customers working through a myriad of challenges, while processing thousands of new applications for cards and business accounts, and billions of dollars of inflows. While exhausting, moments like today reinforce what a company’s values and culture is about, and we feel so proud of how our team stepped up to come up with creative ways to help the startup community through this.
+L53: Brex will continue working hard to support you. If you need us, don’t hesitate to reach out cite7†here .
+L54: 
+L55: Pedro and Henrique
+L56: 
+L57:   * ## Product
+L58: 
+L59:   * cite10†Corporate card L60:   * cite8†Business banking L61:   * cite11†Expense management L62:   * cite12†Accounting automation L63:   * cite13†Bill pay L64:   * cite14†Travel L65:   * cite15†Startups L66:   * cite16†Release notes L67: ## Platform
+L68: 
+L69:   * cite17†Intelligence L70:   * cite18†Global ready L71:   * cite19†Native integrations L72:   * cite20†Live Budgets L73:   * cite21†Reporting L74:   * cite22†Mobile app L75:   * cite23†API L76: 
+L77: ## Company
+L78: 
+L79:   * cite24†About Brex L80:   * cite25†Careers L81:   * cite7†Contact L82:   * cite26†Partner portal L83:   * cite27†Press L84:   * cite28†Security L85: ## Resources
+L86: 
+L87:   * cite29†Customer Hub L88:   * cite30†Help center L89:   * cite31†Resource center & blog L90:   * cite32†Spend trends L91:   * cite33†Accounting services†partners.brex.com L92:   * cite34†Status†status.brex.com L93:   * cite35†Implementation services L94:   * cite36†Legal L95:   * cite37†Privacy†privacy.brex.com L96:   * [Button: Your Privacy Choices]
+L97: 
+L98:   *   * Brex LLC is a wholly owned subsidiary of Capital One, N.A.
+L99: 
+L100: Brex LLC | 2261 Market Street STE 85844 | San Francisco, CA 94114
+L101: 
+L102: Brex LLC | 650 S 500W Suite 300 | Salt Lake City, UT 84101
+L103: The Brex business account consists of Checking, a commercial checking account provided by Column N.A., Member cite38†FDIC†www.fdic.gov (an unaffiliated institution), and Treasury and Vault, cash management services provided by Brex Treasury LLC, Member cite39†FINRA†brokercheck.finra.org /cite40†SIPC†www.sipc.org and a Capital One company.
+L104: Securities are offered through Brex Treasury LLC. Funds in Treasury are not FDIC-insured. Funds in Vault at cite41†program banks are eligible for cite38†FDIC†www.fdic.gov insurance. Funds are not FDIC-insured until they arrive at program banks. Conditions apply.
+L105: Investing in securities involves risk and loss of money. Yield and return are variable and fluctuate. Past performance is not a guarantee of future results. This is not an offer to, or implied offer, or a solicitation to, buy or sell any securities. Brex Treasury LLC does not provide legal, tax, or investment advice. The latest statement of financial condition for Brex Treasury LLC is available cite42†here . You could lose money by investing in the Fund.
+L106: Although the Fund seeks to preserve the value of your investment at $1.00 per share, it cannot guarantee it will do so. An investment in the Fund is not insured or guaranteed by the FDIC or any other government agency.
+L107: The Brex Mastercard® Corporate Credit Card is issued by Emigrant Bank, Fifth Third Bank N.A., or Airwallex (Netherlands) B.V. (all unaffiliated institutions), pursuant to licenses by Mastercard International Inc. Mastercard is a registered trademark, and the circles design is a trademark of Mastercard International Inc. The Brex Commercial Card is issued by Sutton Bank (an unaffiliated institution), pursuant to a license from Visa® U.S.A. Inc. Can be used where Visa® cards are accepted. No ATM access.
+L108: All loans are subject to approval, including underwriting, credit, and collateral approval, as well as availability restrictions. Nothing herein should be construed as a commitment to lend.
+L109: Certain payment services are provided by Brex Payments LLC, a cite43†licensed money transmitter (NMLS #2035354) and a Capital One company.
+L110: 
+L111: Some Brex products have associated fees. Plans start at $0 per user, per month, and more advanced features are available for $12 per user, per month.

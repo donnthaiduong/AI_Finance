@@ -1,0 +1,403 @@
+Cash Flows, Balances, and Buffer Days | JPMorgan Chase Institute (https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/report-cash-flows-balances-and-buffer-days)
+citeturn40view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn33view1","lineno":115}); Total lines: 505
+L0: cite0†Join our team†jpmc.fa.oraclecloud.com L1: 
+L2: Search JPMorganChase
+L3: 
+L4:   * About us
+L5: 
+L6: ## cite1†About us L7: 
+L8: ## cite2†How we do business L9: 
+L10: ## cite3†Leadership L11: 
+L12: ## cite4†Awards and recognition L13: 
+L14: ## cite5†Technology L15: 
+L16: ## cite6†Governance L17: 
+L18: ## cite7†Suppliers L19: 
+L20: ## cite8†Diversity, opportunity & inclusion L21: 
+L22: Read more
+L23: 
+L24: cite9†Image L25: 
+L26: Chairman and CEO Letter to Shareholders
+L27: 
+L28: cite10†Learn more L29: 
+L30:   * Impact
+L31: ## cite11†Impact L32: 
+L33:     * cite11†Global impact L34:     * cite12†U.S. impact L35: 
+L36: cite13†Image: American town - Red Lodge, Montana, USA L37: 
+L38: Creating thriving communities together
+L39: 
+L40: See how our clients and partners—from small business owners to workforce training leaders—work with JPMorganChase to drive meaningful impact and economic growth where they live and work.
+L41: 
+L42: cite14†Learn more L43: 
+L44:   * cite15†Communities L45: 
+L46:   * Insights
+L47: 
+L48: ## cite16†Institute L49: 
+L50: ## cite17†Center for Geopolitics L51: 
+L52: ## cite18†PolicyCenter L53: 
+L54: ## cite19†From the desk of L55: 
+L56:   * Careers
+L57: ## cite20†Careers L58: 
+L59: ## cite21†Work with us L60: 
+L61: ## cite22†Grow with us L62: 
+L63: ## cite23†How we hire L64: 
+L65: ## cite24†Explore opportunities L66: 
+L67: ## cite25†Students and graduates L68: 
+L69: ## cite0†Apply now†jpmc.fa.oraclecloud.com L70: 
+L71: Latest news
+L72: 
+L73: cite26†Image L74: 
+L75: Veteran’s Unconventional Path to Landing her Dream Job in Tech
+L76: 
+L77: U.S. Army Veteran Ashley Wigfall transitioned to a civilian role and charted her path to technologist through mentorship and skills training at the JPMorgan Chase tech hub in Plano, Texas.
+L78: 
+L79: cite27†Learn more L80: 
+L81:   * Investor Relations
+L82: ## cite28†Investor Relations L83: 
+L84:     * cite10†Senior Executive Letters L85:     * cite29†Annual Report L86:     * cite30†Quarterly Earnings L87:     * cite31†Press releases L88:     * cite32†Events and presentations L89:     * cite33†Company Update L90:     * cite34†Investor Day L91: 
+L92: Learn more
+L93: 
+L94: cite9†Image L95: 
+L96: Chairman and CEO Letter to Shareholders
+L97: 
+L98: cite10†Learn more L99: 
+L100:   * Newsroom
+L101: ## cite35†Newsroom L102: 
+L103:     * cite36†Stories L104:     * cite37†Press releases L105:     * cite38†Media contacts L106: 
+L107: Latest news
+L108: 
+L109: cite9†Image L110: 
+L111: Chairman and CEO Letter to Shareholders
+L112: 
+L113: cite10†Learn more L114: 
+L115: cite39†Image L116: 
+L117: Research
+L118: 
+L119: Cash is King: Flows, Balances, and Buffer Days
+L120: 
+L121: Evidence from 600,000 Small Businesses
+L122: 
+L123: September 1, 2016
+L124: ## Findings
+L125: 
+L126: Open
+L127: 
+L128: cite40†Executive summary L129: 
+L130: For most small business, cash reserves are a critical tool for meeting liquidity needs. Cash reserves provide a readily available means to pay employees and suppliers in normal times and are an important buffer to draw upon during adverse times. This is particularly true for small businesses with limited access to credit and other sources of liquidity. In other words, cash reserves are a key measure of the vitality and security of a small business.
+L131: In this inaugural report on the small business sector, the JPMorgan Chase Institute explores the financial lives of small business through the lens of cash inflows, outflows, and account balances. We find that, despite the importance of cash reserves, most small businesses hold a level of cash reserves that would provide an insufficient cushion in the face of a significant economic downturn or other disruption.
+L132: Using a new data asset constructed from over 470 million transactions conducted by 597,000 small businesses from February to October 2015, our analysis shows that half of all small businesses hold a cash buffer large enough to support 27 days of their typical outflows.
+L133: This report also explores key industry characteristics that help explain the drivers of cash buffers. Additionally, it offers a new synthesis of publicly available data to begin to draw together a comprehensive view of the small business sector.
+L134: These findings are relevant to policy makers who seek to assist small businesses; to nonprofit organizations that coach small business owners; to financial services firms that help small businesses manage their liquidity; and to owners of small businesses who seek benchmarks for guidance in managing their own liquidity.
+L135: We hope this report draws attention to cash balances as an important issue, helps people better understand differences among small businesses, and helps in the development of smarter programs, products, and policies that enable small businesses to flourish.
+L136: 
+L137: Measuring cash inflows, outflows, balances, and buffer days
+L138: 
+L139: cite41†Image: Infographic describes about measuring cash inflows, outflows, balances, and buffer days L140: 
+L141: See Text Version
+L142: ### MEASURING CASH INFLOWS, OUTFLOWS, BALANCES, AND BUFFER DAYS
+L143: 
+L144: Cash Inflows: Credits into any business deposit or savings account (e.g., revenues, owner transfers into the account from private savings, loan disbursement, or tax rebates)
+L145: 
+L146: Business Deposit & Savings Accounts -> Cash Balances: The amount of cash held at the end of the day across all business deposit or savings accounts
+L147: Cash Outflows: Debits out of any business deposit or savings accounts (e.g., supplies purchased, payroll, owner transfers out of the account to private savings, loan repayments, or tax payments)
+L148: 
+L149: Cash Balances ÷ Cash Outflows = Cash Buffer Days: The number of days of cash outflows a business could pay out of its cash balance were its inflows to stop
+L150: 
+L151: 01
+L152: The median small business has average daily cash outflows of $374 and average daily cash inflows of $381, with wide variation across and within industries.
+L153: 
+L154: Outflows refer to debit transactions paid out of any business deposit or savings accounts, such as the purchase of material and payroll, owner transfers out of the account to private savings, loan repayments, or tax payments.
+L155: Inflows refer to credit transactions into any business deposit or savings account, such as revenues, owner transfers into the account from private savings, loan funding, or tax rebates.
+L156: 
+L157: cite42†Image: Bar garph describes about median daily cash outflows and inflows by industry L158: 
+L159: See Text Version
+L160: 
+L161: Finding One
+L162: 
+L163: Median daily cash outflows and inflows by industry
+L164: Industry  | Outflows  | Inflows
+L165: --- | --- | ---
+L166: Personal Services  | $216  | $219
+L167: High-Tech Services  | $374  | $387
+L168: Health Care Services  | $577  | $598
+L169: Restaurants  | $957  | $968
+L170: All Small Business Median  | $374  | $381
+L171: 
+L172: Source: JPMorgan Chase Institute
+L173: 
+L174: © 2018 JPMorgan Chase & Co.
+L175: 
+L176: Individual small business average daily inflows and outflows are highly correlated.
+L177: 
+L178: Average daily cash inflows and outflows vary widely by industry:
+L179:   * In the Personal Services industry, daily cash outflows and inflows were the lowest at $216 and $219, respectively.
+L180:   * In the Restaurant industry, daily cash outflows and inflows were the highest at $957 and $968, respectively.
+L181: 
+L182: Average daily cash outflows vary substantially within industries as well:
+L183:   * Outflows varied the most among small businesses within the Wholesale, Metal & Machinery Manufacturing, and High-Tech Manufacturing industries—in these industries small business at the 75th percentile had outflows four times higher than the median.
+L184: 
+L185: 01
+L186: 
+L187:  The median small business holds an average daily cash balance of $12,100, with wide variation across and within industries.
+L188: 
+L189: Balances refer to the amount of cash held by a business across all its business deposit or savings accounts.
+L190: cite43†Image: Bar garph describes about average daily cash balances by industry L191: 
+L192: See Text Version
+L193: 
+L194: Finding Two
+L195: 
+L196: Average daily cash balances by industry
+L197: 
+L198:   * High-Tech Manufacturing: $34,200
+L199:   * Wholesalers: $18,500
+L200:   * Construction: $10,700
+L201:   * Personal Services: $5,300
+L202:   * All small business median: $12,100
+L203: 
+L204: Source: JPMorgan Chase Institute
+L205: 
+L206: © 2018 JPMorgan Chase & Co.
+L207: 
+L208: Cash balances vary widely by industry:
+L209:   * In the Personal Services industry, the median small business held a cash balance of $5,300.
+L210:   * In the High-Tech Manufacturing industry, the median small business held a cash balance of $34,200.
+L211: 
+L212: Cash balances vary substantially within industries as well:
+L213: 
+L214:   * In most industries, small businesses at the 75th percentile carried balances 3 to 4 times the median level.
+L215: 
+L216: 01
+L217: ### The median small business holds 27 cash buffer days in reserve.
+L218: 
+L219: Half of all small businesses hold a cash buffer of less than one month.
+L220: 
+L221:   * Moreover, 25 percent of small businesses hold fewer than 13 cash buffer days in reserve.
+L222:   * In contrast, 25 percent of small businesses hold over 62 cash buffer days in reserve.
+L223: Cash buffer days are the number of days of cash outflows a business could pay out of its cash balance were its inflows to stop. We estimate cash buffer days for a business by computing the ratio of its average daily cash balance to its average daily cash outflows.
+L224: 
+L225: cite44†Image: Infographic describes about cash buffer days held by small businesses L226: 
+L227: See Text Version
+L228: 
+L229: Finding Three
+L230: 
+L231: Cash buffer days held by small businesses
+L232: 
+L233: Percentile  | Cash Buffer Days
+L234: --- | ---
+L235: 25th  | 13
+L236: Median  | 27
+L237: 75th  | 62
+L238: Median cash buffer days held by small businesses in each industry
+L239: 
+L240: 
+L241: 
+L242: Industry  | Cash Buffer Days
+L243: Restaurants  | 16
+L244: Repair & Maintenance  | 18
+L245: Retail  | 19
+L246: Construction  | 20
+L247: Personal Services  | 21
+L248: Wholesalers  | 23
+L249: Metal & Machinery  | 28
+L250: Health Care Services  | 30
+L251: High-Tech Manufacturing  | 32
+L252: Other Professional Services  | 33
+L253: High-Tech Services  | 33
+L254: Real Estate  | 47
+L255: 
+L256: 
+L257: 
+L258: Source: JPMorgan Chase Institute
+L259: 
+L260: © 2018 JPMorgan Chase & Co.
+L261: 
+L262: 01
+L263: Small businesses in labor-intensive or low-wage industries hold fewer cash buffer days than those in capital-intensive or high-wage industries.
+L264: 
+L265: Share of Total US Small Business Employment within Each Segment
+L266: 
+L267: cite45†Image: Bar garph describes about difference in Cash Buffer Days by Segment L268: 
+L269: See Text Version
+L270: 
+L271: Finding Four
+L272: 
+L273: Difference in Cash Buffer Days by Segment
+L274: 
+L275: 
+L276: 
+L277: Segment  | Cash Buffer Days
+L278: --- | ---
+L279: Capital Intensive  | 38 days
+L280: Labor Intensive  | 23 days
+L281: Difference  | 15 fewer days
+L282: Industries Included within Each Segment
+L283: 
+L284: Labor Intensive: Construction, Health Care Services, Other Professional Services, Personal Services, Repair & Maintenance, Restaurants, and Retail
+L285: 
+L286: Capital Intensive: High-Tech Manufacturing, High-Tech Services, Metal & Machinery, Real Estate, and Wholesalers
+L287: 
+L288: High-wage: Construction, Health Care Services, High-Tech Manufacturing, High-Tech Services, Metal & Machinery, Other Professional Services, Real Estate, and Wholesalers
+L289: Low-wage: Personal Services, Repair & Maintenance, Restaurants, and Retail
+L290: 
+L291: Source: JPMorgan Chase Institute
+L292: 
+L293: © 2018 JPMorgan Chase & Co.
+L294: 
+L295: Share of Total US Small Business Employment within Each Segment
+L296: 
+L297: cite46†Image: Graph describes about share of Total US Small Business Employment within Each Segment L298: 
+L299: See Text Version
+L300: 
+L301: Finding Four
+L302: 
+L303: Difference in Cash Buffer Days by Segment
+L304: 
+L305: 
+L306: 
+L307: Segment  | Cash Buffer Days
+L308: --- | ---
+L309: Capital Intensive  | 38 days
+L310: Labor Intensive  | 23 days
+L311: Difference  | 15 fewer days
+L312: Industries Included within Each Segment
+L313: 
+L314: Labor Intensive: Construction, Health Care Services, Other Professional Services, Personal Services, Repair & Maintenance, Restaurants, and Retail
+L315: 
+L316: Capital Intensive: High-Tech Manufacturing, High-Tech Services, Metal & Machinery, Real Estate, and Wholesalers
+L317: 
+L318: High-wage: Construction, Health Care Services, High-Tech Manufacturing, High-Tech Services, Metal & Machinery, Other Professional Services, Real Estate, and Wholesalers
+L319: Low-wage: Personal Services, Repair & Maintenance, Restaurants, and Retail
+L320: 
+L321: Source: JPMorgan Chase Institute
+L322: 
+L323: © 2018 JPMorgan Chase & Co.
+L324: 
+L325: Small businesses in industries with a high amount of information technology or intellectual property (IT/IP) do not hold cash buffer days that are very different from low IT/IP industry businesses.
+L326: Similarly, small businesses in business-to-business (B2B) industries do not hold cash buffer days that are very different from business-to-consumer (B2C) industry businesses.
+L327: 
+L328: 01
+L329: 
+L330: Small business cash buffer days vary across metropolitan areas, but no clear pattern emerges from this variance.
+L331: Median cash buffer days in our 24 selected cities vary from 21 days in Orlando to 34 days in San Jose, a spread of 60 percent. Differences in industry mix and population between metropolitan areas do not explain this variation.
+L332: 
+L333: cite47†Image: Infographic describes about median cash buffer days vary across 24 selected cities L334: 
+L335: See Text Version
+L336: 
+L337: Finding Five
+L338: 
+L339: Median cash buffer days vary across 24 selected cities.
+L340: Metropolitan Area  | Median Cash Buffer Days
+L341: Atlanta  | 23
+L342: Austin  | 27
+L343: Chicago  | 28
+L344: Columbus  | 25
+L345: Dallas  | 25
+L346: Denver  | 25
+L347: Detroit  | 26
+L348: Houston  | 27
+L349: Las Vegas  | 27
+L350: Los Angeles  | 28
+L351: Louisville  | 24
+L352: Miami  | 25
+L353: Milwaukee  | 25
+L354: New Orleans  | 27
+L355: New York  | 28
+L356: Orlando  | 21
+L357: Phoenix  | 25
+L358: Portland  | 27
+L359: Salt Lake City  | 28
+L360: San Diego  | 26
+L361: San Francisco  | 30
+L362: San Jose  | 34
+L363: Seattle  | 30
+L364: Tampa  | 23
+L365: 
+L366: 
+L367: 
+L368: Source: JPMorgan Chase Institute
+L369: 
+L370: © 2018 JPMorgan Chase & Co.
+L371: Cash buffer days are the number of days of cash outflows a business could pay out of its cash balance were its inflows to stop. We estimate cash buffer days for a business by computing the ratio of its average daily cash balance to its average daily cash outflows.
+L372: ### Data
+L373: 
+L374: We constructed a sample of 597,000 businesses who hold Chase Business Banking deposit accounts and meet our criteria for small, core metropolitan operating businesses. We then used 470 million anonymized transactions from these businesses to produce a daily view of cash inflows, cash outflows, and end-of-day balances over the nine non-holiday months from February 2015 to October 2015.
+L375: cite48†Image: Infographic describes about 597,000 Small Businesses, Core Metropolitan Operating Businesses and Selected Key Industries L376: 
+L377: See Text Version
+L378: 
+L379: 597,000 Small Businesses
+L380: 
+L381: We select a sample of 597,000 small businesses with the following characteristics:
+L382: 
+L383:   * Hold Chase Business Banking accounts
+L384:   * End-of-day combined balances do not exceed $20 million each day
+L385:   * Do not identify with more than a single address and/or a single industry
+L386: 
+L387: Core Metropolitan Operating Businesses
+L388: We study businesses that have financial activity that indicates they are not seasonal:
+L389: 
+L390:   * For at least five of nine months, at least $500 in outflows and 10 combined inflows and outflows
+L391:   * At least one inflow and outflow in each month
+L392:   * Are located in one of 367 Metropolitan Areas where Chase has a representative footprint
+L393: 
+L394: Selected Key Industries
+L395: 
+L396: We focus on small businesses in 12 representative industries that capture most small business employees:
+L397:   * Construction
+L398:   * Health Care Services
+L399:   * High-Tech Manufacturing
+L400:   * High-Tech Services
+L401:   * Metal & Machinery
+L402:   * Other Professional Services
+L403:   * Personal Services
+L404:   * Real Estate
+L405:   * Repair & Maintenance
+L406:   * Restaurants
+L407:   * Retail
+L408:   * Wholesalers
+L409: 
+L410: Together, these 12 industries capture 73 percent of for-profit employer small firms and 65 percent of for-profit small business employment.
+L411: 
+L412: Source: JPMorgan Chase Institute
+L413: ### Conclusion
+L414: 
+L415: This study leverages a new JPMorgan Chase Institute small business data asset to highlight cash buffer days as a key financial vitality indicator for small businesses. Our research shows substantial variation in cash buffer days for small businesses across and within industries and by region. Many small businesses may not have enough cash to continue operations in the face of a month-long loss of cash inflows due to an economic downturn or other negative shock.
+L416: Interventions that help small business owners better understand and manage cash could support the financial health of a sector that provides the economic base for a large portion of the U.S. population.
+L417: Specifically, our new industry segmentation draws attention to an opportunity to develop new policies that target large numbers of especially financially fragile small businesses in labor-intensive or low-wage industries, in contrast to policies that target small businesses in high-technology, capital intensive, high-wage, or business-serving industries.
+L418: Finally, cash buffer days can focus the attention of policymakers, advocates, and private-sector partners on liquidity as an important feature of the credit landscape. New educational programs and diversified credit offerings can help small business owners better understand and manage their liquidity, and substantially improve the financial resilience of the small business sector.
+L419: ##
+L420: 
+L421: Authors
+L422: 
+L423: cite49†Image: Diana Farrell L424: 
+L425: Diana Farrell
+L426: 
+L427: Founding and Former President & CEO
+L428: 
+L429: cite50†Image: Chris Wheat L430: 
+L431: Chris Wheat
+L432: 
+L433: President, JPMorganChase Institute
+L434: 
+L435: cite51†Image: JPMorganChase logo L436: 
+L437: ## cite1†About us L438: 
+L439:   * cite2†How we do business L440:   * cite3†Leadership L441:   * cite4†Awards and recognition L442:   * cite5†Technology L443:   * cite7†Suppliers L444:   * cite6†Governance L445:   * cite52†History L446:   * cite53†Art collection L447:   * cite54†Human rights L448:   * cite8†Diversity, opportunity & inclusion L449: ## cite15†Communities L450: 
+L451:   * cite55†Community relief L452:   * cite56†Volunteerism L453: 
+L454: ## cite11†Impact L455: 
+L456:   * cite11†Global impact L457:   * cite12†U.S. impact L458:   * cite57†Business growth and entrepreneurship L459:   * cite58†Careers and skills L460:   * cite59†Housing access and affordability L461:   * cite60†Environmental sustainability L462:   * cite61†Financial health and wealth creation L463:   * cite62†Stay informed†cloud.impact.jpmchase.com L464: 
+L465: ## cite16†Institute L466: 
+L467: ## cite17†Center for Geopolitics L468: ## cite20†Careers L469: 
+L470:   * cite21†Work with us L471:   * cite22†Grow with us L472:   * cite23†How we hire L473:   * cite24†Explore opportunities L474:   * cite63†Equal opportunities L475:   * cite64†Recruitment scams warning L476: 
+L477: ## cite28†Investor Relations L478: 
+L479: ## cite35†Newsroom L480: 
+L481:   * cite38†Media contacts L482: ##
+L483: 
+L484: Related sites
+L485: 
+L486:   * cite65†Chase†www.chase.com L487:   * cite66†J.P. Morgan†www.jpmorgan.com L488:   * cite67†J.P. Morgan Research†www.jpmorgan.com L489:   * cite68†Morgan Health†www.morganhealth.com L490:   * cite69†Alumni Network†alumni.jpmorganchase.com L491: 
+L492:   * cite70†Privacy and security L493:   * cite71†Terms and conditions L494:   * cite72†Cookies L495:   * cite73†Accessibility†www.chase.com L496:   * cite74†Global Financial Crimes Compliance L497: 
+L498: JPMorgan Chase & Co. is an Equal Opportunity Employer, including Disability/Veterans.
+L499: © JPMorgan Chase & Co. All rights reserved.
+L500: ## You are now leaving JPMorganChase
+L501: 
+L502: JPMorganChase's website terms, privacy and security policies don't apply to the site or app you're about to visit. Please review its website terms, privacy and security policies to see how they apply to you. JPMorganChase isn't responsible for (and doesn't provide) any products, services or content at this third-party site or app, except for products and services that explicitly carry the JPMorganChase name.
+L503: 
+L504: Cancel cite75†Proceed 

@@ -1,0 +1,96 @@
+How Many Test Users in a Usability Study? - NN/G (https://www.nngroup.com/articles/how-many-test-users/)
+citeturn39view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.nngroup.com/articles/how-many-test-users/","lineno":null}); Total lines: 152
+L0: cite0†Skip to content L1: 
+L2:   * UX Training & Courses
+L3:     * ### Live Online
+L4: 
+L5:       * cite1†All Live Online Courses L6:       * cite2†Upcoming Live Online Training L7:       * cite3†Train Your Team L8:         * cite4†Group-Discount Pricing L9:         * cite5†Private Team Training L10:       * cite6†UX Certification L11:     * ### Self-Paced
+L12: 
+L13:       * cite7†Self-Paced Courses New L14:     * ### Deciding Between Formats?
+L15: 
+L16: Find the training option that fits your learning style.
+L17: cite8†Which Format Is Right For Me? L18:   * Articles & Resources
+L19:     *       * cite9†Articles & Videos L20:       * cite10†Reports & Books L21:       * cite11†The NN/G UX Podcast†podcasters.spotify.com L22:   * Consulting
+L23:     *       * cite12†All Consulting Services L24:       * cite13†Customized Research L25:       * cite14†Expert Review L26:       * cite15†Intensive Applied Workshops L27:       * cite16†Keynote Speaking L28:       * cite17†User Testing L29:       * cite18†UX Maturity Assessment L30:   * About Us
+L31:     *       * cite19†About NNGroup L32:       * cite20†People L33:       * cite21†Clients L34:       * cite22†News & Careers L35:       * cite23†FAQs L36:       * cite24†Contact Us L37: [Input]
+L38: 
+L39: 4
+L40: # How Many Test Users in a Usability Study?
+L41: 
+L42: Jakob Nielsen
+L43: 
+L44: cite25†Image†media.nngroup.com L45: 
+L46: cite26†Jakob Nielsen L47: 
+L48: June 3, 2012 2012-06-03
+L49: 
+L50: Summary:  The answer is 5, except when it's not. Most arguments for using more test participants are wrong, but some tests should be bigger and some smaller.
+L51: If you want a single number, the answer is simple: cite27†test 5 users in a qualitative usability study . Testing with 5 people lets you find almost as many usability problems as you'd find using many more test participants.
+L52: 
+L53: This answer has been the same since I started promoting "cite28†discount usability engineering " in 1989. Doesn't matter whether you test websites, intranets, PC applications, or mobile apps. With 5 users, you almost always get close to user testing's maximum benefit-cost ratio.
+L54: ## In This Article:
+L55: 
+L56:   * cite29†Exceptions to the Rule L57:   * cite30†Return on Investment L58:   * cite31†(Weak) Arguments for More Test Participants L59:   * cite32†83 Case Studies L60: ## Exceptions to the Rule
+L61: 
+L62: As with any human factors issue, however, there are exceptions:
+L63: 
+L64:   * cite33†Quantitative studies (aiming at statistics, not insights): Test at least 20 users to get statistically significant numbers; tight confidence intervals require even more users.
+L65:   * cite34†Card sorting : Test at least 15 users per user group.
+L66:   * cite35†Eyetracking : Test 39 users if you want stable heatmaps.
+L67: However, these exceptions shouldn't worry you much: the vast cite36†majority of your user research should be qualitative — that is, aimed at collecting insights to drive your design, not numbers to impress people in PowerPoint.
+L68: ## Return on Investment
+L69: 
+L70: The main argument for small tests is simply return on investment: testing costs increase with each additional study participant, yet the number of findings quickly reaches the point of diminishing returns. There's little additional benefit to running more than 5 people through the same study; ROI drops like a stone with a bigger N.
+L71: 
+L72: And if you have a big budget? Yay! Spend it on additional studies, not more users in each study.
+L73: Sadly, most companies insist on running bigger tests. During the cite37†UX Conference , I surveyed 217 participants about the practices at their companies. The average response was that they used 11 test participants per round of user testing — more than twice the recommended size. Clearly, I need to better explain the benefits of small-N usability testing.
+L74: ## (Weak) Arguments for More Test Participants
+L75: 
+L76: > "A big website has millions of users."
+L77: Doesn't matter for the sample size, even if you were doing statistics. An opinion poll needs the same number of respondents to find out who will be elected mayor of Pittsburgh or president of France. The variance in statistical sampling is determined by the sample size, not the size of the full population from which the sample was drawn. In user testing, we focus on a website's functionality to see which design elements are easy or difficult to use.
+L78: The evaluation of a design element's quality is independent of how many people use it. (Conversely, the decision about whether to fix a design flaw should certainly consider how much use it'll get: it might not be worth the effort to improve a feature that has few users; better to spend the effort recoding something with millions of users.)
+L79: > "A big website has hundreds of features."
+L80: 
+L81: This is an argument for running several different tests — each focusing on a smaller set of features — not for having more users in each test. You can't ask any individual to test more than a handful of tasks before the poor user is tired out. Yes, you'll need more users overall for a feature-rich design, but you need to spread these users across many studies, each focusing on a subset of your research agenda.
+L82: 
+L83: > "We have several different target audiences."
+L84: This can actually be a legitimate reason for testing a larger user set because you'll need representatives of each target group. However, this argument holds only if the different users are actually going to behave in completely different ways. Some examples from our projects include
+L85: 
+L86:   * a medical site targeting both doctors and patients, and
+L87:   * an auction site where you can either sell stuff or buy stuff.
+L88: When the users and their tasks are this different, you're essentially running a new test for each target audience, and you'll need close to 5 users per group. Typically, you can get away with 3–4 users per group because the user experience will overlap somewhat between the two groups. With, say, a financial site that targets novice, intermediate, and experienced investors, you might test 3 of each, for a total of 9 users — you won't need 15 users total to assess the site's usability.
+L89: > "The site makes so much money that even the smallest usability problem is unacceptable."
+L90: 
+L91: Rich companies certainly have an cite38†ROI case to spend more on usability . Even if they spend "too much" on each quality improvement, they'll make even more back because of the vast amounts of money flowing through the user interface. However, even the highest-value design projects will still optimize their ROI by keeping each study small and conducting many more studies than a lower-value project could afford.
+L92: The basic point is that it's okay to leave usability problems behind in any one version of the design as long as you're employing an cite39†iterative design process where you'll design and test additional versions. Anything not fixed now will be fixed next time. If you have many things to fix, simply plan for a lot of iterations. The end result will be higher quality (and thus higher business value) due to the additional iterations than from testing more users each time.
+L93: ## 83 Case Studies
+L94: 
+L95: The following chart summarizes 83 of Nielsen Norman Group's recent cite12†usability consulting projects . Each dot is one usability study and shows how many users we tested and how many usability findings we reported to the client. (The chart includes only normal qualitative studies; we also run competitive studies and benchmark measurements, and conduct other types of research not shown here.)
+L96: cite40†Image: Scatterplot of 83 usability-testing case studies, showing the number of users tested in each study as well as the number of usability findings reported.†media.nngroup.com There's a small correlation, but it's really tiny. Across these many projects, testing more users didn't result in appreciably more insights.
+L97: 
+L98: Why did we run more users in the first place, given that I certainly believe my own research results showing the superiority of small-N testing? Three reasons:
+L99:   * Some clients wanted bigger studies for internal credibility. When a study's sponsor presents findings to executives who don't understand usability, the recommendations are easier to swallow when more users were tested. (If management trusted its own employees, much money could be saved.)
+L100:   * Some design projects had multiple target audiences and the differences in expected (or at least suspected) behaviors were large enough to justify the expense of sampling additional users.
+L101:   * Finally, the very fact that these were consulting projects justified including a few more users, which is why we often run studies with around 8 users. ROI is the ratio between benefits and expense. When hiring a consultant, the true expense is higher than just the fee because the client must also spend time finding the consultant and negotiating the project. With higher investment, you want a larger benefit.
+L102: The last point also explains why the true answer to "how many users" can sometimes be much smaller than 5. If you have an cite41†Agile-style UX process with very low overhead, your investment in each study is so trivial that the cost–benefit ratio is optimized by a smaller benefit.
+L103: (It might seem counterintuitive to get more return on investment by benefiting less from each study, but this savings occurs because the smaller overhead per study lets you run so many more studies that the sum of numerous small benefits becomes a big number.)
+L104: For really low-overhead projects, it's often optimal to test as few as 2 users per study. For some other projects, 8 users — or sometimes even more — might be better. For most projects, however, you should stay with the tried-and-true: 5 users per usability test.
+L105: 
+L106: User Testing,budgets & cost,roi
+L107: ## Never miss an update
+L108: 
+L109: Get weekly UX articles, videos, upcoming courses, and job openings straight to your inbox with our newsletter.
+L110: 
+L111:   * ### Courses
+L112: 
+L113:     * cite1†Live Online Training Events L114:     * cite7†Self-Paced Courses L115:   * ### Consulting
+L116: 
+L117:     * cite15†Intensive Applied Workshops L118:     * cite13†Customized Research L119:     * cite14†Expert Review L120:     * cite16†Keynote Speaking L121:     * cite17†User Testing L122:     * cite18†UX Maturity Assessment L123:   * ### Help
+L124:     * cite42†Terms & Conditions L125:     * cite43†Privacy Policy L126:     * cite44†Copyright & Reprint Policy L127:     * cite45†Return Policy L128:     * cite46†Live Course Tech Support L129:     * cite23†FAQs L130:   * ### Company
+L131: 
+L132:     * cite19†About NNGroup L133:     * cite20†People L134:     * cite22†News & Careers L135:     * cite24†Contact Us L136: 
+L137: Copyright © 1998-2026 Nielsen Norman Group, All Rights Reserved.
+L138: 
+L139:   *   * cite47†Cookie Declaration L140: ## Follow Us
+L141: 
+L142:   * cite48†Youtube†www.youtube.com L143:   * cite49†LinkedIn†www.linkedin.com L144:   * cite50†Instagram†www.instagram.com L145:   * cite51†Threads†www.threads.com L146:   * cite52†Bluesky†bsky.app L147:   * cite53†X†x.com L148:   * cite54†Facebook†www.facebook.com L149:   * cite11†Spotify†podcasters.spotify.com L150: 
+L151: Back to Top

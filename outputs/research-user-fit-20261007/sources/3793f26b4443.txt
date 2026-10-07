@@ -1,0 +1,112 @@
+How do sweep networks work? | Mercury (https://mercury.com/blog/understanding-bank-sweep-network)
+citeturn35view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://mercury.com/blog/understanding-bank-sweep-network","lineno":null}); Total lines: 276
+L0: cite0†Blog L1: 
+L2: Open Menu
+L3: 
+L4: Explore...
+L5: 
+L6:   * cite1†Library L7:   * cite2†Meridian L8:   * cite3†Inside Mercury L9: 
+L10: Topics
+L11: 
+L12:   * cite4†Accounting & Financial Ops L13:   * cite5†Business Banking L14:   * cite6†Business Operations L15:   * cite7†Company News L16:   * cite8†Customer Stories L17:   * cite9†Deep Dives L18:   * cite10†Founder Features L19:   * cite11†Fundraising L20:   * cite12†Go-to-Market L21:   * cite13†Ideas L22:   * cite14†Personal Finance L23:   * cite15†Product Updates L24:   * cite16†Scaling & Growth L25:   * cite17†Starting a Business L26: 
+L27: cite18†Read All Stories L28: cite19†Image: Pattern of puzzle pieces | Product Updates | Mercury Blog†www.datocms-assets.com L29: 
+L30: cite15†Product Updates L31: 
+L32: The latest Mercury product news. Head to cite20†Release Notes for more updates.
+L33: 
+L34: cite21†Image: Magnifying glass illustration | Deep Dives | Mercury Blog†www.datocms-assets.com L35: 
+L36: cite9†Deep Dives L37: 
+L38: Beneath the surface, into the archives, down the rabbit hole, and beyond.
+L39: 
+L40: Topics
+L41:   * cite4†Accounting & Financial Ops L42:   * cite5†Business Banking L43:   * cite6†Business Operations L44:   * cite7†Company News L45:   * cite8†Customer Stories L46:   * cite9†Deep Dives L47:   * cite10†Founder Features L48:   * cite11†Fundraising L49:   * cite12†Go-to-Market L50:   * cite13†Ideas L51:   * cite14†Personal Finance L52:   * cite15†Product Updates L53:   * cite16†Scaling & Growth L54:   * cite17†Starting a Business L55: 
+L56: cite18†Read All Stories L57: 
+L58: cite22†Dashboard†app.mercury.com L59: 
+L60: cite23†Log in†app.mercury.com L61: 
+L62: cite24†Open account†app.mercury.com L63: 
+L64: Business Banking
+L65: # What is a sweep network and how does it work?
+L66: 
+L67: Learn how your business bank’s sweep network can unlock additional FDIC insurance for your funds.
+L68: 
+L69: cite25†Image: Banking system hierarchy†www.datocms-assets.com L70: 
+L71: * * *
+L72: 
+L73: By: cite26†Mercury L74: 
+L75: November 30, 2022 Updated: January 29, 2026
+L76: An effective business bank accountcite27†^{} is one that cite28†ensures your money is safe while balancing that cite29†security with readily available cash funds and a smooth banking experience. In the case of Mercury, cite30†we’ve built our products to offer you the stability you’d expect from traditional banks, while sparing you from the familiar pain of unwieldy interfaces and hidden fees.
+L77: Naturally, there’s a lot of work that has to happen behind the scenes in order for a cite31†checking account to check all the right boxes. A sweep network is just one example of this system at play.
+L78: 
+L79: cite32†TL;DR: Sweep networks, explained L80: A sweep network spreads your deposits across multiple FDIC-insured banks to increase how much of your money is protected. Instead of being limited to $250K of insurance at one bank, your balance can be distributed across several program banks—each with its own FDIC coverage.
+L81: ### Key benefits
+L82: 
+L83:   * Higher FDIC insurance coverage for large balances
+L84:   * One primary account instead of managing many
+L85:   * Automated, behind-the-scenes operation
+L86: ### Typical coverage range
+L87: 
+L88: From the standard $250K up to several million dollars, depending on the number of partner banks in the network.
+L89: 
+L90: cite33†What is a sweep network? L91: 
+L92: Sweep networks are a way for customer deposits to be spread across a network of banks. Sweep networks aren’t investment funds — funds held across the network are treated similarly to money in a typical bank account.
+L93: At Mercury, rather than holding deposits with a single cite34†banking partner , our partner banks’ sweep programs spread your deposits across a network of established FDIC-insured program banks.
+L94: 
+L95: cite35†Why do banks set up sweep networks? L96: Sweep networks are an effective way for banks to create additional value to their customers through increased FDIC insurance on deposits, while simultaneously solving for their own operational needs.
+L97: Essentially, sweep networks help balance cash flow between banks. Some banks have more deposits than they want to hold, while others want more to support lending, so the sweep network helps ensure that each institution has the cash it needs on hand at any given time.
+L98: 
+L99: Did you know?
+L100: Opening a cite31†business bank account comes with financial, tax, and brand payoffs—all of which can boost your bottom line, even if you’re not a U.S. citizen.
+L101: 
+L102: cite36†Learn moreOpens in new tab cite37†Why don't all banks offer sweep networks? L103: If sweep networks benefit customers, a natural question follows: why don't all banks use them? The answer isn't about safety — it's about business incentives, as Casey Jennings, a financial attorney at Seward & Kissel who specializes in financial services regulation, explains.
+L104: U.S. banks practice fractional reserve banking, meaning they hold roughly 10% of deposits at any given time and use the remaining 90% to earn yield through loans and investments. “Many banks would rather keep the money at the bank, even if it's uninsured,” says Jennings. “Bank deposits are a loan to the bank, and the bank can use that money. If they sweep the money off their books, they can no longer use that money in their business.”
+L105: On top of that, FDIC insurance isn't free. Banks pay premiums for it. Sweep networks also have to meet specific qualifying conditions for FDIC pass-through insurance to apply, and not all sweep programs satisfy those requirements. Together, these factors mean sweep networks require meaningful operational investment, and not every bank finds that trade-off worthwhile.
+L106: At the same time, because the sweep network holds customer funds across different program bank accounts, it allows them to tap into additional FDIC insurance benefits beyond each account’s individual maximum coverage.
+L107: 
+L108: cite38†How does the sweep network increase insurance coverage on deposits? L109: One of the biggest benefits of a sweep network is that it can provide more cite39†FDIC insurance . The standard FDIC offering covers up to $250K in deposits for each client at a bank, regardless of the amount of money held in that account. However, startups deserve to have peace of mind that their operational cash and payroll funds are secured — and $250K insurance is simply not enough to guarantee that protection.
+L110: In order to get more insurance, you need to open more bank accounts. Sweep networks allow your bank to open those additional accounts on your behalf, so you can get that additional coverage without the headache of balancing multiple accounts yourself.
+L111: Your bank will also do the legwork of negotiating with partner banks to increase the maximum coverage that you’re eligible for through relationships with program banks across the sweep network — the more program bank accounts you have access to through your bank’s agreement with a partner bank, the greater your maximum coverage will be.
+L112: For example, if you have $1M in deposits sitting in a single FDIC-insured account, that sum will generally only be insured up to the FDIC insurance maximum of $250K, which is only a quarter of your funds. However, a sweep network would allow your primary bank to spread that $1M across four accounts with different program banks — each of which insures your money up to $250K, raising your total insured cash amount to $1M, or 100% of your deposit.
+L113: “Sweep networks are set up to ensure that FDIC insurance passes through from each bank to the customer,” says Jennings. “If the customer is participating in a sweep network with ten banks, then they should be eligible for $2.5M in insurance coverage. Each customer in a sweep network has a deposit account at each bank. It might be held by a custodian, and records might be kept by the custodian, but from the FDIC's perspective, each customer has an individual deposit account at each program bank.”
+L114: cite40†How Mercury extends FDIC coverage L115: 
+L116: In the case of Mercury, we currently offer up to cite41†$5M in FDIC insurance through our partners Column N.A. and Choice Financial Group and their respective sweep networks. This works by spreading your deposits across multiple FDIC-insured partner banks, without requiring you to open or manage separate accounts yourself.
+L117: 
+L118: We are actively working to help customers maximize the protection of their funds through cite29†Mercury Vault .
+L119: For balances beyond sweep network coverage limits, businesses may also consider treasury solutions that focus on both protection and yield. While sweep networks are designed to maximize FDIC insurance on operational cash, treasury products can help larger balances earn interest while maintaining strong liquidity and risk controls.
+L120: 
+L121: Approach  | Effort  | Liquidity  | Risk of errors
+L122: --- | --- | --- | ---
+L123: Sweep network  |
+L124: 
+L125:   * Low
+L126: 
+L127:   * Low (single account view)
+L128:  |
+L129: 
+L130:   * High (normal access)
+L131:   * High (distributed automatically)
+L132:  | Low
+L133: Manual multi-bank strategy  |
+L134: 
+L135:   * High
+L136: 
+L137:   * High (many accounts)
+L138:  |
+L139: 
+L140:   * Medium (transfers needed)
+L141: 
+L142:   * High (if managed correctly)
+L143:  | High (manual mistakes possible)
+L144: 
+L145: cite42†What are other benefits of a sweep network? L146: While accessing more insurance coverage is the primary advantage of using a sweep network, a subsequent benefit is that founders don’t have to juggle a handful of different banking relationships. Instead, you’re reaping the insurance benefits of multiple accounts while continuing to deal directly with a banking provider that you know and trust.
+L147: For example, to get $10M of insurance on deposits, you’d need to open and manage 40 bank accounts, and likely pay fees to transfer funds between those various accounts. A sweep program, however, takes that operational burden off your plate and saves your company time and money, while still getting the insurance benefit.
+L148: The sweep network also bakes redundancy into your business through account diversification. Because your funds are held across a network of trusted, FDIC-insured banks, you never have to worry about a single point of failure should an issue arise. You also continue to have access to all of your funds, even though they are held at multiple institutions.
+L149: 
+L150: cite43†How do you know that your bank uses a sweep network? L151: Before participating in a sweep network, your bank or banking provider will have you sign a disclosure agreement confirming your decision to opt into the network with your designated partner bank.
+L152: 
+L153: You will also see a list of the banks where your funds were FDIC insured on your monthly account statement. You can review Mercury’s sweep disclosure and our list of sweep partners at cite44†mercury.com/legal .
+L154: 
+L155: cite45†How does opting into a sweep network change the way you bank? L156: Rest assured — you can reap the rewards of a sweep network without making changes to your regular banking routine. Your primary bank or banking provider will remain your main point of contact, and you’ll still be able to conduct business as usual with every dollar in your account, regardless of where those dollars are held. The sweep network also doesn’t impact how quickly you can transact or withdraw money from your account.
+L157: Sweeps typically occur automatically on a regular schedule, often daily, based on your account balance. Excess funds above a certain threshold are allocated across partner banks in the network, while your primary account continues to show a single balance.
+L158: From your perspective, you still see and use one account. Payments, transfers, and withdrawals work the same way because your primary bank manages the movement of funds behind the scenes. Liquidity is maintained by keeping enough funds readily available for normal activity, while the rest are distributed across partner banks for insurance coverage.
+L159: In the case of Mercury, regardless of whether you opt in or out of the sweep program, your account functionality, features, and fees will remain the same, and your funds will continue to be held at FDIC-insured partner banks. The main difference will be the maximum insurance that your funds are eligible for.
+L160: 
+L161: cite46†Are there risks associated with the sweep network? L162: For the most part, the role of the cite47†sweep network is to help alleviate risk for businesses rather than create more of it. By allowing customers to increase the FDIC insurance on large deposits, the sweep program model helps ensure that as much of your funds are protected as possible.

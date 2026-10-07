@@ -1,0 +1,35 @@
+Federal Reserve Board - Joint Statement by Treasury, Federal Reserve, and FDIC (https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312b.htm?mf_ct_campaign=aol-synd-feed)
+citeturn39view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312b.htm?mf_ct_campaign=aol-synd-feed","lineno":null}); Total lines: 54
+L0: cite0†Skip to main content cite1†Board of Governors of the Federal Reserve System The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system. L1: 
+L2: ## Joint Press Release
+L3: 
+L4: Please enable JavaScript if it is disabled in your browser or access the information through the links provided below.
+L5: 
+L6: March 12, 2023
+L7: ### Joint Statement by Treasury, Federal Reserve, and FDIC
+L8: 
+L9: Department of the Treasury
+L10: 
+L11: Board of Governors of the Federal Reserve System
+L12: 
+L13: Federal Deposit Insurance Corporation
+L14: 
+L15: For release at 6:15 p.m. EDT
+L16: 
+L17: Washington, DC -- The following statement was released by Secretary of the Treasury Janet L. Yellen, Federal Reserve Board Chair Jerome H. Powell, and FDIC Chairman Martin J. Gruenberg:
+L18: Today we are taking decisive actions to protect the U.S. economy by strengthening public confidence in our banking system. This step will ensure that the U.S. banking system continues to perform its vital roles of protecting deposits and providing access to credit to households and businesses in a manner that promotes strong and sustainable economic growth.
+L19: After receiving a recommendation from the boards of the FDIC and the Federal Reserve, and consulting with the President, Secretary Yellen approved actions enabling the FDIC to complete its resolution of Silicon Valley Bank, Santa Clara, California, in a manner that fully protects all depositors. Depositors will have access to all of their money starting Monday, March 13. No losses associated with the resolution of Silicon Valley Bank will be borne by the taxpayer.
+L20: We are also announcing a similar systemic risk exception for Signature Bank, New York, New York, which was closed today by its state chartering authority. All depositors of this institution will be made whole. As with the resolution of Silicon Valley Bank, no losses will be borne by the taxpayer.
+L21: Shareholders and certain unsecured debtholders will not be protected. Senior management has also been removed. Any losses to the Deposit Insurance Fund to support uninsured depositors will be recovered by a special assessment on banks, as required by law.
+L22: 
+L23: Finally, the Federal Reserve Board on Sunday announced it will make available additional funding to eligible depository institutions to help assure banks have the ability to meet the needs of all their depositors.
+L24: The U.S. banking system remains resilient and on a solid foundation, in large part due to reforms that were made after the financial crisis that ensured better safeguards for the banking industry. Those reforms combined with today's actions demonstrate our commitment to take the necessary steps to ensure that depositors' savings remain safe.
+L25: 
+L26: Last Update: March 12, 2023
+L27: ###### Board of Governors of the Federal Reserve System
+L28: 
+L29:   * cite2†About the Fed L30:   * cite3†News & Events L31:   * cite4†Monetary Policy L32:   * cite5†Supervision & Regulation L33:   * cite6†Financial Stability L34:   * cite7†Payment Systems L35:   * cite8†Economic Research L36:   * cite9†Data L37:   * cite10†Consumers & Communities L38:   * cite11†Connect with the Board L39: ###### Tools and Information
+L40: 
+L41:   * cite12†Contact L42:   * cite13†Publications L43:   * cite14†Freedom of Information (FOIA) L44:   * cite15†Office of Inspector General†oig.federalreserve.gov L45:   * cite16†Budget & Performance | cite17†Audit L46:   * cite18†No FEAR Act L47:   * cite19†Español L48:   * cite20†Website Policies | cite21†Privacy Program L49:   * cite22†Accessibility L50: cite23†Federal Reserve Facebook Page†www.facebook.com cite24†Federal Reserve Instagram Page†www.instagram.com cite25†Federal Reserve YouTube Page†www.youtube.com cite26†Federal Reserve Flickr Page†www.flickr.com cite27†Federal Reserve LinkedIn Page†www.linkedin.com cite28†Federal Reserve Threads Page†www.threads.net cite29†Link to Federal Reserve Bluesky Page†bsky.app cite30†Subscribe to RSS cite31†Subscribe to Email L51: 
+L52: Board of Governors of the Federal Reserve System
+L53: 20th Street and Constitution Avenue N.W., Washington, DC 20551

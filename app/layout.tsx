@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./finance-design.css";
 
 export const metadata: Metadata = {
   title: "CascadeGuard | SME Treasury Copilot",

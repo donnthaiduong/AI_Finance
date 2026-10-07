@@ -1,0 +1,56 @@
+2024 Report on Payments: Findings from the 2023 Small Business Credit Survey (https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments)
+citeturn37view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments","lineno":null}); Total lines: 90
+L0: ###### Skip to:
+L1: 
+L2:   1. cite0†Main navigation L3:   2. cite1†Main content L4:   3. cite2†Footer L5: 
+L6: [Input: Search]
+L7: 
+L8:   * Research and Analysis
+L9: 
+L10: ##### Small business categories
+L11: 
+L12:     * cite3†Employer firms L13:     * cite4†Nonemployer firms L14:     * cite5†Minority-owned firms L15:     * cite6†Women-owned firms L16:     * cite7†Rural firms L17:     * cite8†Startup firms L18:     * cite9†All small business categories L19: 
+L20: ##### Topics
+L21: 
+L22:     * cite10†Workforce L23:     * cite11†Fintech lending L24:     * cite12†Natural disasters L25:     * cite13†Covid-19 L26: ##### Survey years
+L27: 
+L28:     * cite14†All survey years L29: ##### Research types
+L30: 
+L31:     * cite15†SBCS reports L32:     * cite16†Chartbooks L33:     * cite17†Briefs L34:     * cite18†Factsheets L35:     * cite19†All research types L36: 
+L37:   * Data
+L38: 
+L39:     * cite20†Methodology L40:     * cite21†Terminology and definitions L41:     * cite22†Questionnaires L42:     * cite23†Microdata L43: 
+L44:   * Partnership and Events
+L45: 
+L46:     * cite24†Become a partner L47:     * cite25†Partner organizations L48:     * cite26†Events L49: 
+L50:   * About
+L51:     * cite27†About Fed Small Business L52:     * cite28†About Small Business Credit Survey L53:     * cite29†FAQ L54:     * cite30†Media L55:     * cite31†Important dates L56: 
+L57: [Input: Search]
+L58: 
+L59: cite32†Image: Images of money and people working at computers L60: # 2024 Report on Payments: Findings from the 2023 Small Business Credit Survey
+L61: 
+L62: December 05, 2024
+L63: 
+L64: cite33†Full report cite34†Data appendix cite35†Questionnaire L65: 
+L66: Timely collection of customer payments is key for small businesses. Data from the 2023 Small Business Credit Survey suggest that most small businesses face payments-related challenges but that their payments experiences vary by industry.
+L67: ## Summary
+L68: 
+L69: Customer payments are the primary source of cash available to small businesses. Based on data from the 2023 Small Business Credit Survey, roughly four of every five small firms face challenges related to these payments.
+L70: 
+L71: The difficulties firms encounter tend to differ based on their payment terms and arrangements. For example,
+L72:   * among firms that collect payment in full at the time of service or purchase, fees are the most common payments-related hurdle.
+L73:   * for firms that collect payment through a third party, time-consuming payments and delays in settlement or availability of funds are the biggest obstacles.
+L74: 
+L75: Businesses’ payments experiences also vary by industry. For instance,
+L76:   * leisure and hospitality and retail businesses are more likely than those in other industries to accept both card and cash payments and to cite challenges with payments-processing fees.
+L77:   * professional services and real estate and manufacturing firms are more likely to accept checks as a form of payment and to report that slow-paying customers are a challenge.
+L78: Examining the relationships between firms’ payments experiences and challenges can help policymakers better understand and respond to the needs of small businesses.
+L79: 
+L80: * * *
+L81: ##### Suggested Citation
+L82: 
+L83: “2024 Report on Payments: Findings from the 2023 Small Business Credit Survey.” 2024. Small Business Credit Survey. Federal Reserve Banks. cite36†https://doi.org/10.55350/sbcs-20241205†doi.org L84: 
+L85: This work is licensed under Creative Commons cite37†Attribution-NonCommercial 4.0 International†creativecommons.org L86: 
+L87: © 2026 FedSmallBusiness.org
+L88: 
+L89: https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments
