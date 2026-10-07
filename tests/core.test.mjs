@@ -43,3 +43,5 @@ test('reject collection/publication contradictions and repeated peers',()=>{
  const peer={cert:s.banks[1].cert,weight:.25};
  assert.equal(snapshotSchema.safeParse(changeBank({peers:[peer,peer]})).success,false);
 });
+
+test('assumption text states the real return day, never a template',()=>{assert.match(calculate(input).assumptions,/Funds return at start of day 22\./);assert.doesNotMatch(calculate(input).assumptions,/duration\+1/);assert.match(calculate({...input,durationDays:30}).assumptions,/do not return within the 30-day window/);});

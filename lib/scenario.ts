@@ -36,7 +36,7 @@ export function calculate(input: ScenarioInput) {
     return { day, due: due / 100, baseline: (total - spent) / 100, stressed: available / 100, shortfall: shortfall / 100 };
   });
   const coverage = input.payments.some(p => cents(p.amount) > 0) ? (maximumShortfall ? 'shortfall' : 'covered') : 'insufficient-input';
-  return { coverage, total: total / 100, blocked: blocked / 100, accessibleNow: (total - blocked) / 100, expenses: spent / 100, maximumShortfall: maximumShortfall / 100, firstShortfallDay, concentration: total ? Math.max(...input.positions.map(p => cents(p.amount))) / total : 0, daily, assumptions: 'Preparation before an interruption. No future inflows, interest, fees or payment processing delays. Accessible funds are assumed usable for scheduled payments. Funds return at start of day duration+1. Shortfalls are unmet obligations, not automatic credit.' };
+  return { coverage, total: total / 100, blocked: blocked / 100, accessibleNow: (total - blocked) / 100, expenses: spent / 100, maximumShortfall: maximumShortfall / 100, firstShortfallDay, concentration: total ? Math.max(...input.positions.map(p => cents(p.amount))) / total : 0, daily, assumptions: `Preparation before an interruption. No future inflows, interest, fees or payment processing delays. Accessible funds are assumed usable for scheduled payments. ${input.durationDays<30?`Funds return at start of day ${input.durationDays+1}.`:'Funds do not return within the 30-day window.'} Shortfalls are unmet obligations, not automatic credit.` };
 }
 export function transfer(positions: Position[], from: number, to: number, amount: number) {
   validatePortfolio(positions, []); const value = money(amount);
