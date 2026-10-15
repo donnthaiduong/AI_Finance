@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = { title: 'Research', description: 'Retrospective pilot on whether a deposit-overlap network helps forecast deposit growth.' };
@@ -23,8 +24,7 @@ const LIMITS = [
 export default function Research() {
   return <main className="site-main">
     <section className="page-intro">
-      <p className="site-eyebrow">RESEARCH</p>
-      <h1>A deposit-overlap network did not beat the same model without it</h1>
+      <h1>No proven gain from the network.</h1>
       <p className="lead">Our retrospective pilot asked whether banks that overlap geographically help forecast next-quarter deposit growth. The graph model improved on Ridge, but not on the control that removes the network, so we do not claim a network benefit.</p>
     </section>
 
@@ -36,6 +36,9 @@ export default function Research() {
           <tbody>{ROWS.map(r => <tr key={r.model}><td>{r.model}</td><td>{r.mae}</td><td>{r.recall}</td></tr>)}</tbody>
         </table>
       </div>
+      <figure className="figure"><Image src="/figures/research-results.png" width={1920} height={832} alt="Two bar charts of test results for four models. Forecast error: lag growth 3.04, Ridge 3.02, graph model 2.72, same model without the network 2.33 percentage points. Recall of the worst-decline quintile: 0.27, 0.21, 0.23, 0.26." sizes="(max-width: 1240px) 100vw, 1240px"/><figcaption>Drawn by a script in this repository from the reproduction report, so it cannot drift from the table above.</figcaption></figure>
+      <figure className="figure"><Image src="/figures/research-seeds.png" width={1760} height={544} alt="Test error by seed. The three no-network seeds fall between 2.26 and 2.39; the three graph-model seeds fall between 2.71 and 2.73." sizes="(max-width: 1240px) 100vw, 1240px"/><figcaption>Each dot is one training seed. Every no-network seed has lower error than every graph seed in this run.</figcaption></figure>
+      <figure className="figure"><Image src="/figures/research-recall-seeds.png" width={1760} height={544} alt="Recall of the worst-decline quintile by training seed. Graph model: 0.196, 0.232, 0.250. No network: 0.232, 0.250, 0.304. The ranges overlap." sizes="(max-width: 1240px) 100vw, 1240px"/><figcaption>Recall by seed: the two models overlap, so this pilot shows no difference in recall.</figcaption></figure>
       <p className="source-note">Source: reproduction run 20261004T100243583769Z in this repository. Test split 2024–2025, 256 observations. Lower error is better. Model selection used validation data only, never test data.</p>
       <p>Because the control without the network has the lowest error, the graph model&apos;s gain over Ridge is not attributable to the network. Ridge remains the default for any deposit-growth estimate shown in our tools.</p>
     </section>

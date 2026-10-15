@@ -1,6 +1,6 @@
 /* CascadeGuard finance design system: navy ink, blue data, green = covered, red = shortfall. */
 .treasury-workspace{--bg:#f4f6fa;--card:#fff;--ink:#0f1b2d;--ink-2:#334155;--muted:#5b6679;--line:#e3e8f0;--grid:#e6ebf2;--axis:#aab4c4;--track:#eef1f6;--blue:#2563eb;--blue-soft:#eaf1ff;--good:#0f9d6b;--good-soft:#e6f6ef;--bad:#d9433a;--bad-soft:#fdecea;--amber:#b7791f;--amber-soft:#fdf3dc;--slate:#8795a8;
- font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+ font-family:var(--font-albert),system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
 .treasury-workspace h1,.treasury-workspace h2,.treasury-workspace h3,.treasury-workspace h4{font-family:inherit;color:var(--ink)}
 .treasury-workspace p{margin:8px 0}
 .treasury-workspace a{color:var(--blue)}
@@ -18,7 +18,7 @@
 /* controls */
 .treasury-workspace button{font-size:13px;border-radius:9px;padding:10px 15px;min-height:40px;font-weight:600;transition:background .15s,box-shadow .15s,transform .1s}
 .treasury-workspace button:active:not(:disabled){transform:translateY(1px)}
-.treasury-workspace .primary{background:var(--blue);color:#fff;box-shadow:0 1px 2px #1d4ed833,0 4px 12px #2563eb24}.treasury-workspace .primary:hover:not(:disabled){background:#1d4ed8;filter:none}
+.treasury-workspace .primary{background:#fe7141;color:#000;box-shadow:none;font-weight:600}.treasury-workspace .primary:hover:not(:disabled){background:#f0602d;filter:none}
 .treasury-workspace .secondary{background:#fff;color:var(--ink-2);border:1px solid #d5dce8;width:auto}
 .treasury-workspace .quiet{color:var(--blue);background:transparent;padding:8px 10px;min-height:36px}.treasury-workspace .quiet:hover:not(:disabled){background:var(--blue-soft);filter:none}
 .treasury-workspace .quiet-link{background:none;color:var(--blue);padding:4px 2px;min-height:32px;font-size:12px;text-decoration:underline;text-underline-offset:3px}

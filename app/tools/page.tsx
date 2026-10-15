@@ -7,7 +7,6 @@ export const metadata: Metadata = { title: 'Tools', description: 'Planning tools
 export default function Tools() {
   return <main className="site-main">
     <section className="page-intro">
-      <p className="site-eyebrow">TOOLS</p>
       <h1>Your cash. A clearer plan.</h1>
       <p className="lead">Plan with your balances and assumptions. Saved on your device.</p>
     </section>

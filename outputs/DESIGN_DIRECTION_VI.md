@@ -153,3 +153,16 @@ Typecheck và 72 test đạt; console không lỗi. Đo bằng DOM; ảnh chụp
 
 1. **Màu thương hiệu — đã chốt 15/10/2026:** website dùng bảng "Report blocks" (cam `#fe7141`, sage `#d1ddd3`, vàng `#f0ff1c`, đen) cho các chương. App giữ nền trung tính (trắng/xám nhạt, mực đen) và màu ngữ nghĩa của mình (đỏ thiếu hụt, màu "covered"); chỉ lấy cam `#fe7141` làm màu nút chính, thay xanh `#2563eb` ở vai trò này. Xanh không còn là màu nhấn; nếu còn dùng thì chỉ cho dữ liệu biểu đồ.
 2. **Ba "dịch vụ" (Tools/Research/Advisory) trên trang chủ — đã chốt 15/10/2026:** giữ ba mục ngang hàng, đặt cạnh nhau. Để không thành hàng thẻ icon giống hệt nhau (house rule), mỗi cột mang một mảnh giao diện thật khác nhau (câu trả lời/biểu đồ cho Tools, bảng nguồn FDIC cho Research, câu hỏi giả định cho Advisory), không icon trên đầu, cùng cỡ chữ và cùng mép trái. Nút chính "Check my cash" ở hero vẫn là hành động duy nhất có màu cam.
+
+## 8. Đã dựng trang chủ theo `colour-chapters` và biểu đồ matplotlib (15/10/2026)
+
+Làm trên nhánh `ui/core-journey-design` (PR #2). Chưa có người dùng thật xem; kiểm bằng `lint.mjs`, `inspect.mjs` và xem ảnh chụp.
+
+**Trang chủ và khung website.** `app/page.tsx` gồm 5 chương nền phẳng nối liền nhau: hero (tiêu đề 136px hai dòng + ví dụ tương tác có thanh trượt "% unavailable" chạy cùng hàm `calculatePortfolio` của app), sage (ba giai đoạn trên một thanh), vàng ("Built to be checked": ba dấu lớn + hai biểu đồ), đen ("Three ways in": Tools, Research, Advisory cạnh nhau, mỗi cột một mảnh khác nhau, không icon), cam (CTA). Một họ chữ Albert Sans dùng chung cho website và app (thay Inter, Manrope, DM Sans). Header nền đặc, không blur. Footer: tên lớn toàn chiều ngang. Chuyển động: `app/reveal.tsx` cho các phần của mỗi chương trồi lên lần lượt (chỉ transform và opacity, có `prefers-reduced-motion`, nội dung vẫn hiện nếu script lỗi). Nút chính trong app đổi sang cam `#fe7141` chữ đen, theo quyết định ở mục 7.
+
+**Python và matplotlib.** `pipeline/figures.py` đọc `outputs/REPRODUCTION_REPORT.json` và vẽ ba hình vào `public/figures/`: kết quả test (MAE và recall), MAE theo seed, recall theo seed. Không số nào gõ tay. Script dừng nếu báo cáo thôi ghi `graphIncrementEstablished: false`, nếu khoảng MAE của hai mô hình bắt đầu chồng nhau, hoặc nếu khoảng recall không còn chồng nhau (chú thích hình sẽ sai). `tests/test_figures.py` kiểm bảng số ở `app/research/page.tsx` khớp với báo cáo mà hình đọc. Chạy lại: `python pipeline/figures.py` (đã thêm `matplotlib` vào `pipeline/requirements.txt`). Hình dùng ở trang chủ (chương vàng và cột Research) và trang Research.
+
+**Kết quả gate (15/10).** Trang chủ: `lint.mjs` 0 FAIL; `inspect.mjs` 0 FAIL, 1 WARN (không có video; chưa có đoạn phim trung thực về chủ đề phần mềm này). `/research`: `lint` sạch; `inspect` còn 2 FAIL (chỉ 3 ảnh thật; màn hình đầu chưa có phần tử chủ đạo cỡ lớn) và 2 WARN. `/advisory` và `/tools`: còn FAIL về số ảnh, phần tử chủ đạo và cỡ chữ thân 14px. Đây là phần P3 (trang trong), chưa làm. Trang Liquidity Check không thuộc phạm vi `inspect` của website.
+
+**Chưa làm / chưa kiểm:** trang trong (`/advisory`, `/tools`, bố cục `/research`); video; kiểm trên thiết bị thật; hàng thẻ giống nhau ở 390px (cảnh báo `card-rows`, đã có từ trước khi sửa) chưa được xử lý.
+

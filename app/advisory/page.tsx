@@ -18,7 +18,6 @@ export default function Advisory() {
   const email = SITE.contactEmail;
   return <main className="site-main">
     <section className="page-intro">
-      <p className="site-eyebrow">ADVISORY</p>
       <h1>Talk through your liquidity plan with us</h1>
       <p className="lead">You bring the balances, payments and assumptions. We help you pressure-test them and understand the result. Advisory complements the Liquidity Check; it does not replace your own judgement.</p>
     </section>
