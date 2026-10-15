@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Check, X, ArrowRight } from 'lucide-react';
 import { SITE } from '../../lib/site';
+import { AnswerFragment, AssumptionsFragment, PaymentsFragment, ProposalFragment } from '../fragments';
 
 export const metadata: Metadata = { title: 'Advisory', description: 'Talk through your own liquidity plan and pressure-test its assumptions.' };
 
@@ -16,26 +16,44 @@ const NOT = ['Investment advice', 'A prediction that any bank will fail', 'Conne
 
 export default function Advisory() {
   const email = SITE.contactEmail;
-  return <main className="site-main">
-    <section className="page-intro">
-      <p className="site-eyebrow">ADVISORY</p>
-      <h1>Talk through your liquidity plan with us</h1>
-      <p className="lead">You bring the balances, payments and assumptions. We help you pressure-test them and understand the result. Advisory complements the Liquidity Check; it does not replace your own judgement.</p>
+  const mail = email ? `mailto:${email}?subject=${encodeURIComponent('Liquidity plan conversation')}` : '';
+  return <main className="inner">
+    <section className="chapter chapter-hero">
+      <h1 data-reveal>Talk it through.</h1>
+      <p className="lead" data-reveal>You bring the balances, payments and assumptions. We help you pressure-test them and understand the result. Advisory complements the Liquidity Check; it does not replace your own judgement.</p>
+      {email
+        ? <a className="btn primary" data-reveal href={mail}>Email us</a>
+        : <p className="fine" data-reveal>Contact details are not configured yet.</p>}
     </section>
 
-    <section className="home-section" aria-labelledby="adv-cover">
-      <div className="value-grid">
-        <div className="value-card"><h3 id="adv-cover">What a conversation can cover</h3><ul>{COVERS.map(c => <li key={c}><Check size={16}/>{c}</li>)}</ul></div>
-        <div className="value-card"><h3>What it is not</h3><ul className="neg">{NOT.map(c => <li key={c}><X size={16}/>{c}</li>)}</ul></div>
+    <section className="chapter chapter-sage" aria-labelledby="adv-cover">
+      <h2 id="adv-cover" data-reveal>What a conversation can cover.</h2>
+      <div className="split">
+        <ul className="big-list">{COVERS.map(c => <li key={c} data-reveal>{c}</li>)}</ul>
+        <div className="fragments one">
+          <figure data-reveal><AssumptionsFragment/><figcaption>Start from your assumptions.</figcaption></figure>
+          <figure data-reveal><AnswerFragment/><figcaption>Read what they imply.</figcaption></figure>
+        </div>
       </div>
     </section>
 
-    <section className="home-cta">
-      <h2>Start a conversation</h2>
-      {email
-        ? <><p>Tell us a little about your business and what you want to check.</p><a className="btn primary" href={`mailto:${email}?subject=${encodeURIComponent('Liquidity plan conversation')}`}>Email us <ArrowRight size={16}/></a></>
-        : <p>Contact details are not configured yet.</p>}
-      <p className="source-note">Prefer to start on your own? <Link href="/tools/liquidity-check">Try the Liquidity Check</Link> first and bring the one-page plan.</p>
+    <section className="chapter chapter-yellow" aria-labelledby="adv-not">
+      <h2 id="adv-not" data-reveal>What it is not.</h2>
+      <div className="split">
+        <ul className="big-list">{NOT.map(c => <li key={c} data-reveal>{c}</li>)}</ul>
+        <div className="fragments one">
+          <figure data-reveal><ProposalFragment/><figcaption>A proposal changes the simulation only, after you confirm.</figcaption></figure>
+          <figure data-reveal><PaymentsFragment/><figcaption>Planned payments are your own entries.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section className="chapter chapter-orange" aria-labelledby="adv-cta">
+      <div>
+        <h2 id="adv-cta" data-reveal>Start a conversation.</h2>
+        <p className="cta-note" data-reveal>Prefer to start on your own? <Link href="/tools/liquidity-check">Try the Liquidity Check</Link> first and bring the one-page plan.</p>
+      </div>
+      {email && <a className="btn dark" data-reveal href={mail}>Email us</a>}
     </section>
   </main>;
 }
