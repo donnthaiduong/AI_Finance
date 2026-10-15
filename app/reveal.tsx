@@ -7,8 +7,6 @@ export default function Reveal() {
   const path = usePathname();
   useEffect(() => {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    // Inner pages are not hand-marked: every direct child of a section rises.
-    document.querySelectorAll<HTMLElement>('.site-main > section > *').forEach(el => el.setAttribute('data-reveal', ''));
     const items = [...document.querySelectorAll<HTMLElement>('[data-reveal]')];
     document.documentElement.classList.add('reveal-ready');
     const io = new IntersectionObserver(entries => entries.forEach(e => {
