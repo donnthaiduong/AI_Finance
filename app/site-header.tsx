@@ -12,7 +12,7 @@ export default function SiteHeader() {
       <nav className="site-nav" aria-label="Site">
         {SITE.nav.map(n => <Link key={n.href} href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined} className={path.startsWith(n.href) ? 'active' : ''}>{n.label}</Link>)}
       </nav>
-      <Link className="site-cta" href="/tools/liquidity-check">Open Liquidity Check <ArrowRight size={16}/></Link>
+      <Link className="site-cta" href="/tools/liquidity-check">Check my cash <ArrowRight size={16}/></Link>
     </div>
   </header>;
 }

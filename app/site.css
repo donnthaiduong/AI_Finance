@@ -48,3 +48,27 @@ body{background:var(--s-bg);color:var(--s-ink);font-family:Inter,ui-sans-serif,s
 .site-footer nav{display:flex;gap:20px}.site-footer nav a{color:var(--s-ink2);text-decoration:none;font-weight:600;font-size:14px}.site-footer nav a:hover{text-decoration:underline}
 @media(max-width:1000px){.home-hero{grid-template-columns:1fr;gap:32px;padding:40px 0}.service-grid,.how-steps,.value-grid{grid-template-columns:1fr}.site-main h1{font-size:34px}.home-section.band,.research-teaser{padding:28px}.site-header-in{flex-wrap:wrap;padding:8px 16px;gap:8px 16px}.site-nav{order:3;flex-basis:100%}.site-main{padding:0 16px 48px}.site-cta{margin-left:auto}}
 @media print{.site-header,.site-footer{display:none!important}}
+
+/* A short introduction, with the working example doing the explaining. */
+.minimal-home .home-hero{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:40px;padding:40px 0;align-items:start}
+.minimal-home .home-hero-copy{padding-top:72px}
+.minimal-home h1{font-size:clamp(38px,4.5vw,60px);line-height:1.06;letter-spacing:-2px;max-width:12ch}
+.minimal-home .lead{font-size:18px;line-height:1.55;max-width:28ch}
+.minimal-home .home-actions{gap:10px;margin-top:24px}
+.home-trust{display:flex;gap:10px 18px;flex-wrap:wrap;list-style:none;margin:20px 0 0;padding:0;font-size:13px;color:var(--s-muted)}
+.home-trust li{display:flex;align-items:center;gap:5px}.home-trust svg{color:#047857}
+.preview-hint{font-size:13px;color:var(--s-muted);margin-top:32px}
+.example-outlook{min-width:0;border:1px solid var(--s-line);background:#fff;border-radius:8px;padding:24px}
+.example-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--s-muted)}
+.example-badge{background:var(--s-blue-soft);color:var(--s-blue-d);font-weight:600;padding:5px 9px;border-radius:4px}
+.example-result{display:flex;gap:44px;margin-top:18px}.example-result span{display:block;font-size:12px;color:var(--s-muted)}
+.example-result strong{display:block;margin-top:4px;font-size:30px;letter-spacing:-1px;font-variant-numeric:tabular-nums}.example-result>div:first-child strong{color:#b91c1c}
+.example-assumption{font-size:13px;color:var(--s-ink2);margin:12px 0 16px}
+.minimal-home .home-section{padding:28px 0}.minimal-home .compact-how{border-top:1px solid var(--s-line)}
+.minimal-home h2{font-size:24px;max-width:none;margin:8px 0 24px}.minimal-home .how-steps{margin:0;gap:24px}
+.minimal-home .how-steps li{padding:0;background:none;border:0;border-radius:0}.minimal-home .how-steps b{border-radius:5px;font-size:13px}
+.minimal-home .how-steps p{font-size:14px}.minimal-home .service-card{padding:22px;border-radius:8px;box-shadow:none}
+.minimal-home .service-icon{margin-bottom:10px;border-radius:5px;width:36px;height:36px}.minimal-home .service-card p{font-size:14px}
+.minimal-home .service-link{font-size:14px}.minimal-home .btn{border-radius:6px;box-shadow:none}
+@media(max-width:1000px){.minimal-home .home-hero{grid-template-columns:1fr;gap:28px;padding:32px 0}.minimal-home .home-hero-copy{padding-top:0}.minimal-home h1{max-width:none}.minimal-home .lead{max-width:40ch}.preview-hint{margin:18px 0 0}.minimal-home .how-steps,.minimal-home .service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:600px){.minimal-home .home-hero{padding:28px 0}.minimal-home h1{font-size:40px;letter-spacing:-1.4px}.minimal-home .how-steps,.minimal-home .service-grid{grid-template-columns:1fr;gap:20px}.example-outlook{padding:16px 12px}.example-result{gap:36px}.example-result strong{font-size:26px}.site-header-in{gap:8px}.site-brand{font-size:16px}.site-cta{font-size:12px;padding:10px}.site-nav a{font-size:13px;min-height:44px;display:flex;align-items:center}.home-trust{font-size:12px;gap:10px 14px}}

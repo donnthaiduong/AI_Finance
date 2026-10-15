@@ -8,8 +8,8 @@ export default function Tools() {
   return <main className="site-main">
     <section className="page-intro">
       <p className="site-eyebrow">TOOLS</p>
-      <h1>Planning tools you can inspect</h1>
-      <p className="lead">Each tool runs in your browser on your own assumptions, shows its sources and never connects to your accounts.</p>
+      <h1>Your cash. A clearer plan.</h1>
+      <p className="lead">Plan with your balances and assumptions. Saved on your device.</p>
     </section>
     <section className="home-section" aria-label="Available tools">
       <div className="service-grid single">
@@ -17,8 +17,8 @@ export default function Tools() {
           <span className="service-icon"><Calculator size={22}/></span>
           <span className="service-tag">Tool</span>
           <h3>Liquidity Check</h3>
-          <p>Does your cash cover essential payments for 30 days if access to one bank is interrupted? Find the first shortfall day and the smallest preparation, then export a one-page plan.</p>
-          <p className="source-note">Inputs stay on your device. USD. Simulation only, not a prediction.</p>
+          <p>Connect bank balances, payment timing and cash gaps. Compare preparation, then export your plan.</p>
+          <p className="source-note">USD · No bank connection · Simulation only</p>
           <Link className="service-link" href="/tools/liquidity-check">Open the tool <ArrowRight size={16}/></Link>
         </article>
       </div>

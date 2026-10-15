@@ -13,22 +13,22 @@ import { exportSection } from '../lib/export-preview';
 import LiquidityOverview, { bankExposure } from './liquidity-overview';
 import QuestionFlow, { type QCard } from './question-flow';
 import { HelpTip, tidy } from './ui';
+import { examplePortfolio as example } from '../lib/example-portfolio';
 import { ShieldCheck, Landmark, MoreHorizontal, ArrowRight, ArrowLeft } from 'lucide-react';
 
 // One guided flow. Scenario Lab is step 3, the Treasury Workspace results are step 4.
 const STEP={cash:0,payments:1,scenario:2,results:3,plan:4} as const;
 const STEP_LABELS=['Cash accounts','Payments','Scenario Lab','Results','Plan'];
 const STEP_TITLES=['Your cash','Your essential payments','Scenario Lab','Results','Your plan'];
-const STEP_SUBS=['Enter what you hold at each bank.','List the payments you must make in the next 30 days.','Model interrupted access to one bank before it affects essential payments.','Know what you can cover. Prepare for what you cannot.','A one-page summary to review with your team.'];
+const STEP_SUBS=['Enter your balances.','Add what you need to pay.','Choose a bank, percentage and duration.','Your cash, at a glance.','Review, then export.'];
 
 const usd=(n:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);
 const empty=():PortfolioInput=>({positions:[],payments:[],affectedId:'',unavailablePercent:80,durationDays:21});
-const example=():PortfolioInput=>({positions:[{id:'demo-a',bankName:'Example bank A',cert:null,amount:90000},{id:'demo-b',bankName:'Example bank B',cert:null,amount:60000},{id:'demo-c',bankName:'Example bank C',cert:null,amount:30000}],payments:[{id:'salary',label:'Payroll',day:5,amount:85000},{id:'supplier',label:'Suppliers',day:15,amount:40000},{id:'operating',label:'Operating costs',day:25,amount:25000}],affectedId:'demo-a',unavailablePercent:80,durationDays:21});
 export default function TreasuryWorkspace({storageAccess=()=>window.localStorage,copilotFetch=fetch}:{storageAccess?:()=>Pick<Storage,'getItem'|'setItem'>;copilotFetch?:typeof fetch}={}){
  const [session,setSession]=useState<PortfolioSession>({schemaVersion:2,input:empty(),activity:[]});
  const [hydrated,setHydrated]=useState(false),[storageBlocked,setStorageBlocked]=useState(false),[storageError,setStorageError]=useState('');
- const [view,setView]=useState<'workspace'|'evidence'>('workspace'),[step,setStep]=useState<number>(STEP.results),[snapshot,setSnapshot]=useState<Snapshot|null>(null),[evidenceError,setEvidenceError]=useState(''),[evidenceLoading,setEvidenceLoading]=useState(false),[evidenceQuery,setEvidenceQuery]=useState('');
- const [error,setError]=useState(''),[notice,setNotice]=useState(''),[comparison,setComparison]=useState<Comparison|null>(null),[checked,setChecked]=useState(false),[destination,setDestination]=useState(''),[verification,setVerification]=useState('');
+ const [view,setView]=useState<'workspace'|'evidence'>('workspace'),[step,setStep]=useState<number>(STEP.cash),[snapshot,setSnapshot]=useState<Snapshot|null>(null),[evidenceError,setEvidenceError]=useState(''),[evidenceLoading,setEvidenceLoading]=useState(false),[evidenceQuery,setEvidenceQuery]=useState('');
+ const [error,setError]=useState(''),[notice,setNotice]=useState(''),[comparison,setComparison]=useState<Comparison|null>(null),[checked,setChecked]=useState(false),[destination,setDestination]=useState(''),[verification,setVerification]=useState(''),[prepNote,setPrepNote]=useState('');
  const [assumptionsTouched,setAssumptionsTouched]=useState(false);
  const [listMode,setListMode]=useState(false),[cashIdx,setCashIdx]=useState<number|null>(null),[payIdx,setPayIdx]=useState<number|null>(null),[scnIdx,setScnIdx]=useState<number|null>(null);
  const [question,setQuestion]=useState(''),[reply,setReply]=useState('');
@@ -63,7 +63,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
  useEffect(()=>{
    void loadEvidence();
    const restored=deviceStore.current!.restore();savedRaw.current=restored.original??'';
-   if(restored.session){setSession(restored.session);const r=restored.session.input;if(r.unavailablePercent!==80||r.durationDays!==21||restored.session.activity.length)setAssumptionsTouched(true);}
+   if(restored.session){setSession(restored.session);const r=restored.session.input;setStep(r.positions.length?STEP.results:STEP.cash);if(r.unavailablePercent!==80||r.durationDays!==21||restored.session.activity.length)setAssumptionsTouched(true);}
    if(restored.state==='damaged'){setStorageBlocked(true);setStorageError('Saved data is damaged. It has not been overwritten. Export the original before replacing it.');}
    if(restored.state==='unavailable'){setStorageBlocked(true);setStorageError('Device storage could not be read. Use a temporary session and export JSON before closing.');}
    setHydrated(true);
@@ -90,7 +90,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
    setExportData(null);setExportStatus('');
    setPendingReplacement(null);
    copilotSequence.current++;setCopilotDraft(null);setCopilotBusy(false);
-   setSession(s=>({...s,input:next}));setComparison(null);setChecked(false);setVerification('');setReply('');setError('');setNotice('');
+   setSession(s=>({...s,input:next}));setPrepNote(comparison?'Inputs changed, so the previous proposal is out of date. Find the minimum again.':'');setComparison(null);setChecked(false);setVerification('');setReply('');setError('');setNotice('');
  }
  function begin(demo:boolean){
    const go=()=>requestReplacement({schemaVersion:2,input:demo?example():empty(),activity:[]},demo?'Example assumptions loaded. These are not observed business balances.':'New blank plan. Add your banks and scheduled obligations.');
@@ -114,8 +114,8 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
  function prepare(to:string=activeDestination){
    setPlanPdf(null);
    if(to!==destination){resetCopilot();setDestination(to);}
-   try{const p=minimumPortfolio(input,to);if(p.status==='feasible'){setComparison(p.comparison);setChecked(false);setPlanPdf(null);setNotice('Review the minimum preparation for this selected interruption.');}
-   else{setComparison(null);setNotice(p.status==='insufficient-input'?'Add positive obligations first.':p.status==='not-needed'?'Existing allocations cover this selected scenario.':p.reason);}}
+   try{const p=minimumPortfolio(input,to);if(p.status==='feasible'){setComparison(p.comparison);setChecked(false);setPlanPdf(null);setPrepNote('');}
+   else{setComparison(null);setPrepNote(p.status==='insufficient-input'?'Add positive obligations first.':p.status==='not-needed'?'Existing allocations cover this selected scenario.':p.reason);}}
    catch(e){setError((e as Error).message);}
  }
  function apply(){
@@ -123,7 +123,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
    setExportData(null);setExportStatus('');
    setPendingReplacement(null);
    resetCopilot();
-   try{if(!liveComparison)throw new Error('Compare the current inputs first.');const c=confirmPortfolio(input,liveComparison,checked);setSession(s=>({...s,input:c.after,activity:[...s.activity,{at:new Date().toISOString(),from:c.from,to:c.to,amount:c.amount,before:c.before,after:c.after}].slice(-50)}));setComparison(null);setChecked(false);setReply('');setVerification('');setNotice('Simulation updated. No real money moved.');}
+   try{if(!liveComparison)throw new Error('Compare the current inputs first.');const c=confirmPortfolio(input,liveComparison,checked);setSession(s=>({...s,input:c.after,activity:[...s.activity,{at:new Date().toISOString(),from:c.from,to:c.to,amount:c.amount,before:c.before,after:c.after}].slice(-50)}));setComparison(null);setChecked(false);setReply('');setVerification('');setPrepNote('Simulation updated. No real money moved.');}
    catch(e){setError((e as Error).message);}
  }
  async function verify(){
@@ -135,7 +135,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
    try{const plan=preparationPlan(input,{preparedAt:new Date().toISOString(),comparison:liveComparison,activity:confirmedAction,evidence:snapshot?{version:snapshot.version,collectedAt:snapshot.collectedAt}:null});setPlanPdf(renderPlanPdf(plan));setError('');}
    catch(e){setError((e as Error).message);setPlanPdf(null);}
  }
- function chooseDestination(id:string){resetCopilot();setDestination(id);setComparison(null);setChecked(false);setPlanPdf(null);}
+ function chooseDestination(id:string){resetCopilot();setDestination(id);setPrepNote(comparison?'Destination changed, so the previous proposal is out of date. Find the minimum again.':'');setComparison(null);setChecked(false);setPlanPdf(null);}
  function resetCopilot(){copilotSequence.current++;setCopilotBusy(false);setReply('');setCopilotDraft(null);}
  async function askCopilot(){
    if(!question.trim()){setReply('Enter a question first, or read the guided explanation above.');return;}
@@ -153,7 +153,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
        // Recompute on this tab before showing a proposal; server output cannot apply it.
        const p=minimumPortfolio(input,activeDestination);
        if(p.status!=='feasible' || JSON.stringify(p)!==JSON.stringify(data.preparation))throw new Error('Comparison could not be verified.');
-       setComparison(p.comparison);setChecked(false);setStep(STEP.results);setView('workspace');
+       setComparison(p.comparison);setChecked(false);setPrepNote('');setStep(STEP.results);setView('workspace');
      }
      if(data.action==='draft'){
        if(!data.draft)throw new Error('Missing draft.');
@@ -169,7 +169,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
  function removeBank(id:string){const positions=input.positions.filter(x=>x.id!==id);edit({...input,positions,affectedId:input.affectedId===id?(positions[0]?.id||''):input.affectedId});setCashIdx(null);}
  function addPayment(){edit({...input,payments:[...input.payments,{id:crypto.randomUUID(),label:'',day:1,amount:0}]});setPayIdx(input.payments.length);}
  const cashCards:QCard[]=input.positions.length===0?[{key:'cash-intro',label:'Start',valid:true,content:<>
-   <h2>Let&apos;s start with your cash</h2><p>Add the banks where you hold operating cash. One bank at a time, about a minute in total.</p>
+   <h2>Let&apos;s start with your cash</h2><p>Add a bank balance, or try the example first.</p>
    <button type="button" className="primary" onClick={addBank}>Add my first bank <ArrowRight size={16}/></button>
    <button type="button" className="quiet" onClick={()=>begin(true)}>Or explore an example portfolio</button></>}]
  :[...input.positions.map((p,i)=>({key:'bank-'+p.id,label:'Bank '+(i+1),valid:p.bankName.trim().length>0&&Number.isFinite(p.amount)&&p.amount>=0,hint:'Enter a bank name and a balance to continue.',content:<>
@@ -234,7 +234,7 @@ export default function TreasuryWorkspace({storageAccess=()=>window.localStorage
  {view==='evidence'?<section className="card"><h2>Bank evidence <HelpTip title="Bank evidence">Public FDIC reporting for banks you can link to your balances. It is context only: it never changes your result, and it is not a prediction that any bank will fail.</HelpTip></h2><p>Optional public evidence. Your disruption assumptions remain yours.</p><button onClick={()=>void loadEvidence()} disabled={evidenceLoading}>{evidenceLoading?'Loading evidence…':'Refresh evidence'}</button>{evidenceError&&<p role="status">{evidenceError}</p>}{snapshot?<><p>Collected {snapshot.collectedAt.slice(0,10)}. Original publication dates unverified. Snapshot {snapshot.version}.</p><label className="field">Find public bank evidence<input type="search" value={evidenceQuery} placeholder="Bank name or FDIC certificate" onChange={e=>setEvidenceQuery(e.target.value)}/></label><p className="small muted">{snapshot.banks.filter(b=>(b.name+' '+b.cert).toLowerCase().includes(evidenceQuery.trim().toLowerCase())).length} matching banks</p>{snapshot.banks.filter(b=>(b.name+' '+b.cert).toLowerCase().includes(evidenceQuery.trim().toLowerCase())).map(b=><details key={b.cert}><summary>{b.name} · FDIC {b.cert}</summary><p>Reporting period {b.period}. Deposits {usd(b.deposits)}. Assets {usd(b.assets)}.</p><a href={b.sourceUrl} target="_blank" rel="noreferrer">Open FDIC source</a><p>Next-quarter deposit growth estimate {b.prediction===null?'unavailable':(b.prediction*100).toFixed(2)+'%'}. This is not a failure probability.</p></details>)}<details><summary>Research pilot and limitations</summary><p>Model {snapshot.model.selected}. Retrospective validation; no demonstrated causal contagion.</p><ul>{snapshot.limitations.map(l=><li key={l}>{l}</li>)}</ul></details></>:<p>Cash planning remains available in Treasury Workspace.</p>}</section>:<>
  {view==='workspace'&&(step===STEP.results||step===STEP.plan)&&!result&&<section className="card empty-workspace"><span className="empty-symbol"><Landmark size={30}/></span><h2>Your cash plan starts here</h2><p>Add your bank balances and essential payments. Then see where an interruption could leave a gap.</p><div className="empty-steps"><span>01 · Enter cash by bank</span><span>02 · Schedule essentials</span><span>03 · Compare preparation</span></div><button className="primary" onClick={()=>setStep(STEP.cash)}>Add my bank balances</button><button className="quiet" onClick={()=>begin(true)}>Explore example portfolio →</button></section>}
  {view==='workspace'&&step===STEP.results&&confirmedAction&&<div className="alert">Latest confirmed simulation: {usd(confirmedAction.amount)} allocated from {bankName(confirmedAction.from)} to {bankName(confirmedAction.to)}. No real money moved.</div>}
- {view==='workspace'&&step===STEP.results&&result&&<><LiquidityOverview assumptionsReviewed={assumptionsTouched} input={input} result={result} comparison={liveComparison} onEdit={i=>{setCashIdx(null);setPayIdx(null);setStep(i);}} onScenario={()=>{setScnIdx(0);setStep(STEP.scenario);}} onPlan={()=>setStep(STEP.plan)} prep={{destination:activeDestination,options:input.positions.filter(p=>p.id!==input.affectedId).map(p=>({id:p.id,name:p.bankName})),onFind:prepare,onDestination:chooseDestination,checked,onChecked:setChecked,onConfirm:apply,notice,onDismissNotice:()=>setNotice('')}}/><div className="step-nav"><button type="button" className="secondary" onClick={()=>setStep(STEP.scenario)}><ArrowLeft size={16}/> Back to Scenario Lab</button><button type="button" className="primary" disabled={result.coverage==='insufficient-input'} onClick={()=>setStep(STEP.plan)}>Continue to plan <ArrowRight size={16}/></button></div></>}
+ {view==='workspace'&&step===STEP.results&&result&&<><LiquidityOverview assumptionsReviewed={assumptionsTouched} input={input} result={result} comparison={liveComparison} onEdit={i=>{setCashIdx(null);setPayIdx(null);setStep(i);}} onScenario={()=>{setScnIdx(0);setStep(STEP.scenario);}} onPlan={()=>setStep(STEP.plan)} prep={{destination:activeDestination,options:input.positions.filter(p=>p.id!==input.affectedId).map(p=>({id:p.id,name:p.bankName})),onFind:prepare,onDestination:chooseDestination,checked,onChecked:setChecked,onConfirm:apply,notice:prepNote,onDismissNotice:()=>setPrepNote('')}}/><div className="step-nav"><button type="button" className="secondary" onClick={()=>setStep(STEP.scenario)}><ArrowLeft size={16}/> Back to Scenario Lab</button><button type="button" className="primary" disabled={result.coverage==='insufficient-input'} onClick={()=>setStep(STEP.plan)}>Continue to plan <ArrowRight size={16}/></button></div></>}
  {validation&&<p role="alert" className="alert error">{validation}</p>}
  {view==='workspace'&&step<=STEP.scenario&&<div className="mode-toggle"><button type="button" className="quiet" onClick={()=>setListMode(m=>!m)}>{listMode?'Switch to guided questions':'Edit everything as a list'}</button></div>}
  {view==='workspace'&&step===STEP.cash&&!listMode&&<section className="card qsection"><QuestionFlow ariaLabel="Cash accounts questions" cards={cashCards} index={cashIdx} onIndex={setCashIdx}/></section>}

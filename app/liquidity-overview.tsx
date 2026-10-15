@@ -3,7 +3,8 @@ import { useState } from 'react';
 import type { PortfolioInput, Comparison } from '../lib/portfolio';
 import { calculatePortfolio } from '../lib/portfolio';
 import { AlertTriangle, CheckCircle2, CircleDashed, ArrowRight } from 'lucide-react';
-import { BarList, HelpTip, MarketChart, Money, exact, tidy } from './ui';
+import { BarList, HelpTip, Money, exact, tidy } from './ui';
+import CashChart from './cash-chart';
 
 /** Same user assumptions applied to each bank in turn. Not a forecast and not drawn from bank evidence. */
 export function bankExposure(input:PortfolioInput){
@@ -40,16 +41,12 @@ export default function LiquidityOverview({input,result,comparison,onEdit,onScen
 
  return <div className="overview-surface">
  <section className={'card hero '+tone} aria-label="Result summary">
-  <div className="hero-main">
-   <span className="hero-icon"><Icon size={26}/></span>
-   <div>
-    <p className="eyebrow">{pending?'NEXT STEP':assumptionsReviewed?'RESULT UNDER YOUR ASSUMPTIONS':'RESULT UNDER DEFAULT ASSUMPTIONS'}</p>
-    <h2>{pending?'Add your essential payments to see coverage.':short?<>If {affected?.bankName||'the selected bank'} is {input.unavailablePercent}% unavailable for {input.durationDays} days, you are <em>{tidy(result.maximumShortfall)}</em> short{result.firstShortfallDay?<> from <em>day {result.firstShortfallDay}</em>{firstDue.length?` (${firstDue.join(', ')})`:''}</>:''}.</>:<>Your entered cash covers every scheduled payment, even if {affected?.bankName||'the selected bank'} is {input.unavailablePercent}% unavailable for {input.durationDays} days.</>}</h2>
-    <p className="hero-sub">{pending?'Without obligations there is nothing to compare your cash against.':short?'Shortfall means obligations that would go unpaid because the cash is not accessible in time. This is a plan, not a transfer: no real money moves.':'This is a simulation of one hypothetical interruption, not a prediction. Processing delays and future receipts are not modelled.'}</p>
-    {!pending&&<p className="scope-note"><b>All banks:</b> {scope}</p>}
-    <div className="chips"><span className="chip">{affected?.bankName||'—'}</span><span className="chip">{input.unavailablePercent}% unavailable</span><span className="chip">{input.durationDays} days</span><button className="quiet-link" onClick={onScenario}>{assumptionsReviewed||pending?'Change assumptions':'Review default assumptions'}</button></div>
-   </div>
+  <span className="hero-icon"><Icon size={26}/></span>
+  <div className="hero-answer">
+   <p className="eyebrow">{pending?'NEXT STEP':assumptionsReviewed?'RESULT UNDER YOUR ASSUMPTIONS':'RESULT UNDER DEFAULT ASSUMPTIONS'}</p>
+   <h2>{pending?'Add your essential payments to see coverage.':short?<>If {affected?.bankName||'the selected bank'} is {input.unavailablePercent}% unavailable for {input.durationDays} days, you are <em>{tidy(result.maximumShortfall)}</em> short{result.firstShortfallDay?<> from <em>day {result.firstShortfallDay}</em>{firstDue.length?` (${firstDue.join(', ')})`:''}</>:''}.</>:<>Your entered cash covers every scheduled payment, even if {affected?.bankName||'the selected bank'} is {input.unavailablePercent}% unavailable for {input.durationDays} days.</>}</h2>
   </div>
+  {/* After the answer in DOM order so phones reach the action first; desktop places it in the right column. */}
   <div className="hero-action">
    {pending?<><p className="small">Payroll, suppliers and rent are the usual essentials.</p><button className="primary" onClick={()=>onEdit(1)}>Add essential payments <ArrowRight size={16}/></button></>
    :!short?<><p className="small">Cash is covered under these assumptions. Next, put the assumptions and result on one page.</p><button className="primary" onClick={onPlan}>Create one-page plan <ArrowRight size={16}/></button><button className="quiet" onClick={onScenario}>Test another scenario</button></>
@@ -65,6 +62,12 @@ export default function LiquidityOverview({input,result,comparison,onEdit,onScen
      <button className="primary" disabled={!prep.checked} onClick={prep.onConfirm}>Confirm simulation</button>
     </div>}
    </>:<button className="primary" onClick={onScenario}>Review in Scenario Lab <ArrowRight size={16}/></button>}
+   <p role="status" className="prep-note" hidden={!prep?.notice}>{prep?.notice}{prep?.notice&&<button type="button" onClick={prep.onDismissNotice} aria-label="Dismiss note">×</button>}</p>
+  </div>
+  <div className="hero-details">
+   <p className="hero-sub">{pending?'Without obligations there is nothing to compare your cash against.':short?'Shortfall means obligations that would go unpaid because the cash is not accessible in time. This is a plan, not a transfer: no real money moves.':'This is a simulation of one hypothetical interruption, not a prediction. Processing delays and future receipts are not modelled.'}</p>
+   {!pending&&<p className="scope-note"><b>All banks:</b> {scope}</p>}
+   <div className="chips"><span className="chip">{affected?.bankName||'—'}</span><span className="chip">{input.unavailablePercent}% unavailable</span><span className="chip">{input.durationDays} days</span><button className="quiet-link" onClick={onScenario}>{assumptionsReviewed||pending?'Change assumptions':'Review default assumptions'}</button></div>
   </div>
  </section>
 
@@ -75,20 +78,9 @@ export default function LiquidityOverview({input,result,comparison,onEdit,onScen
   <Kpi label="Maximum shortfall" tip="Maximum shortfall" help="The largest amount of obligations left unpaid on any day in the scenario. It is $0 when entered cash covers everything. It is not credit and not a bank-failure probability." value={result.maximumShortfall} note={pending?'Add payments to assess':result.firstShortfallDay?`First appears on day ${result.firstShortfallDay}`:'Entered obligations covered'} tone={short?'bad':undefined}/>
  </div>
 
- <section className="card chart-panel" aria-label="Cash outlook">
-  <div className="panel-head">
-   <div><h2>{pending?'30-day cash outlook':short?`Cash first falls below zero on day ${result.firstShortfallDay}`:'Cash stays at or above zero every day'} <HelpTip title="Cash outlook">Cash left after each day&apos;s scheduled payments. The solid blue line applies your interruption; the dashed grey line shows no interruption. Payments due are drawn beneath on the same days; red bars are days with unmet obligations. Hover, tap, or use the arrow keys to inspect any day.</HelpTip></h2><p>30-day cash outlook · cash left after scheduled obligations, with payments due beneath</p></div>
-   <dl className="stat-row"><div><dt>Lowest cash left <HelpTip title="Lowest cash left">The smallest end-of-day balance across the 30 days in your scenario. Below zero means unmet obligations.</HelpTip></dt><dd className={minStressed<0?'bad-text':''}>{tidy(minStressed)}</dd></div><div><dt>Funds return</dt><dd>{input.durationDays<30?`Day ${input.durationDays+1}`:'After day 30'}</dd></div></dl>
-  </div>
-  <div className="chart-legend"><span><i className="lg-line scenario"/>Selected interruption</span><span><i className="lg-line baseline"/>No interruption</span>{comparison&&<span><i className="lg-line prepared"/>Proposed allocation</span>}<span><i className="lg-box due"/>Payment due</span><span><i className="lg-box short"/>Unmet payment day</span></div>
-  <MarketChart daily={result.daily} proposed={comparison?.afterResult.daily} day={day} onDay={setDay} durationDays={input.durationDays} firstShortfallDay={result.firstShortfallDay}/>
-  <p className="small muted">Days count from the start of your hypothetical interruption. Negative values are unmet obligations. The line steps because your balance only changes on days a payment is due. Future receipts and processing delays are excluded.</p>
-  <p className="source-note">Source: balances and payments you entered · Assumption: {affected?.bankName||'selected bank'}, {input.unavailablePercent}% unavailable for {input.durationDays} days · Simulation, not a forecast</p>
- </section>
-
  <div className="two-up">
   <section className="card">
-   <div className="section-heading"><div><h2>{largest?.bankName||'One bank'} holds {shareOf(largest?.amount??0).toFixed(0)}% of your cash <HelpTip title="Cash by bank">How your total cash is split across the banks you entered. Accounts at the same bank should be combined.</HelpTip></h2><p>Cash by bank, largest first</p></div><button className="quiet" onClick={()=>onEdit(0)}>Manage banks</button></div>
+   <div className="section-heading"><div><h2>1 · {largest?.bankName||'One bank'} holds {shareOf(largest?.amount??0).toFixed(0)}% of your cash <HelpTip title="Cash by bank">How your total cash is split across the banks you entered. Accounts at the same bank should be combined.</HelpTip></h2><p>Cash by bank, largest first</p></div><button className="quiet" onClick={()=>onEdit(0)}>Manage banks</button></div>
    <BarList ariaLabel="Cash by bank" rows={[...input.positions].sort((a,b)=>b.amount-a.amount).map(p=>({key:p.id,label:(p.bankName||'Unnamed bank')+(p.id===input.affectedId?' (selected)':''),value:p.amount,text:`${exact(p.amount)} · ${shareOf(p.amount).toFixed(1)}%`,tone:p.id===input.affectedId?'accent' as const:'muted' as const}))}/>
    <p className="source-note">Source: balances you entered, not read from a bank.</p>
   </section>
@@ -98,10 +90,21 @@ export default function LiquidityOverview({input,result,comparison,onEdit,onScen
    <p className="source-note">Source: balances and payments you entered.</p>
   </section>
  </div>
+ <section className="card chart-panel" aria-label="Cash outlook">
+  <div className="panel-head">
+   <div><h2>2 · Follow payments into the cash gap <HelpTip title="Cash outlook">Cash left after each day&apos;s scheduled payments. The solid blue line applies your interruption; the dashed grey line shows no interruption. Payments due are drawn beneath on the same days; red bars are days with unmet obligations. Hover, tap, or use the arrow keys to inspect any day.</HelpTip></h2><p>30-day cash outlook · cash left after scheduled obligations, with payments due beneath</p></div>
+   <dl className="stat-row"><div><dt>Lowest cash left <HelpTip title="Lowest cash left">The smallest end-of-day balance across the 30 days in your scenario. Below zero means unmet obligations.</HelpTip></dt><dd className={minStressed<0?'bad-text':''}>{tidy(minStressed)}</dd></div><div><dt>Funds return</dt><dd>{input.durationDays<30?`Day ${input.durationDays+1}`:'After day 30'}</dd></div></dl>
+  </div>
+  <div className="chart-legend"><span><i className="lg-line scenario"/>Selected interruption</span><span><i className="lg-line baseline"/>No interruption</span>{comparison&&<span><i className="lg-line prepared"/>Proposed allocation</span>}<span><i className="lg-box due"/>Payment due</span><span><i className="lg-box short"/>Unmet payment day</span></div>
+  <CashChart opening={result.accessibleNow} daily={result.daily} proposed={comparison?.afterResult.daily} day={day} onDay={setDay} durationDays={input.durationDays} firstShortfallDay={result.firstShortfallDay}/>
+  <p className="small muted">Days count from the start of your hypothetical interruption. Negative values are unmet obligations. The line steps because your balance only changes on days a payment is due. Future receipts and processing delays are excluded.</p>
+  <p className="source-note">Source: balances and payments you entered · Assumption: {affected?.bankName||'selected bank'}, {input.unavailablePercent}% unavailable for {input.durationDays} days · Simulation, not a forecast</p>
+ </section>
+
 
  <section className="card">
-  <div className="section-heading"><div><h2>Upcoming obligations</h2><p>Planned obligations, not completed transactions</p></div><button className="quiet" onClick={()=>onEdit(1)}>Manage payments</button></div>
-  {payments.length?<div className="table-scroll" role="region" aria-label="Upcoming obligations" tabIndex={0}><table className="ob-table"><thead><tr><th>Day</th><th>Payment</th><th className="num">Amount</th><th>Status</th></tr></thead><tbody>{payments.slice(0,8).map(p=>{const gap=!!result.daily[p.day-1]?.shortfall;return <tr key={p.id}><td>{p.day}</td><td>{p.label||'Payment'}</td><td className="num">{exact(p.amount)}</td><td className={gap?'bad-text':'good-text'}>{gap?'Cash gap on this day':'Covered under assumptions'}</td></tr>;})}</tbody></table></div>:<p>No payments yet. Add your essentials to get a meaningful result.</p>}
+  <div className="section-heading"><div><h2>3 · Review obligations behind the gap</h2><p>Planned obligations, not completed transactions</p></div><button className="quiet" onClick={()=>onEdit(1)}>Manage payments</button></div>
+  {payments.length?<div className="table-scroll" role="region" aria-label="3 · Review obligations behind the gap" tabIndex={0}><table className="ob-table"><thead><tr><th>Day</th><th>Payment</th><th className="num">Amount</th><th>Status</th></tr></thead><tbody>{payments.slice(0,8).map(p=>{const gap=!!result.daily[p.day-1]?.shortfall;return <tr key={p.id} className={p.day===day?"selected-obligation":undefined}><td>{p.day}</td><td>{p.label||'Payment'}</td><td className="num">{exact(p.amount)}</td><td className={gap?'bad-text':'good-text'}>{gap?'Cash gap on this day':'Covered under assumptions'}</td></tr>;})}</tbody></table></div>:<p>No payments yet. Add your essentials to get a meaningful result.</p>}
   {payments.length>8&&<button className="quiet" onClick={()=>onEdit(1)}>View all {payments.length} obligations →</button>}
   <p className="source-note">Source: payments you entered.</p>
  </section>
